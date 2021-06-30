@@ -1,0 +1,22 @@
+.line-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-black);
+  margin: 2.5rem 0;
+  span {
+    padding: 0 1.5rem;
+  }
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    background-color: var(--color-border);
+    height: 1px;
+    flex: 1 1 auto;
+    margin-bottom: -.3rem;
+  }
+  &::after {
+
+  }
+}

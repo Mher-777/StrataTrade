@@ -2,14 +2,20 @@
 .p,
 .content li,
 .li {
-	font-size: 1.6rem;
-	line-height: (19/16) * 1;
+	font-size: 1.4rem;
+	line-height: (18/14) * 1;
 }
 
 .content ul,
 .content ol {
 }
-
+.content p,
+.p {
+	color: var(--color-text);
+	&:not(:first-child) {
+		margin-top: 1rem;
+	}
+}
 .content b,
 .b {
 	font-weight: bold;
@@ -36,6 +42,7 @@
 .content h5,
 .h6,
 .content h6 {
+	margin-bottom: 1.5rem;
 }
 
 .h1,
@@ -48,10 +55,14 @@
 
 .h3,
 .content h3 {
+	font-weight: 400;
+	font-size: 2rem;
 }
 
 .h4,
 .content h4 {
+	font-weight: 600;
+	font-size: 1.6rem;
 }
 
 .h5,

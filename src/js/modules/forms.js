@@ -1,27 +1,53 @@
-import Inputmask from "inputmask";
 import validate from "jquery-validation";
 import { config } from "../config";
 
 var forms = {
-	mask: () => {
-		var selector = document.querySelectorAll("input[name='phone']");
+	focusUpdate: (set = false, field) => {
+		let input = $(field);
 
-		var im = new Inputmask({
-			mask: "+7 (999) 999-99-99",
-			clearMaskOnLostFocus: true,
-			clearIncomplete: true,
-		});
+		let val = Number(
+			input
+				.val()
+				.replace(/\s/g, "")
+				.match(/[+-]?([0-9]*[.])?[0-9]+/g)
+		);
 
-		im.mask(selector);
+		if (set) {
+			if (val == 0) input.val("").trigger("change");
+			else input.val(config.numberWithSpaces(val)).trigger("change");
+		} else {
+			if (val == 0) input.val("").trigger("change");
+			else input.val(val).trigger("change");
+		}
 	},
-
+	translate: () => {
+		$.extend($.validator.messages, {
+			required: "Это поле необходимо заполнить",
+			remote: "Исправьте это поле чтобы продолжить",
+			email: "Введите правильный email адрес.",
+			url: "Введите верный URL.",
+			date: "Введите правильную дату.",
+			dateISO: "Введите правильную дату (ISO).",
+			number: "Введите число.",
+			digits: "Введите только цифры.",
+			creditcard: "Введите правильный номер вашей кредитной карты.",
+			equalTo: "Повторите ввод значения еще раз.",
+			accept: "Пожалуйста, введите значение с правильным расширением.",
+			maxlength: jQuery.validator.format("Нельзя вводить более {0} символов."),
+			minlength: jQuery.validator.format("Должно быть не менее {0} символов."),
+			rangelength: jQuery.validator.format("Введите от {0} до {1} символов."),
+			range: jQuery.validator.format("Введите число от {0} до {1}."),
+			max: jQuery.validator.format("Введите число меньше или равное {0}."),
+			min: jQuery.validator.format("Введите число больше или равное {0}.")
+		});
+	},
 	validate: () => {
 		$("form").each((i, el) => {
 			var $form = $(el);
 
 			$form.validate({
 				errorPlacement: function (error, element) {
-					//just nothing, empty
+					element.parent().after(error);
 				},
 				highlight: (element, errorClass, validClass) => {
 					$(element)
@@ -47,12 +73,21 @@ var forms = {
 						},
 					});
 				},
+				errorElement: 'span',
+				ignore: "input.is-deactive",
+				debug: false,
 				rules: {
-					phone: {
-						required: true,
-						minlength: 10,
+					password: {
+						minlength: 8
 					},
+					password_repeat: {
+						minlength: 8,
+					}
 				},
+				messages: {
+
+				}
+
 			});
 		});
 	},
@@ -71,9 +106,15 @@ var forms = {
 	},
 
 	init: () => {
-		forms.mask();
+		forms.translate()
 		forms.validate();
 		forms.events();
+
+		$(".js-num").on({
+			"keypress keyup": forms.num,
+			focus: (e) => forms.focusUpdate(0, e.currentTarget),
+			focusout: (e) => forms.focusUpdate(1, e.currentTarget),
+		});
 	},
 };
 

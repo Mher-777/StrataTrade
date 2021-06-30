@@ -56,7 +56,7 @@ module.exports = (gulp, plugins, browserSync) => {
 					plugins.replace(
 						/(css\/|\/css\/)|(js\/|\/js\/)/g,
 						(match) => {
-							let sub = match.charAt(0) == "/" ? "/app" : "/app/";
+							let sub = match.charAt(0) == "/" ? "app" : "app/";
 
 							return sub + match;
 						}
@@ -79,7 +79,7 @@ module.exports = (gulp, plugins, browserSync) => {
 									src = element
 										.match(/("|')(.*?)("|').*?/g)
 										.toString()
-										.replace("/img/", "/app/img/");
+										.replace("/img/", "app/img/");
 									webpSrc = src.replace(
 										/(gif|jpg|jpeg|tiff|png)/g,
 										"webp"

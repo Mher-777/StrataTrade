@@ -1,0 +1,17 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Восстановление пароля(пароль успешно изменен)';
+	- login = true
+
+block content
+	+e.logo.logo__._width
+		+e.A(href="#").link
+			+e.IMG(src="app/img/logo.svg" alt="Логотип" width="40" height="40")
+	+e.box
+		+b.success-icon
+			+icon('check')
+		+e.content.content.css-text-center
+			+e.H4 Восстановление пароля
+			+e.P Пароль успешно изменен
+			+btn(true)(class="_blue _tiny") Окей

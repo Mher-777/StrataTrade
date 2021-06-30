@@ -2,6 +2,8 @@ include ../mixins/mixin-loader.pug
 
 block vars
 	-
+		var login = false
+	-
 		var title = title || ''
 		var description = description || ''
 		var image = image || ''
@@ -30,7 +32,7 @@ block vars
 		var link = {
 			icon: '',
 			icon16x16: '',
-			icon32x32: '',
+			icon32x32: ''
 		}
 
 doctype html
@@ -59,10 +61,16 @@ html(class=html.classList)&attributes(html.attrs)
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
 		block body-start
+		if(!login)
+			block header
+		if(login)
+			+b.SECTION.login
+				.container
+					block content
+		else
+			block content
 
-		block header
-			include header
-		block content
+
 		block footer 
 			include footer
 		block popup 

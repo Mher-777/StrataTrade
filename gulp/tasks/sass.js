@@ -41,7 +41,7 @@ module.exports = (gulp, plugins, browserSync) => {
 										/\b(?:background\s*?([^;>]*?)(?=[;">}]);)/g
 									)
 									.join(" ")
-									.replace("/img/", "/app/img/");
+									.replace("/img/", "app/img/");
 
 								let webpImage = bg.indexOf('svg') !== -1 ? bg : bg.replace(
 									/(gif|jpg|jpeg|tiff|png)/g,

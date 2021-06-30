@@ -1,0 +1,36 @@
+.login {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  min-height: 100vh;
+  &__logo {
+    margin-bottom: 1.5rem;
+  }
+  &__tabs {
+    margin-bottom: 2.5rem;
+  }
+  &__btn {
+    margin-top: 2.5rem;
+  }
+  &__content {
+    margin-bottom: 2rem;
+  }
+  &__box {
+    background: var(--color-white);
+    box-shadow: 0 1rem 4rem rgba(242, 242, 242, 0.5);
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    margin-top: 16rem;
+    h4 {
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 1.2rem;
+      &:not(:first-child) {
+        margin-top: 0;
+      }
+    }
+    .login__btn {
+      margin-top: 1.5rem;
+    }
+  }
+}

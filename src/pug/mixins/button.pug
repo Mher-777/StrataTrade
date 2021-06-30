@@ -1,21 +1,13 @@
-mixin btn(link = true, arrow = false)
+mixin btn(link = false, submit = false)
     if (link)
-        +e.A.button.h5.btn__.js-btn(href='#')&attributes(attributes)
-            +e.back.js-circles
+        +e.A.btn.btn__(href='#')&attributes(attributes)
+            +e.back
             +e.SPAN.text
                 if block
                     block
-            if arrow
-                +e.SPAN.arrow
-                    +e.arrow-inner
-                        +icon('arrowBtn')
     else
-        +e.BUTTON.button.h5.btn__.js-btn()&attributes(attributes)
-            +e.back.js-circles
+        +e.BUTTON.btn.btn__(type=`${submit ? 'submit' : 'button'}`)&attributes(attributes)
+            +e.back
             +e.SPAN.text
                 if block
                     block
-            if arrow
-                +e.SPAN.arrow
-                    +e.arrow-inner
-                        +icon('arrowBtn')
