@@ -1,0 +1,29 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Ондобрдин №3. Привязка карты';
+
+
+block content
+	+b.SECTION.onboarding
+		.container
+			+e.top
+				+e.logo.logo__._width
+					+e.A(href="#").link
+						+e.IMG(src="app/img/logo.svg" alt="Логотип" width="40" height="40")
+				+e.A(href="#").skip.link Пропустить
+			+e.content
+				+e.image
+					+b.IMG(src="/app/img/illustration-3.svg" alt="").object-fit
+				+e.wrap.css-text-center
+					+e.subtitle.color-blue Шаг 3
+					+e.P На третьем шаге рассказываем о том как оплатить подключенную стратегию и важности привязки карты для автоплатежей
+		+e.bottom
+			.container
+				+b.steps
+					+e.line
+					+e.line
+					+e.line.is-active
+					+e.line
+				+btn('onboarding-v-4.html') Следующий
+				+e.A(href="onboarding-v-2.html").link.link Назад

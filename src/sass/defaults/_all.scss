@@ -1,0 +1,19 @@
+.color-blue {
+  color: var(--color-blue);
+}
+
+.success-icon {
+  width: 5.6rem;
+  height: 5.6rem;
+  background-color: rgba(#5E81F4, .1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: .4rem;
+  margin: 0 auto 1.5rem;
+  .icon {
+    max-width: 100%;
+    fill: var(--color-blue)
+  }
+}

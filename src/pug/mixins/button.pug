@@ -1,6 +1,6 @@
 mixin btn(link = false, submit = false)
     if (link)
-        +e.A.btn.btn__(href='#')&attributes(attributes)
+        +e.A.btn.btn__(href=link)&attributes(attributes)
             +e.back
             +e.SPAN.text
                 if block

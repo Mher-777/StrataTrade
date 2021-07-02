@@ -1,0 +1,28 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Ондобрдин №1. Выбор биржи';
+
+
+block content
+	+b.SECTION.onboarding._padding
+		.container
+			+e.top
+				+e.logo.logo__._width
+					+e.A(href="#").link
+						+e.IMG(src="app/img/logo.svg" alt="Логотип" width="40" height="40")
+				+e.A(href="#").skip.link Пропустить
+			+e.content
+				+e.image
+					+b.IMG(src="/app/img/illustration-1.svg" alt="").object-fit
+				+e.wrap.css-text-center
+					+e.subtitle.color-blue Шаг 1
+					+e.P На первом шаге рассказываем о неохдодимости выбрать и <br> подключить биржу
+		+e.bottom
+			.container
+				+b.steps
+					+e.line.is-active
+					+e.line
+					+e.line
+					+e.line
+				+btn('onboarding-v-2.html') Следующий

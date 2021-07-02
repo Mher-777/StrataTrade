@@ -1,0 +1,16 @@
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  &__line {
+    height: .4rem;
+    width: 1.8rem;
+    border-radius: .1rem;
+    background-color: #DFDFDF;
+    margin: 0 .25rem;
+    &.is-active {
+      background-color: var(--color-blue);
+    }
+  }
+}
