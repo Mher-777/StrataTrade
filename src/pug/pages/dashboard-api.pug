@@ -1,0 +1,42 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Подключение API аккаунта';
+
+block content
+	+b.SECTION.dashboard
+		.container
+			+b.top-content__
+				+b.H4 Подключить API аккакунт
+				+b.P Для использования стратегии, подлкючите свой аккаунт <<br> <a href="#">Binance</a>
+			+e.box.box
+				+b.H5.h5 Binance
+				+e.tabs.tabs__
+					+e.item
+						+e.A(href="dashboard-api.html").link.is-active Spot
+					+e.item
+						+e.A(href="#").link Futures
+				+e.FORM.form(action="")
+					+e.field.input__
+						+e.label.flex_justify._vertical Номер аккаунта
+							+b.info(data-tippy-placement="auto" data-tippy-content="<strong>Номер аккаунта</strong><p>На бирже Binance, нажмите на иконку аккаунта - в выпадающем меню, нажмите первую вкладку, там находится Ваш номер аккаунта</p>" )
+								+icon('info')
+						+e.parent
+							+e.INPUT.field(name="number" placeholder="52929951" type="text" autocomplete="off" required)
+					+e.field.input__
+						+e.label.flex_justify._vertical API ключ
+							+b.info(data-tippy-placement="auto" data-tippy-content="<strong>API ключ</strong><p>На бирже BInance, нажмите на иконку аккаунта - в выпадающем меню, выберите вкладку “ Управление API”. В разделе “Лист API” находится API ключ.</p>" )
+								+icon('info')
+						+e.parent
+							+e.INPUT.field(name="kay" placeholder="SU5zwfluOPoDJ6q8vuT4SU5zwfluOPoDJ6qvuT4SU5" type="text" autocomplete="off" required)
+					+e.field.input__
+						+e.label.flex_justify._vertical Секретный ключ
+							+b.info(data-tippy-placement="auto" data-tippy-content="<strong>Секретный ключ</strong><p>На бирже BInance, нажмите на иконку аккаунта - в выпадающем меню, выберите вкладку “Управление API”. В разделе “Лист API” находится Секретный ключ.</p>" )
+								+icon('info')
+						+e.parent
+							+e.INPUT.field(name="code" value="test" type="password" autocomplete="off" required)
+							+e.BUTTON(type="button").button.js-type-change
+								+icon('carbon')
+					+b.BUTTON(type="submit").btn._blue._tiny._left
+						+e.back
+						+e.SPAN.text Подключить

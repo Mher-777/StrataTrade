@@ -69,4 +69,9 @@
   &_small {
     min-height: 4rem;
   }
+  &_left {
+    display: flex;
+    margin-left: auto;
+    max-width: fit-content;
+  }
 }

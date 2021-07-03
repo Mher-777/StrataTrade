@@ -116,6 +116,15 @@ var forms = {
 
 				if ($input.val() == "") $input.parent().removeClass("is-focus");
 			});
+		$('.js-type-change').on('click', function () {
+			const input = $(this).closest('.input').find('input')
+			if(input.attr('type') == 'text') {
+				$(this).closest('.input').find('input').attr('type', 'password')
+			} else {
+				$(this).closest('.input').find('input').attr('type', 'text')
+			}
+
+		})
 	},
 
 	init: () => {

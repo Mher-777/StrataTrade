@@ -70,6 +70,8 @@
 
 .h5,
 .content h5 {
+	font-weight: 500;
+	font-size: 1.6rem;
 }
 
 .h6,
@@ -85,5 +87,8 @@
 		font-size: 1.2rem;
 		letter-spacing: -0.011em;
 		color: var(--color-placeholder);
+	}
+	a {
+		color: var(--color-accent);
 	}
 }

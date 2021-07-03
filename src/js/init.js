@@ -5,6 +5,7 @@ import { modals } from "./modules/modals";
 import { button } from "./modules/button";
 import { forms } from "./modules/forms";
 import { card } from "./modules/card";
+import { tooltip } from "./modules/tooltip";
 
 var App = () => {};
 
@@ -16,6 +17,7 @@ App.prototype.init = () => {
 	button.init();
 	forms.init();
 	card.init();
+	tooltip.init();
 	config.log('app init')
 	
 };
