@@ -29,13 +29,20 @@ body {
 	line-height: 1.285em;
 	background-color: var(--color-bg);
 	color: var(--color-main);
+
 	&.js-lock {
 		overflow-x: hidden;
 		overflow-y: scroll;
 	}
-
+	&.body_padding {
+		padding-top: 2.5rem;
+		padding-bottom: 10.5rem;
+	}
 }
-
+html,
+body {
+	min-height: 100%;
+}
 input,
 textarea,
 button {
@@ -71,10 +78,6 @@ a {
 		display: inline-block;
 		vertical-align: middle;
 	}
-}
-
-.icon {
-	width: 100%;
 }
 
 .clear {

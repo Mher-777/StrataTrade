@@ -5,9 +5,11 @@ append vars
 	- login = true
 
 block content
-	+e.logo.logo__._width
-		+e.A(href="#").link
-			+e.IMG(src="app/img/logo.svg" alt="Логотип" width="40" height="40")
-	+e.content.content
-		+e.H3 Пароль отправлен на почту
-		+e.P Password recovery instructions have been sent to your e-mail sazonovmax@gmail.com. You will receive it within 5 minutes. Don't forget to check your Spam folder.
+	+b.SECTION.login
+		.container
+			+e.logo.logo__._width
+				+e.A(href="#").link
+					+e.IMG(src="app/img/logo.svg" alt="Логотип" width="40" height="40")
+			+e.content.content
+				+e.H3 Пароль отправлен на почту
+				+e.P Password recovery instructions have been sent to your e-mail sazonovmax@gmail.com. You will receive it within 5 minutes. Don't forget to check your Spam folder.

@@ -2,7 +2,7 @@ extends ../layouts/base
 
 append vars
 	- title = 'Ондобрдин №2. Выбор стратегии';
-
+	- login = true
 
 block content
 	+b.SECTION.onboarding
@@ -14,7 +14,7 @@ block content
 				+e.A(href="#").skip.link Пропустить
 			+e.content
 				+e.image
-					+b.IMG(src="/app/img/illustration-2.svg" alt="").object-fit
+					+b.IMG(src="app/img/illustration-2.svg" alt="").object-fit
 				+e.wrap.css-text-center
 					+e.subtitle.color-blue Шаг 2
 					+e.P На втором шаге рассказываем <br> о необ ходимости выбрать <br> и подключить стратегию

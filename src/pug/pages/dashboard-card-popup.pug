@@ -1,0 +1,48 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Карта добавлена';
+
+block content
+	+b.SECTION.dashboard
+		.container
+			+e.tabs.tabs__
+				+e.item
+					+e.A(href="dashboard-card.html").link.is-active Ввести вручную
+				+e.item
+					+e.A(href="login.html").link Сканировать карту
+			+b.top-content__
+				+b.H4 Подключить карту
+				+b.P Для привязки карты, необходимо ввести данные
+			+b.add-card.js-card
+				+b.card
+					+e.bg.absolute
+						+b.IMG(src="app/img/card-bg.svg" alt="").object-fit
+					+e.wrap
+						+e.top.flex._bottom._justify
+							+e.SPAN.text Банковская карта
+							+e.logo
+								+e.IMG(src="app/img/master-card.svg" alt="")
+						+e.number 4433 3453 2345 4242
+						+e.bottom.flex._justify
+							+e.day 01/24
+							+e.code 533
+				+e.FORM(action="").form.box
+					+e.row.flex
+						+input('', '', 'card')(data-inputmask="'mask': '9999 9999 9999 9999', 'placeholder': ''" required)
+						+e.field.input__._width
+							+e.parent
+								+e.INPUT.field(name="day" placeholder="" type="text" autocomplete="off" data-inputmask="'mask': '99/99', 'placeholder': ''" required)
+						+e.field.input__._width
+							+e.parent
+								+e.INPUT.field(name="ccv" placeholder="" type="text" autocomplete="off" data-inputmask="'mask': '999', 'placeholder': ''" required)
+					+btn()(class="_blue _tiny js-modal" data-modal="#succes-card" type="submit") Подключить
+block popup
+	+b.modal.mfp-hide.mfp-hide-close#succes-card
+		+e.icon.icon._small
+			+icon('card')
+		+e.content.css-text-center
+			+e.H4.title.h4 Карта добавлена
+			+e.P.text Вы успешно добавили новую карту
+		+e.bottom.flex._center
+			+btn()(class="_blue _tiny js-close-modal") Окей

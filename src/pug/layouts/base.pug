@@ -59,22 +59,16 @@ html(class=html.classList)&attributes(html.attrs)
 			script.
 				function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
 		block head-end
-	body(class=body.classList)&attributes(body.attrs)
+	body(class=`${login ? '' : 'body_padding'}`)&attributes(body.attrs)
 		block body-start
 		if(!login)
 			block header
-		if(login)
-			+b.SECTION.login
-				.container
-					block content
-		else
-			block content
-
-
-		block footer 
-			include footer
+				include header
+		block content
+		if(!login)
+			block footer
+				include footer
 		block popup 
-			include modals
 
 		block scripts
 			script(src="http://code.jquery.com/jquery-3.3.1.min.js")

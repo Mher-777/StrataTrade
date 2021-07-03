@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
-import { config } from "../config";
-import { defaults } from "./defaults";
+import SwiperCore, { Autoplay, EffectFade } from 'swiper/core';
+SwiperCore.use([Autoplay, EffectFade]);
 
 var sliders = {
 	selector: ".js-slider",

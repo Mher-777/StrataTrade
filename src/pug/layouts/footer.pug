@@ -1,1 +1,24 @@
 +b.FOOTER.footer
+	.container
+		+b.NAV.nav
+			+e.item.is-active
+				+e.A(href="#").link
+					+e.icon
+						+icon('dashboard')
+					+e.SPAN.text Дашборд
+			+e.item
+				+e.A(href="#").link
+					+e.icon
+						+icon('strategy')
+					+e.SPAN.text Стратегии
+			+e.item
+				+e.A(href="#").link
+					+e.icon
+						+icon('briefcase')
+					+e.SPAN.text Портфель
+			+e.item
+				+e.A(href="#").link
+					+e.icon
+						+e.user
+							+b.IMG(src="/img/avatar.png" alt="Александр").object-fit
+					+e.SPAN.text Профиль

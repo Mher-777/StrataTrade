@@ -1,5 +1,6 @@
 .input {
   margin-bottom: 1.5rem;
+  width: 100%;
   &__label {
     display: block;
     margin-bottom: 1rem;
@@ -15,13 +16,14 @@
         }
       }
     }
+    & ~ .error {
+      font-size: 1rem;
+      display: block;
+      margin-top: .5rem;
+      color: var(--color-red-600);
+      line-height: 1;
+    }
     &.error {
-      & ~ .error {
-        font-size: 1rem;
-        display: block;
-        margin-top: .5rem;
-        color: var(--color-red-600);
-      }
       .input__field {
         border-color: var(--color-red);
         @include placeholder {
@@ -48,5 +50,8 @@
       letter-spacing: -0.006em;
       transition: var(--anim-transition);
     }
+  }
+  &_width {
+    width: 50%;
   }
 }

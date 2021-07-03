@@ -1,0 +1,17 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Подключение карты';
+
+block content
+	+b.SECTION.dashboard
+		.container
+			+e.tabs.tabs__
+				+e.item
+					+e.A(href="dashboard-card.html").link.is-active Ввести вручную
+				+e.item
+					+e.A(href="login.html").link Сканировать карту
+			+b.top-content__
+				+b.H4 Подключить карту
+				+b.P Для привязки карты, необходимо ввести данные
+			include ../modules/card

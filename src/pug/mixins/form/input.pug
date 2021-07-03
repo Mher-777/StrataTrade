@@ -5,4 +5,4 @@ mixin input (label, placeholder, name, icon)
 		+e.parent
 			if(icon)
 				+icon(icon)
-			+e.INPUT.field(name=name placeholder=placeholder type="text")&attributes(attributes)
+			+e.INPUT.field(name=name placeholder=placeholder type="text" autocomplete="off")&attributes(attributes)

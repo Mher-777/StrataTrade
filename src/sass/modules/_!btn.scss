@@ -12,6 +12,7 @@
   color: var(--color-white);
   transition: var(--anim-transition);
   margin-top: 1rem;
+  z-index: 1;
   &:hover {
     opacity: .9;
     .btn__back {
@@ -63,5 +64,9 @@
       min-width: 6rem;
       padding: 0.75rem 1.2rem;
       display: inline-flex;
+      min-height: auto;
+  }
+  &_small {
+    min-height: 4rem;
   }
 }

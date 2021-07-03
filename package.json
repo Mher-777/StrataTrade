@@ -48,6 +48,7 @@
   "dependencies": {
     "emitty": "^1.4.0",
     "gulp-if": "^3.0.0",
+    "inputmask": "^5.0.6",
     "ion-rangeslider": "^2.3.1",
     "jquery-validation": "^1.19.3",
     "magnific-popup": "^1.1.0",

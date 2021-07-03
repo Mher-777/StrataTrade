@@ -1,0 +1,22 @@
+.header {
+
+  &__inner {
+    padding: 1.5rem 1.2rem;
+    border-radius: 1.2rem;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin-right: 1.5rem;
+  }
+  &__notice {
+    margin-right: 2.5rem;
+    margin-left: auto;
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: var(--color-accent);
+    }
+  }
+}

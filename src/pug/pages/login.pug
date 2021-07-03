@@ -5,20 +5,22 @@ append vars
 	- login = true
 
 block content
-	+e.logo.logo__._width
-		+e.A(href="#").link
-			+e.IMG(src="app/img/logo.svg" alt="Логотип" width="40" height="40")
-	+e.tabs.tabs__
-		+e.item
-			+e.A(href="registration.html").link Регистрация
-		+e.item
-			+e.A(href="login.html").link.is-active Авторизация
+	+b.SECTION.login
+		.container
+			+e.logo.logo__._width
+				+e.A(href="#").link
+					+e.IMG(src="app/img/logo.svg" alt="Логотип" width="40" height="40")
+			+e.tabs.tabs__
+				+e.item
+					+e.A(href="registration.html").link Регистрация
+				+e.item
+					+e.A(href="login.html").link.is-active Авторизация
 
-	+e.FORM(action="").form
-		+input('Email', 'Email', 'email')(type="email" required)
-		+input('Пароль', 'Пароль', 'password')(type="password" required)
-		+e.cell.flex.flex_justify.flex_vertical
-			+checkbox('Запомнить меня', 'remember', true, false)(class="checkbox_no-margin")
-			+e.A(href="reset.html").link.link Забыли пароль?
-		+btn(false, true) Войти
-		include ../modules/socials
+			+e.FORM(action="").form
+				+input('Email', 'Email', 'email')(type="email" required)
+				+input('Пароль', 'Пароль', 'password')(type="password" required)
+				+e.cell.flex.flex_justify.flex_vertical
+					+checkbox('Запомнить меня', 'remember', true, false)(class="checkbox_no-margin")
+					+e.A(href="reset.html").link.link Забыли пароль?
+				+btn(false, true) Войти
+				include ../modules/socials

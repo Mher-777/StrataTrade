@@ -1,0 +1,36 @@
+.banner {
+  color: var(--color-white);
+  &__bg {
+    z-index: -1;
+    border-radius: 1.2rem;
+    overflow: hidden;
+  }
+  &__content {
+    min-height: 10rem;
+    height: 100%;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 28rem;
+    h4 {
+      margin-bottom: 0;
+    }
+    p {
+      line-height: 1.33em;
+      margin-top: .5rem;
+    }
+  }
+  &__slider {
+    border-radius: 1.2rem;
+    .swiper-slide {
+      height: auto;
+    }
+  }
+  &__link {
+    margin-top: auto;
+    padding-top: .7rem;
+  }
+}

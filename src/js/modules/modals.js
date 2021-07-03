@@ -45,8 +45,8 @@ var modals = {
 			fixedContentPos: true,
 			fixedBgPos: true,
 			overflowY: 'hidden',			
-			closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-close close2" viewBox="0 0 612 612"><use xlink:href="/app/icons/sprite.svg#cls"></use></svg></div>',
-			mainClass: 'css-modal-animate',				
+			closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-close" viewBox="0 0 24 24"><use xlink:href="/app/icons/sprite.svg#close"></use></svg></div>',
+			mainClass: 'mfp-fade',
 			items: {
 				src: modal,
 				type: 'inline'

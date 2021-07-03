@@ -1,0 +1,27 @@
+.icon {
+  width: 3.6rem;
+  height: 3.6rem;
+  background-color: rgba(#5E81F4, .1);
+  fill: var(--color-blue);
+  border-radius: .4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  &_small {
+    width: 5.5rem;
+    height: 5.5rem;
+    svg {
+      width: 3.8rem;
+      height: 3.8rem;
+    }
+  }
+  &_red {
+    background-color: rgba(255, 68, 68, .1);
+    fill: #F76659;
+  }
+}

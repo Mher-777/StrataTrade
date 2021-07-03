@@ -1,0 +1,60 @@
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+.mfp-fade.mfp-bg {
+  background: rgba(112, 112, 112, 0.5);
+  opacity: 1;
+}
+.mfp-hide-close {
+  .close {
+    display: none;
+  }
+}
+.mfp-content {
+  background-color: var(--color-white);
+  box-shadow: 0 1rem 4rem rgba(242, 242, 242, 0.5);
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+  max-width: 37.5rem;
+}
+.mfp-container {
+  padding: 0 1.2rem;
+}
+.modal {
+  &__icon {
+    margin-bottom: 1.5rem;
+  }
+  &__content {
+    color: var(--color-placeholder);
+    p {
+      font-size: 1.2rem;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      color: var(--color-main);
+    }
+  }
+  &__title {
+    margin-bottom: .5rem;
+  }
+  &__btn {
+    margin-top: 1.5rem;
+  }
+}

@@ -5,19 +5,21 @@ append vars
 	- login = true
 
 block content
-	+e.logo.logo__._width
-		+e.A(href="#").link
-			+e.IMG(src="app/img/logo.svg" alt="Логотип" width="40" height="40")
-	+e.tabs.tabs__
-		+e.item
-			+e.A(href="registration.html").link.is-active Регистрация
-		+e.item
-			+e.A(href="login.html").link Авторизация
+	+b.SECTION.login
+		.container
+			+e.logo.logo__._width
+				+e.A(href="#").link
+					+e.IMG(src="app/img/logo.svg" alt="Логотип" width="40" height="40")
+			+e.tabs.tabs__
+				+e.item
+					+e.A(href="registration.html").link.is-active Регистрация
+				+e.item
+					+e.A(href="login.html").link Авторизация
 
-	+e.FORM(action="").form
-		+input('Имя', 'Имя', 'name')(required)
-		+input('Email', 'Email', 'email')(type="email" required)
-		+input('Пароль', 'Пароль', 'password')(type="password" required)
-		+checkbox('Условия соглашения', 'agreement', true)
-		+btn(false, true) Зарегестрироваться
-		include ../modules/socials
+			+e.FORM(action="").form
+				+input('Имя', 'Имя', 'name')(required)
+				+input('Email', 'Email', 'email')(type="email" required)
+				+input('Пароль', 'Пароль', 'password')(type="password" required)
+				+checkbox('Условия соглашения', 'agreement', true)
+				+btn(false, true) Зарегестрироваться
+				include ../modules/socials

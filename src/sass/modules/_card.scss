@@ -1,0 +1,61 @@
+.card {
+  padding: 3rem;
+  position: relative;
+  color: var(--color-white);
+  border-radius: 1.2rem;
+  overflow: hidden;
+
+  &__bg {
+    background: linear-gradient(177.23deg, #9C2CF3 -13.49%, #3A49F9 109.75%);
+    border-radius: 1.2rem;
+  }
+  &__wrap {
+    position: relative;
+    min-height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__text {
+    color: rgba(#fff, .7);
+    margin-bottom: .5rem;
+  }
+  &__top {
+    margin-bottom: 2.5rem;
+  }
+  &__logo {
+    max-width: 4.5rem;
+    margin-right: -1.5rem;
+    margin-top: -1rem;
+  }
+  &__number {
+    font-size: 2rem;
+    white-space: nowrap;
+    margin-bottom: 3.5rem;
+  }
+  &__day {
+    color: rgba(#fff, .9);
+  }
+}
+
+.add-card {
+  &__form {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+  }
+  &__field {
+    width: calc(100% - 1.2rem);
+    margin-left: 1.2rem;
+    &.input_width {
+      width: calc(50% - 1.2rem);
+    }
+  }
+  &__row {
+    margin-left: -1.2rem;
+  }
+  &__btn {
+    display: flex;
+    max-width: fit-content;
+    margin-left: auto;
+  }
+}

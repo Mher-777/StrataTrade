@@ -1,0 +1,22 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Дашборд';
+
+block content
+	+b.SECTION.dashboard
+		.container
+			+e.top
+				+e.SPAN.top-name Добрый день, Александр!
+				+e.H2.top-title.h2 Дашборд
+			include ../modules/banner
+			+e.holder.box
+				+e.icon.icon__
+					+icon('logout')
+				+e.P Для того, чтобы использовать стратегии, необходимо подключить аккаунт Binance
+				+btn('#')._small Подключить API аккаунт
+			+e.holder.box
+				+e.icon.icon__
+					+icon('card')
+				+e.P Для того, чтобы использовать стратегии, необходимо подвязать свою <br> банковкускую карту,
+				+btn('dashboard-card.html')._small Подключить карту

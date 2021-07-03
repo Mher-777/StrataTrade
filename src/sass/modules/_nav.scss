@@ -1,0 +1,62 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: .5rem 1rem 2rem;
+  &__user {
+    position: relative;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+  }
+  &__text {
+    display: block;
+    font-size: 1.2rem;
+    color: #BDBDBD;
+  }
+  &__link {
+    display: block;
+    text-align: center;
+  }
+  &__icon {
+    padding: 1.3rem;
+    border-radius: .4rem;
+    display: block;
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: #BDBDBD;
+    }
+  }
+  &__item {
+    position: relative;
+    &::before {
+      content: '';
+      width: 100%;
+      height: .2rem;
+      position: absolute;
+      border-radius: .1em;
+      background-color: transparent;
+      left: 0;
+      top: -.6rem;
+    }
+    &.is-active {
+      &::before {
+        background-color: var(--color-accent);
+      }
+      .nav {
+        &__icon {
+          background: linear-gradient(0deg, rgba(163, 55, 255, 0.1), rgba(163, 55, 255, 0.1)), #FFFFFF;
+          svg {
+            fill: var(--color-accent);
+          }
+        }
+        &__text {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+}

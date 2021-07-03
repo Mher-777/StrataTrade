@@ -1,4 +1,5 @@
 import validate from "jquery-validation";
+import inputMask from "inputmask";
 import { config } from "../config";
 
 var forms = {
@@ -50,6 +51,7 @@ var forms = {
 					element.parent().after(error);
 				},
 				highlight: (element, errorClass, validClass) => {
+
 					$(element)
 						.parent()
 						.addClass(errorClass)
@@ -82,10 +84,21 @@ var forms = {
 					},
 					password_repeat: {
 						minlength: 8,
+					},
+					card: {
+						minlength: 19,
+					},
+					day: {
+						minlength: 5,
+					},
+					code: {
+						minlength: 3,
 					}
 				},
 				messages: {
-
+					card: {
+						minlength: 'Должно быть не менее 16 символов.'
+					}
 				}
 
 			});
@@ -115,6 +128,8 @@ var forms = {
 			focus: (e) => forms.focusUpdate(0, e.currentTarget),
 			focusout: (e) => forms.focusUpdate(1, e.currentTarget),
 		});
+		inputMask().mask($("input[data-inputmask]"), {})
+
 	},
 };
 

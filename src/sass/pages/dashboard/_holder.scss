@@ -1,0 +1,18 @@
+.dashboard {
+  &__holder {
+    margin-top: 2rem;
+    padding: 3rem 4.5rem;
+    text-align: center;
+    p {
+      font-weight: 500;
+      color: var(--color-placeholder);
+      font-size: 1.2rem;
+      line-height: 1.333em;
+    }
+  }
+  &__btn {
+    margin-top: 1rem;
+    max-width: 24rem;
+    display: inline-flex;
+  }
+}

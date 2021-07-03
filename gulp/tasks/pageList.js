@@ -24,7 +24,6 @@ module.exports = (gulp, plugins) => {
 	                var content = fs.readFileSync(file, 'utf8');
 
 	                var fileName = content.match(/<title>(.*?)<\/title>/g).toString().replace(/<\/?\w+((\s+\w+(\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)\/?>/g, '');
-					console.log(fileName)
 
 	                if(fileHref.indexOf('index.html') === -1)
 	                    ol += `<li><a href="${fileHref}" target="_blank">${fileName}</a></li>`
