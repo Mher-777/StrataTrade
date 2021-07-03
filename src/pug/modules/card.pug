@@ -13,11 +13,11 @@
 				+e.code 533
 	+e.FORM(action="").form.box
 		+e.row.flex
-			+input('', '', 'card')(data-inputmask="'mask': '9999 9999 9999 9999', 'placeholder': ''" required)
+			+input('', '', 'card')(type="text" inputmode="numeric" data-inputmask="'mask': '9999 9999 9999 9999', 'placeholder': ''" required)
 			+e.field.input__._width
 				+e.parent
-					+e.INPUT.field(name="day" placeholder="" type="text" autocomplete="off" data-inputmask="'mask': '99/99', 'placeholder': ''" required)
+					+e.INPUT.field(type="text" inputmode="numeric" name="day" placeholder="" autocomplete="off" data-inputmask="'mask': '99/99', 'placeholder': ''" required)
 			+e.field.input__._width
 				+e.parent
-					+e.INPUT.field(name="ccv" placeholder="" type="text" autocomplete="off" data-inputmask="'mask': '999', 'placeholder': ''" required)
+					+e.INPUT.field(type="text" inputmode="numeric" name="code" placeholder="" autocomplete="off" data-inputmask="'mask': '999', 'placeholder': ''" required)
 		+btn()(class="_blue _tiny _left" type="submit") Подключить
