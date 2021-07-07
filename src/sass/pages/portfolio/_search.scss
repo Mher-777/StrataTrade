@@ -1,0 +1,30 @@
+.search {
+  margin-top: 2rem;
+  &__control {
+    width: 7.6rem;
+    padding-right: .6rem;
+  }
+  &__field {
+    max-width: 25.5rem;
+    margin-bottom: 0;
+    span.error {
+      display: none;
+    }
+    .input__field {
+      height: 3rem;
+      @include placeholder {
+        font-weight: 500;
+      }
+    }
+    .input__button {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+  &__result {
+    margin-top: 2rem;
+    &-text {
+      font-size: 1.2rem;
+    }
+  }
+}

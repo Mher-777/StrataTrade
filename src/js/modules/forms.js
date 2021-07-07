@@ -102,6 +102,9 @@ var forms = {
 				messages: {
 					card: {
 						minlength: 'Должно быть не менее 16 символов.'
+					},
+					search: {
+						required: null
 					}
 				}
 

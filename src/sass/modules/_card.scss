@@ -25,7 +25,7 @@
   }
   &__logo {
     max-width: 4.5rem;
-    margin-right: -1.5rem;
+    margin-right: -1.6rem;
     margin-top: -1rem;
   }
   &__number {
@@ -78,7 +78,7 @@
     padding: 1.2rem;
     border-radius: .8rem;
     width: 17.8rem;
-    filter: drop-shadow(0px 4px 24px rgba(179, 100, 56, 0.24));
+    filter: drop-shadow(0px .4rem 2.4rem rgba(179, 100, 56, 0.24));
     font-weight: 500;
     height: 100%;
     .card {
@@ -133,7 +133,7 @@
 
 .add-card {
   &__form {
-    margin-top: 1.5rem;
+    margin-top: 1.6rem;
   }
   &__row {
     justify-content: space-between;

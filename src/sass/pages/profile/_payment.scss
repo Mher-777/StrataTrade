@@ -3,7 +3,7 @@
     margin: 0 -1.2rem;
     padding: 0 1.2rem 1.6rem;
     border-bottom: 1px solid #EEE;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.6rem;
   }
   &__price {
     margin-right: .5rem;
@@ -11,13 +11,6 @@
   &__slider {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    .swiper-slide {
-      height: auto;
-      width: auto;
-    }
-    &.swiper-container {
-      overflow: visible;
-    }
   }
   &__history {
     box-shadow: 0 1rem 4rem rgba(242, 242, 242, 0.5);

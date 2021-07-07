@@ -1,13 +1,6 @@
 .menu {
   margin-top: 1rem;
   margin-bottom: .5rem;
-  &.swiper-container {
-    overflow: visible;
-  }
-  .swiper-slide {
-    height: auto;
-    width: auto;
-  }
   &__link {
     color: var(--color-gray);
     letter-spacing: -0.006em;

@@ -1,0 +1,52 @@
+.card-strategy {
+  background-color: var(--color-white);
+  box-shadow: 0 1rem 4rem rgba(242, 242, 242, 0.5);
+  border-radius: 1.6rem;
+  overflow: hidden;
+  margin-top: 1.6rem;
+  display: block;
+  &__top {
+    color: var(--color-white);
+    position: relative;
+    display: block;
+  }
+  &__content {
+    padding: 1.6rem 1.6rem 1rem;
+    min-height: 11.2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+  }
+  &__title {
+    font-size: 2rem;
+    line-height: 1.3em;
+    padding-bottom: .5rem;
+    display: block;
+  }
+  &__subscriber {
+    margin-top: auto;
+    display: block;
+  }
+  &__bottom {
+    padding: 1rem 1.6rem;
+  }
+  &__text {
+    display: block;
+    font-size: 1.2rem;
+    color: #455A64;
+    font-weight: 500;
+    &_small {
+      font-size: 1.1rem;
+    }
+  }
+  &__profit {
+    margin-top: .8rem;
+  }
+}
+.list-strategy {
+  margin-top: 2rem;
+  &__btn {
+    margin-top: 2rem;
+  }
+}

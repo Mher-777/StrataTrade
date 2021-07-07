@@ -1,0 +1,18 @@
+.dropdown {
+  margin-top: 2rem;
+  display: none;
+  &__close {
+    stroke: #11142D;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  &__title {
+    max-width: 20rem;
+  }
+  &__top {
+    margin-bottom: 1.2rem;
+  }
+  &__bottom {
+    margin-top: 1.4rem;
+  }
+}

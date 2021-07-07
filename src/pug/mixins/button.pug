@@ -11,3 +11,7 @@ mixin btn(link = false, submit = false)
             +e.SPAN.text
                 if block
                     block
+
+mixin btn-refresh
+    +b.BUTTON.btn-refresh.flex._vertical._center(type="reset")&attributes(attributes)
+        +icon('refresh')

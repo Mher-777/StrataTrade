@@ -15,8 +15,8 @@ block vars
 					+e.icon
 						+icon('strategy')
 					+e.SPAN.text Стратегии
-			+e.item
-				+e.A(href="#").link
+			+e.item(class=`${current === 'portfolio' ? 'is-active' : ''}`)
+				+e.A(href="portfolio-v-1.html").link
 					+e.icon
 						+icon('briefcase')
 					+e.SPAN.text Портфель

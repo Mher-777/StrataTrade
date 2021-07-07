@@ -11,8 +11,6 @@ module.exports = function(gulp, plugins) {
 
     return async () => {
 
-    	console.log(`name is ${projectName}`)
-
 	    var conn = ftp.create( {
 	        host:     ftpData.host,
 	        user:     ftpData.user,
