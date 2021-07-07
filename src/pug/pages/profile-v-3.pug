@@ -1,0 +1,72 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Настройки профиля (История сессий)';
+	- current = 'profile'
+block content
+	+b.SECTION.profile
+		.container
+			+e.menu.menu__.swiper-container.js-slider(data-settings=`{"slidesPerView": "auto", "freeMode": true }`)
+				.swiper-wrapper
+					.swiper-slide
+						+e.A(href="profile-v-1.html").link Личные данные
+					.swiper-slide
+						+e.A(href="profile-v-2.html").link 2FA
+					.swiper-slide
+						+e.A(href="profile-v-3.html").link.is-active История сессий
+					.swiper-slide
+						+e.A(href="profile-v-4.html").link Подписки
+					.swiper-slide
+						+e.A(href="profile-v-5.html").link API
+					.swiper-slide
+						+e.A(href="profile-v-6.html").link Пароль
+					.swiper-slide
+						+e.A(href="profile-v-7.html").link Платежи
+			+e.history.history__
+				+b.top-content__
+					+b.H3 Активная сессия
+				+b.session.box
+					+e.top.flex._justify
+						+e.day 2020-11-26 14:32:22
+						+e.ip
+							img(src="/img/flag-1.jpg" alt="")
+							span 123.45.678.987
+					+e.bottom.flex._justify
+						+e.platform Windows 10, Chrome 84
+						+e.A(href="#").link.color-red Завершить
+				+btn('#')(class="_border _small") Выйти на всех устройствах
+				+b.top-content__
+					+b.H3 История сессий
+				+e.wrap
+					+b.session._border.box
+						+e.top.flex._justify
+							+e.day 2020-11-26 14:32:22
+							+e.ip
+								img(src="/img/flag-1.jpg" alt="")
+								span 123.45.678.987
+						+e.bottom.flex._justify
+							+e.platform Windows 10, Chrome 84
+					+b.session._border.box
+						+e.top.flex._justify
+							+e.day 114.45.22.147
+							+e.ip
+								img(src="/img/flag-1.jpg" alt="")
+								span 114.45.22.147
+						+e.bottom.flex._justify
+							+e.platform iPhone X
+					+b.session._border.box
+						+e.top.flex._justify
+							+e.day 149.75.255.111
+							+e.ip
+								img(src="/img/flag-1.jpg" alt="")
+								span 149.75.255.111
+						+e.bottom.flex._justify
+							+e.platform Windows 8.1, Chrome 84
+					+b.session._border.box
+						+e.top.flex._justify
+							+e.day 149.75.255.111
+							+e.ip
+								img(src="/img/flag-1.jpg" alt="")
+								span 123.45.678.987
+						+e.bottom.flex._justify
+							+e.platform MacOS Catalina

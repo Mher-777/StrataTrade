@@ -1,0 +1,59 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Настройки профиля (Управление подписками)';
+	- current = 'profile'
+block content
+	+b.SECTION.profile
+		.container
+			+e.menu.menu__.swiper-container.js-slider(data-settings=`{"slidesPerView": "auto", "freeMode": true, "initialSlide": 2 }`)
+				.swiper-wrapper
+					.swiper-slide
+						+e.A(href="profile-v-1.html").link Личные данные
+					.swiper-slide
+						+e.A(href="profile-v-2.html").link 2FA
+					.swiper-slide
+						+e.A(href="profile-v-3.html").link История сессий
+					.swiper-slide
+						+e.A(href="profile-v-4.html").link.is-active Подписки
+					.swiper-slide
+						+e.A(href="profile-v-5.html").link API
+					.swiper-slide
+						+e.A(href="profile-v-6.html").link Пароль
+					.swiper-slide
+						+e.A(href="profile-v-7.html").link Платежи
+			+e.subscription.subscription__
+				+b.top-content__
+					+b.H3 Управление подписками
+				+e.wrap
+					+e.item.box
+						+e.cell._left
+							+e.name Elon Mask Strategy
+							+e.A(href="#close-subscription").link.color-red.js-modal Отменить подписку
+						+e.cell._right
+							+e.day До 10.06.2021 , 13:54 PM
+							+btn()(type="button" class="_tiny _blue _disabled js-modal" data-modal="#pause-copying") Приостановить копирование
+					+e.item.box
+						+e.cell._left
+							+e.name Elon Mask Strategy
+							+e.A(href="#close-subscription").link.color-red.js-modal Отменить подписку
+						+e.cell._right
+							+e.day До 10.06.2021 , 13:54 PM
+							+btn()(type="button" class="_tiny _blue") Возобновить копирование
+					+e.item.box
+						+e.cell._left
+							+e.name Elon Mask Strategy
+							+e.A(href="#").link.color-red Возоб. подписку
+						+e.cell._right
+							+e.day До 10.06.2021 , 13:54 PM
+							+btn()(type="button" class="_tiny _blue") Возобновить копирование
+					+e.item.box
+						+e.cell._left
+							+e.name Elon Mask Strategy
+							+e.A(href="#close-subscription").link.color-red.js-modal Отменить подписку
+						+e.cell._right
+							+e.day До 10.06.2021 , 13:54 PM
+							+btn()(type="button" class="_tiny _blue") Возобновить копирование
+block popup
+	include ../modules/popup/close-subscription
+	include ../modules/popup/pause-copying

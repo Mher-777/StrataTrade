@@ -1,0 +1,38 @@
+.session {
+  color: #1C1D21;
+  display: block;
+  &__top {
+    margin-bottom: 1rem;
+    flex-wrap: nowrap;
+  }
+  &__day {
+    padding-right: 1rem;
+  }
+  &__ip {
+    display: inline-flex;
+    align-items: center;
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 15rem;
+      display: block;
+    }
+    img {
+      margin-right: .5rem;
+      margin-top: .3rem;
+      max-width: 1.6rem;
+    }
+  }
+  &__link {
+    font-size: 1.2rem;
+  }
+  &__platform {
+    color: rgba(24, 24, 25, 0.7);
+  }
+  &_border {
+    border-radius: 0;
+    border-bottom: 1px solid #EEEEEE;
+    box-shadow: none;
+  }
+}

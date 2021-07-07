@@ -61,6 +61,10 @@ button {
 	vertical-align: baseline;
 	line-height: normal;
 }
+ul,
+li {
+	list-style: none;
+}
 main {
 	display: block;
 }
@@ -147,7 +151,10 @@ svg {
 	vertical-align: top;
 	max-width: 100%;
 }
-
+input:disabled,
+textarea:disabled {
+	opacity: 1;
+}
 .object-fit {
 	position: absolute;
 	left: 0;
@@ -161,17 +168,19 @@ svg {
 	overflow-y: auto;
 	/* width */
 	&::-webkit-scrollbar {
-		width: 3px;
+		width: .3rem;
+		height: .3rem;
+		display: none;
 	}
 
 	/* Track */
 	&::-webkit-scrollbar-track {
-		background: rgba(#c4c4c4, 0.4);
+
 	}
 
 	/* Handle */
 	&::-webkit-scrollbar-thumb {
-		background: gray;
+
 	}
 
 	/* Handle on hover */

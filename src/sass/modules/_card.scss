@@ -21,7 +21,7 @@
     margin-bottom: .5rem;
   }
   &__top {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
   &__logo {
     max-width: 4.5rem;
@@ -29,12 +29,105 @@
     margin-top: -1rem;
   }
   &__number {
-    font-size: 2rem;
-    white-space: nowrap;
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
+    input {
+      border: none;
+      background-color: transparent;
+      width: 100%;
+      display: block;
+      font-size: 2rem;
+      @include placeholder {
+        font-size: 2rem;
+        color: var(--color-white);
+      }
+    }
+  }
+  &__code {
+    width: 50%;
+    text-align: right;
+    input {
+      border: none;
+      background-color: transparent;
+      width: 100%;
+      display: inline-block;
+      font-size: 2rem;
+      max-width: 3.8rem;
+      @include placeholder {
+        font-size: 2rem;
+        color: var(--color-white);
+      }
+    }
   }
   &__day {
-    color: rgba(#fff, .9);
+
+    width: 50%;
+    input {
+      border: none;
+      background-color: transparent;
+      width: 100%;
+      display: block;
+      font-size: 2rem;
+      color: rgba(#fff, .9);
+      @include placeholder {
+        font-size: 2rem;
+        color: rgba(255,255,255,.9);
+      }
+    }
+  }
+  &_small {
+    padding: 1.2rem;
+    border-radius: .8rem;
+    width: 17.8rem;
+    filter: drop-shadow(0px 4px 24px rgba(179, 100, 56, 0.24));
+    font-weight: 500;
+    height: 100%;
+    .card {
+      &__wrap {
+        min-height: 7.5rem;
+        height: 100%;
+      }
+      &__logo {
+        max-width: 4.2rem;
+        margin: 0;
+      }
+      &__bottom {
+        font-size: 1rem;
+        line-height: 1.4em;
+      }
+      &__name {
+        margin-bottom: .4rem;
+        max-width: 8.2rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      &__top {
+        margin-bottom: 1rem;
+      }
+      &__day {
+        width: auto;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      &__text {
+        color: var(--color-white);
+        font-size: 1.2rem;
+      }
+      &__cell {
+        flex: 1 1 auto;
+        &_left {
+          max-width: 8.5rem;
+        }
+      }
+      &__state {
+        margin-left: auto;
+      }
+    }
+  }
+  &_blue {
+    background: linear-gradient(90deg, #3855B3 0%, #10277C 100%);
+  }
+  &_orange {
+    background: linear-gradient(90deg, #ED6700 0%, #FFA000 100%);
   }
 }
 
@@ -42,14 +135,27 @@
   &__form {
     margin-top: 1.5rem;
   }
-  &__field {
-    width: calc(100% - 1.2rem);
-    margin-left: 1.2rem;
-    &.input_width {
-      width: calc(50% - 1.2rem);
-    }
-  }
   &__row {
-    margin-left: -1.2rem;
+    justify-content: space-between;
+  }
+}
+
+.card-add {
+  min-width: 4rem;
+  background: rgba(165, 60, 254, 0.04);
+  border: 1px dashed rgba(165, 60, 254, 0.16);
+  border-radius: .8rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10rem;
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: #A640FD;
+  }
+  &_width {
+    width: 17.8rem;
   }
 }

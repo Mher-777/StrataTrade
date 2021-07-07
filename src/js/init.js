@@ -6,6 +6,7 @@ import { button } from "./modules/button";
 import { forms } from "./modules/forms";
 import { card } from "./modules/card";
 import { tooltip } from "./modules/tooltip";
+import { select } from "./modules/select";
 
 var App = () => {};
 
@@ -18,6 +19,7 @@ App.prototype.init = () => {
 	forms.init();
 	card.init();
 	tooltip.init();
+	select.init();
 	config.log('app init')
 	
 };

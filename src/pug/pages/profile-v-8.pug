@@ -1,0 +1,110 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Настройки профиля (Платежные данные, когде нет карты)';
+	- current = 'profile'
+block content
+	+b.SECTION.profile
+		.container
+			+e.menu.menu__.swiper-container.js-slider(data-settings=`{"slidesPerView": "auto", "freeMode": true, "initialSlide": 4 }`)
+				.swiper-wrapper
+					.swiper-slide
+						+e.A(href="profile-v-1.html").link Личные данные
+					.swiper-slide
+						+e.A(href="profile-v-2.html").link 2FA
+					.swiper-slide
+						+e.A(href="profile-v-3.html").link История сессий
+					.swiper-slide
+						+e.A(href="profile-v-4.html").link Подписки
+					.swiper-slide
+						+e.A(href="profile-v-5.html").link API
+					.swiper-slide
+						+e.A(href="profile-v-6.html").link Пароль
+					.swiper-slide
+						+e.A(href="profile-v-7.html").link.is-active Платежи
+			+e.payment.payment__
+				+e.info
+					+b.top-content__
+						+b.H3 Платежные данные
+					+e.holder.box
+						+e.top.flex._justify._vertical
+							+e.price.price $2,580.49
+							+e.number **** 4242
+						+e.params.params__
+							+e.item
+								+e.cell._left
+									+e.subtitle Статус
+								+e.cell._right
+									+e.text.status Неактивно
+							+e.item
+								+e.cell._left
+									+e.subtitle Тип карты
+								+e.cell._right
+									+e.text
+										+e.IMG(src="app/img/master-card.svg" alt="").icon
+										| MasterCard
+							+e.item
+								+e.cell._left
+									+e.subtitle Валюта
+								+e.cell._right
+									+e.text
+										+e.IMG(src="app/img/flag-usa.svg" alt="").icon
+										| USD
+				+e.cards
+					+b.top-content__
+						+b.H3 Мои карты
+					+e.slider.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								+b.A(href="dashboard-card.html").card-add._width
+									+icon('add')
+				+b.top-content__
+					+b.H3 История платежей
+				+e.history
+					+b.payment-history._border.box
+						+e.cell._left
+							+e.name Elon Mask Strategy
+							+e.day 19.05.2021 , 16:24 PM
+						+e.cell._right
+							+e.number **** 4242
+							+e.price.color-red -$10.00 USD
+					+b.payment-history._border.box
+						+e.cell._left
+							+e.name HODL Strategy
+							+e.day 14.05.2021 , 09:22 PM
+						+e.cell._right
+							+e.number **** 4242
+							+e.price.color-red -$10.00 USD
+					+b.payment-history._border.box
+						+e.cell._left
+							+e.name To the m00n
+							+e.day 01.05.2021 , 12:32 PM
+						+e.cell._right
+							+e.number **** 4242
+							+e.price.color-red -$10.00 USD
+					+b.payment-history._border.box
+						+e.cell._left
+							+e.name Bullseye-Trading
+							+e.day 27.04.2021 , 20:51 PM
+						+e.cell._right
+							+e.number **** 4242
+							+e.price.color-green +$10.00 USD
+				+btn('#')(class="_border _small") Показать еще
+block popup
+	+b.modal.mfp-hide#edit-card
+		+e.content
+			+e.H4.title.h4 Данные карты
+			+e.P.text Можно редактировать карту
+		+e.FORM(action="")
+			+e.row.flex._justify
+				+input('', '', 'card')(type="text" inputmode="numeric" value="4433 3453 2345 4242" data-inputmask="'mask': '9999 9999 9999 9999', 'placeholder': ''" required)
+				+e.field.input__._width
+					+e.parent
+						+e.INPUT.field(type="text" inputmode="numeric" value="01/24" name="day" placeholder="" autocomplete="off" data-inputmask="'mask': '99/99', 'placeholder': ''" required)
+				+e.field.input__._width
+					+e.parent
+						+e.INPUT.field(type="text" inputmode="numeric" value="533" name="code" placeholder="" autocomplete="off" data-inputmask="'mask': '999', 'placeholder': ''" required)
+			+switcher('state', 'Основная', 'Дополнительная')
+			+e.bottom.flex._right
+				+btn()(class="_blue _tiny _border js-close-modal") Удалить
+				+btn()(type="submit" class="_blue _tiny") Сохранить

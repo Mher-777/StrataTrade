@@ -1,4 +1,5 @@
 import validate from "jquery-validation";
+import "../vendor/jquery-pincode-autotab.min"
 import inputMask from "inputmask";
 import { config } from "../config";
 
@@ -48,7 +49,10 @@ var forms = {
 
 			$form.validate({
 				errorPlacement: function (error, element) {
-					element.parent().after(error);
+					if(!element.hasClass('checkbox__input')) {
+						element.parent().after(error);
+					}
+
 				},
 				highlight: (element, errorClass, validClass) => {
 
@@ -65,7 +69,7 @@ var forms = {
 				},
 				submitHandler: (form) => {
 					var data = $(form).serialize();
-
+					alert(data)
 					$.ajax({
 						type: "POST",
 						url: $(form).attr("action"),
@@ -93,7 +97,7 @@ var forms = {
 					},
 					code: {
 						minlength: 3,
-					}
+					},
 				},
 				messages: {
 					card: {
@@ -123,8 +127,18 @@ var forms = {
 			} else {
 				$(this).closest('.input').find('input').attr('type', 'text')
 			}
-
 		})
+		$('.js-checkbox input[type="checkbox"]').on('change', function () {
+			if($(this).is(":checked")) {
+				$(this).closest('.modal').find('button[type="submit"]').addClass('js-modal')
+			} else {
+				$(this).closest('.modal').find('button[type="submit"]').removeClass('js-modal')
+			}c
+		})
+		$(".code input").jqueryPincodeAutotab({
+			prevElement: null,
+			nextElement: null,
+		});
 	},
 
 	init: () => {

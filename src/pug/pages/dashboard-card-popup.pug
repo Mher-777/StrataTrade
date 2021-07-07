@@ -23,10 +23,10 @@ block content
 							+e.SPAN.text Банковская карта
 							+e.logo
 								+e.IMG(src="app/img/master-card.svg" alt="")
-						+e.number 4433 3453 2345 4242
+						+e.number ____ ____ ____ ____
 						+e.bottom.flex._justify
-							+e.day 01/24
-							+e.code 533
+							+e.day __/__
+							+e.code ___
 				+e.FORM(action="").form.box
 					+e.row.flex
 						+input('', '', 'card')(inputmode="numeric" data-inputmask="'mask': '9999 9999 9999 9999', 'placeholder': ''" required)
@@ -36,13 +36,6 @@ block content
 						+e.field.input__._width
 							+e.parent
 								+e.INPUT.field(inputmode="numeric" name="code" placeholder="" type="text" autocomplete="off" data-inputmask="'mask': '999', 'placeholder': ''" required)
-					+btn()(class="_blue _tiny js-modal" data-modal="#succes-card" type="submit") Подключить
+					+btn()(class="_blue _tiny js-modal" data-modal="#success-card" type="submit") Подключить
 block popup
-	+b.modal.mfp-hide.mfp-hide-close#succes-card
-		+e.icon.icon._small
-			+icon('card')
-		+e.content.css-text-center
-			+e.H4.title.h4 Карта добавлена
-			+e.P.text Вы успешно добавили новую карту
-		+e.bottom.flex._center
-			+btn()(class="_blue _tiny js-close-modal") Окей
+	include ../modules/popup/success-card

@@ -13,11 +13,10 @@ var sliders = {
 		let data = $(selector).attr("data-settings")
 			? $(selector).data("settings")
 			: {};
-
 		let clone = JSON.parse(JSON.stringify(sliders.settings));
 
 		let current = Object.assign(clone, data);
-		new Swiper(sliders.selector, current)
+		new Swiper($(selector)[0], current)
 	},
 
 	run: (selector) => {

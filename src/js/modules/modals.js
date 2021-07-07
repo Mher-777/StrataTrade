@@ -10,8 +10,6 @@ var modals = {
 
 		e.preventDefault();
 
-		config.log('close modal');
-
 		$.magnificPopup.close();	
 
 	},
@@ -22,7 +20,7 @@ var modals = {
 
 		if(e) e.preventDefault();
 
-		$.magnificPopup.close();		
+		$.magnificPopup.close();
 
 		modal = modal || (e != false ? ($(e.currentTarget).attr('href') ? $(e.currentTarget).attr('href') : $(e.currentTarget).data('modal')) : e);
 
@@ -35,37 +33,43 @@ var modals = {
 
 		if(e && $(e.currentTarget).attr('data-input')){
 			$(modal + ' input[name="form"]').val($(e.currentTarget).data('input'))
-		}	
+		}
+		if($(e.currentTarget).closest('.mfp-content').length) {
+			$.magnificPopup.close();
+			setTimeout(function () {
+				openPopup()
+			}, 300)
+			return false
+		}
 
-		config.log('modal open')
-
-		$.magnificPopup.open({
-			tClose: 'Закрыть',
-			removalDelay: 600,
-			fixedContentPos: true,
-			fixedBgPos: true,
-			overflowY: 'hidden',			
-			closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-close" viewBox="0 0 24 24"><use xlink:href="/app/icons/sprite.svg#close"></use></svg></div>',
-			mainClass: 'mfp-fade',
-			items: {
-				src: modal,
-				type: 'inline'
-			},
-			callbacks: {
-				beforeOpen: () => {
+		function openPopup() {
+			$.magnificPopup.open({
+				tClose: 'Закрыть',
+				removalDelay: 300,
+				fixedContentPos: true,
+				fixedBgPos: true,
+				closeMarkup: '<div class="modal__close close js-close-modal"><svg class="icon-close" viewBox="0 0 24 24"><use xlink:href="/app/icons/sprite.svg#close"></use></svg></div>',
+				mainClass: 'mfp-fade',
+				items: {
+					src: modal,
+					type: 'inline'
 				},
+				callbacks: {
+					beforeOpen: () => {
+					},
 
-				beforeClose: () => {
+					beforeClose: () => {
+					}
 				}
-			}
-		}, 0);
-
+			}, 0);
+		}
+		openPopup()
 	},
 
 
 	init: (e) => {
 
-		
+
 		$(document).on('click', '.js-close-modal', modals.close);
 
 		$(document).on('click', '.js-modal', modals.open);

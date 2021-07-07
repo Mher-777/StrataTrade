@@ -1,0 +1,21 @@
++b.modal.mfp-hide.mfp-hide-close#pause-copying
+	+e.icon.icon._small._red
+		+icon('close')
+	+e.FORM(action="")
+		+e.content.css-text-center
+			+e.H4.title.h4 Приостановка копирования
+			+e.P.text <span class="color-red">Внимание!</span> Все открытые в рамках данной стратегии позиции будут немедленно закрыты по текущей рыночной цене, а активные ордера будут удалены.
+			+e.P.text.color-bg Вы действительно хотите приостановить <br> копирование сигналов трейдера по этой подписке?
+			+checkbox('Я понимаю риск и хочу приостановить копирование трейдов.', 'subscription', false, true).js-checkbox
+		+e.bottom.flex._center
+			+btn()(class="_blue _tiny _border js-close-modal") Отменить
+			+btn()(class="_blue _tiny" data-modal="#pause-copying-success" type="submit") Приостановить
+
++b.modal.mfp-hide.mfp-hide-close#pause-copying-success
+	+e.icon.icon._small._red
+		+icon('close')
+	+e.content.css-text-center
+		+e.H4.title.h4 Копирование приостановлено
+		+e.P.text Вы можете возобновить копирование сигналов по <br> этой стратегии в любой момент.
+	+e.bottom.flex._center
+		+btn()(class="_blue _tiny js-close-modal") Окей

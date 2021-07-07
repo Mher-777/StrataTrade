@@ -21,8 +21,9 @@
     }
   }
   &_red {
-    background-color: rgba(255, 68, 68, .1);
-    fill: #F76659;
+    background: rgba(255, 68, 68, 0.1);
+    stroke: #FF3F3F;
+    stroke-width: .2rem;
   }
 }
 .info {
@@ -30,4 +31,11 @@
   height: 1.2rem;
   fill: var(--color-placeholder);
   cursor: pointer;
+}
+.icon-qrCode {
+  width: 20rem;
+  height: 20rem;
+  fill: #474747;
+  margin: 0 auto;
+  display: block;
 }

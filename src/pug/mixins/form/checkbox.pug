@@ -1,6 +1,6 @@
 mixin checkbox(value, name, checked = false, required = true)
 	+e.LABEL.checkbox.checkbox__()&attributes(attributes)
-		+e.INPUT.input(checked=checked data-rule-required=required name=name type="checkbox" )
+		+e.INPUT.input(checked=checked data-rule-required=`${required}` name=name type="checkbox" )
 		+e.SPAN.text.middle 
 			+e.arrow
 				+icon('checked')

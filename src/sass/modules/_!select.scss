@@ -1,0 +1,98 @@
+.select2-container .select2-selection--single {
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  font-size: 1.2rem;
+  border-radius: .5rem;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: var(--color-placeholder);
+  width: 100%;
+  padding: .5rem 1.2rem;
+
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+  display: none;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  width: .8rem;
+  height: .4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.2rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 0.5L5 4.5L9 0.5' stroke='%236E7C87'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:  center;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow {
+  transform: rotate(180deg);
+}
+.select2-container {
+  &.select2-container--focus {
+    //.select2-selection--single {
+    //  border-color: var(--color-green);
+    //}
+    //.select2-selection__rendered {
+    //  color: var(--color-green);
+    //}
+  }
+}
+.select2-dropdown {
+  border-color: #E5E9FF;
+  border-radius: .6rem;
+  overflow: hidden;
+}
+.select2-results__option {
+  font-size: 1.2rem;
+  color: var(--color-main);
+}
+.select2-container--classic .select2-results>.select2-results__options, .select2-container--default .select2-results>.select2-results__options {
+  max-height: 15rem;
+  &::-webkit-scrollbar {
+    width: .2rem;
+    height: .2rem;
+    margin-right: .4rem;
+  }
+  &::-webkit-scrollbar-track {
+
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #CFD8DC;
+    border-radius: .2rem;
+
+  }
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: transparent;
+  &::after {
+    content: '';
+    width: .4rem;
+    height: .4rem;
+    border-radius: 50%;
+    background-color: #DD2C00;
+    display: inline-block;
+    margin-left: .5rem;
+    vertical-align: middle;
+  }
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: transparent;
+  color: var(--color-main);
+}
+
+.select__label {
+  display: flex;
+  margin-bottom: 1rem;
+  letter-spacing: -.011em;
+  font-weight: 500;
+}
+.select {
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}

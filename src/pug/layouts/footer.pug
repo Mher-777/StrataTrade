@@ -1,8 +1,12 @@
+block vars
+	-
+		current = 'dashboard'
+
 +b.FOOTER.footer
 	.container
 		+b.NAV.nav
-			+e.item.is-active
-				+e.A(href="#").link
+			+e.item(class=`${current === 'dashboard' ? 'is-active' : ''}`)
+				+e.A(href="main.html").link
 					+e.icon
 						+icon('dashboard')
 					+e.SPAN.text Дашборд
@@ -16,8 +20,8 @@
 					+e.icon
 						+icon('briefcase')
 					+e.SPAN.text Портфель
-			+e.item
-				+e.A(href="#").link
+			+e.item(class=`${current === 'profile' ? 'is-active' : ''}`)
+				+e.A(href="profile-v-1.html").link
 					+e.icon
 						+e.user
 							+b.IMG(src="/img/avatar.png" alt="Александр").object-fit

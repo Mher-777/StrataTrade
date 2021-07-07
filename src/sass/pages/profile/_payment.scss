@@ -1,0 +1,65 @@
+.payment {
+  &__top {
+    margin: 0 -1.2rem;
+    padding: 0 1.2rem 1.6rem;
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 1.5rem;
+  }
+  &__price {
+    margin-right: .5rem;
+  }
+  &__slider {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    .swiper-slide {
+      height: auto;
+      width: auto;
+    }
+    &.swiper-container {
+      overflow: visible;
+    }
+  }
+  &__history {
+    box-shadow: 0 1rem 4rem rgba(242, 242, 242, 0.5);
+    border-radius: 1.2rem;
+    margin-bottom: 2.4rem;
+  }
+}
+.payment-history {
+  font-weight: 500;
+  line-height: 1.4em;
+  display: flex;
+  justify-content: space-between;
+  &_border {
+    border-radius: 0;
+    border-bottom: 1px solid #EEE;
+    box-shadow: none;
+  }
+  &__name {
+    color: #2F2F30;
+    max-width: 19rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  &__number {
+    color: #2F2F30;
+  }
+  &__day {
+    color: rgba(24, 24, 25, 0.7);
+    margin-top: .8rem;
+  }
+  &__price {
+    margin-top: .8rem;
+    white-space: nowrap;
+  }
+  &__cell {
+    flex: 0 1 auto;
+    &_left {
+      max-width: 20rem;
+    }
+    &_right {
+      text-align: right;
+    }
+  }
+}

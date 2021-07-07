@@ -38,10 +38,19 @@
     background-color: var(--color-main);
   }
   &_blue {
+    font-weight: 400;
     .btn__back {
       display: none;
     }
     background-color: var(--color-blue);
+    &.btn_disabled {
+      opacity: 0.75;
+    }
+    &.btn_border {
+      background-color: transparent;
+      color: var(--color-blue);
+      border-color: var(--color-blue);
+    }
   }
   &_primary {
     .btn__back {
@@ -73,5 +82,16 @@
     display: flex;
     margin-left: auto;
     max-width: fit-content;
+  }
+  &_border {
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    .btn__back {
+      display: none;
+    }
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+    }
   }
 }

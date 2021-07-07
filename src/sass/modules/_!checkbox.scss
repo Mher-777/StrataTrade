@@ -29,7 +29,7 @@
     height: 2rem;
     flex-shrink: 0;
     border: 1px solid #B0BABF;
-    background-color: #F6F8F9;
+    background-color: var(--color-white);
     border-radius: .4rem;
     display: inline-flex;
     align-items: center;
@@ -42,6 +42,14 @@
       fill: var(--color-white);
       width: 1.2rem;
       height: 1.2rem;
+    }
+  }
+  &.error {
+    .checkbox__text {
+      color: var(--color-red);
+    }
+    .checkbox__arrow {
+      border-color: var(--color-red);
     }
   }
 }

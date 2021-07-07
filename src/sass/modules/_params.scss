@@ -1,0 +1,29 @@
+.params {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__cell {
+    &_left {
+      padding-right: 1rem;
+      color: var(--color-placeholder);
+    }
+    &_right {
+      text-align: right;
+      color: rgba(24, 24, 25, 0.9);
+    }
+  }
+  &__text {
+    flex-wrap: nowrap;
+  }
+  &__icon {
+    max-width: 1.8rem;
+    margin-right: .5rem;
+    vertical-align: bottom;
+  }
+}

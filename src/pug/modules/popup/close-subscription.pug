@@ -1,0 +1,20 @@
++b.modal.mfp-hide.mfp-hide-close#close-subscription
+	+e.icon.icon._small._red
+		+icon('close')
+	+e.FORM(action="")
+		+e.content.css-text-center
+			+e.H4.title.h4 Отмена подписки
+			+e.P.text <span class="color-red">Внимание!</span> Ваша подписка оплачена до 23.06.2021. Вы продолжите копировать трейды в рамках этой стратегии до 23.06.2021 17:57 UTC+3. После этого все открытые на тот момент позиции будут закрыты по рыночной цене, а активные ордера удалены.
+			+checkbox('Я понимаю риск и хочу отписаться от подписки.', 'subscription', false, true).js-checkbox
+		+e.bottom.flex._center
+			+btn()(class="_blue _tiny _border js-close-modal") Отменить
+			+btn()(class="_blue _tiny" data-modal="#close-subscription-success" type="submit") Отписаться
+
++b.modal.mfp-hide.mfp-hide-close#close-subscription-success
+	+e.icon.icon._small._red
+		+icon('close')
+	+e.content.css-text-center
+		+e.H4.title.h4 Подписка отменена
+		+e.P.text Вы можете остановить копирование <br> сигналов в любой момент.
+	+e.bottom.flex._center
+		+btn()(class="_blue _tiny js-close-modal") Окей

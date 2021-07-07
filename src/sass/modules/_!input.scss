@@ -53,7 +53,7 @@
     }
   }
   &_width {
-    width: 50%;
+    width: calc(50% - .6rem);
   }
   &__button {
     position: absolute;

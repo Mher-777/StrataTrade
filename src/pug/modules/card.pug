@@ -7,10 +7,13 @@
 				+e.SPAN.text Банковская карта
 				+e.logo
 					+e.IMG(src="app/img/master-card.svg" alt="")
-			+e.number 4433 3453 2345 4242
+			+e.number
+				+e.INPUT(data-inputmask="'mask': '9999 9999 9999 9999', 'placeholder': '_'" placeholder="____ ____ ____ ____" disabled)
 			+e.bottom.flex._justify
-				+e.day 01/24
-				+e.code 533
+				+e.day
+					+e.INPUT.field(type="text" placeholder="__/__" data-inputmask="'mask': '99/99', 'placeholder': '_'" disabled)
+				+e.code
+					+e.INPUT.field(type="text" placeholder="___" data-inputmask="'mask': '999', 'placeholder': '_'" disabled)
 	+e.FORM(action="").form.box
 		+e.row.flex
 			+input('', '', 'card')(type="text" inputmode="numeric" data-inputmask="'mask': '9999 9999 9999 9999', 'placeholder': ''" required)

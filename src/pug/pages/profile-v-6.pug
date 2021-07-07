@@ -1,0 +1,53 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Настройки профиля (Пароль)';
+	- current = 'profile'
+block content
+	+b.SECTION.profile
+		.container
+			+e.menu.menu__.swiper-container.js-slider(data-settings=`{"slidesPerView": "auto", "freeMode": true, "initialSlide": 3 }`)
+				.swiper-wrapper
+					.swiper-slide
+						+e.A(href="profile-v-1.html").link Личные данные
+					.swiper-slide
+						+e.A(href="profile-v-2.html").link 2FA
+					.swiper-slide
+						+e.A(href="profile-v-3.html").link История сессий
+					.swiper-slide
+						+e.A(href="profile-v-4.html").link Подписки
+					.swiper-slide
+						+e.A(href="profile-v-5.html").link API
+					.swiper-slide
+						+e.A(href="profile-v-6.html").link.is-active Пароль
+					.swiper-slide
+						+e.A(href="profile-v-7.html").link Платежи
+			+b.top-content__
+				+b.H3 Пароль
+				+b.P В этом разделе Вы можете изменить пароль  от аккаунта
+			+e.FORM(action="")
+				+e.holder.box
+					+e.H5.title.h5 Основная информация
+					+input('Текущий пароль', 'Имя', 'name')(required)
+					+input('Новый пароль', 'Введите новый пароль', 'password')(type="password" data-rule-password="password" id="password" required)
+					+input('Новый пароль еще раз', 'Повторите пароль', 'password_repeat')(type="password" data-rule-password="password" data-rule-equalTo="#password" required)
+				+e.holder.box
+					+e.H5.title.h5 Секретный вопрос
+					+e.SPAN.text Используйте эту опцию для дополнительной защиты аккаунта при восстановлении пароля.
+					+e.field.select__
+						+e.label Девичья фамилия матери?
+						+e.parent
+							+e.SELECT.field(data-placeholder="Русский").js-select
+								+e.OPTION Русский
+								+e.OPTION test 2
+								+e.OPTION test 3
+								+e.OPTION test 4
+					+e.field.select__
+						+e.label Ответ
+						+e.parent
+							+e.SELECT.field(data-placeholder="Русский").js-select
+								+e.OPTION Русский
+								+e.OPTION test 2
+								+e.OPTION test 3
+								+e.OPTION test 4
+				+btn()(class="_border" type="submit") Сохранить изменения

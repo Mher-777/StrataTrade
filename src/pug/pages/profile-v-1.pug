@@ -1,0 +1,53 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Настройки профиля (Личные данные)';
+	- current = 'profile'
+block content
+	+b.SECTION.profile
+		.container
+			+e.menu.menu__.swiper-container.js-slider(data-settings=`{"slidesPerView": "auto", "freeMode": true }`)
+				.swiper-wrapper
+					.swiper-slide
+						+e.A(href="profile-v-1.html").link.is-active Личные данные
+					.swiper-slide
+						+e.A(href="profile-v-2.html").link 2FA
+					.swiper-slide
+						+e.A(href="profile-v-3.html").link История сессий
+					.swiper-slide
+						+e.A(href="profile-v-4.html").link Подписки
+					.swiper-slide
+						+e.A(href="profile-v-5.html").link API
+					.swiper-slide
+						+e.A(href="profile-v-6.html").link Пароль
+					.swiper-slide
+						+e.A(href="profile-v-7.html").link Платежи
+			+b.top-content__
+				+b.H3 Личные данные
+				+b.P Основная информация о Вас и параметры ее <br> отображения на платформе.
+			+e.FORM.form(action="")
+				+e.holder.box
+					+e.H5.title.h5 Основная информация
+					+input('Имя', 'Имя', 'name')(required)
+					+input('Фамилия', 'Фамилия', 'surname')(required)
+					+input('Никнейм', 'Никнейм', 'nickname')(required)
+					+input('E-mail', 'Почта', 'email')(type="email" required)
+				+e.holder.box
+					+e.H5.title.h5 Настройки интерфейса
+					+e.field.select__
+						+e.label Язык
+						+e.parent
+							+e.SELECT.field(data-placeholder="Русский").js-select
+								+e.OPTION Русский
+								+e.OPTION Английский
+								+e.OPTION Немецкий
+								+e.OPTION Испанский
+					+e.field.select__
+						+e.label Часовой пояс
+						+e.parent
+							+e.SELECT.field(data-placeholder="Armenia Time (AMT), UTC +4").js-select
+								+e.OPTION Armenia Time (AMT), UTC +4
+								+e.OPTION Афины, Киев, Станбул, Минск (GMT +2)
+								+e.OPTION Афины, Киев, Станбул, Минск (GMT +1)
+								+e.OPTION Афины, Киев, Станбул, Минск (GMT +3)
+				+btn()(class="_border" type="submit") Сохранить изменения

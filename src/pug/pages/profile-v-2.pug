@@ -1,0 +1,44 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Настройки профиля (2FA)';
+	- current = 'profile'
+block content
+	+b.SECTION.profile
+		.container
+			+e.menu.menu__.swiper-container.js-slider(data-settings=`{"slidesPerView": "auto", "freeMode": true }`)
+				.swiper-wrapper
+					.swiper-slide
+						+e.A(href="profile-v-1.html").link Личные данные
+					.swiper-slide
+						+e.A(href="profile-v-2.html").link.is-active 2FA
+					.swiper-slide
+						+e.A(href="profile-v-3.html").link История сессий
+					.swiper-slide
+						+e.A(href="profile-v-4.html").link Подписки
+					.swiper-slide
+						+e.A(href="profile-v-5.html").link API
+					.swiper-slide
+						+e.A(href="profile-v-6.html").link Пароль
+					.swiper-slide
+						+e.A(href="profile-v-7.html").link Платежи
+			+b.top-content__
+				+b.H3 Двухфакторная аутентификация
+				+b.P В этом разделе Вы можете дополнительно защитить <br> свой аккаунт.
+			+e.holder.box
+				+e.H5.title.h5 Cканируйте QR-код
+				+icon('qrCode')
+				p Если Вы желаете включить двухфакторную аутентификацию в аккаунте, мы рекомендуем использовать приложение <a href="#">Google Authenticator app.</a> Установите его на свое мобильное устройств и используйте его для сканирования QR-кода, который расположен ниже.
+					| <br> Или добавьте вручную, с помощью номера аккаунта и API ключа.
+			+b.FORM(action="")
+				+e.holder.box
+					+e.H5.title.h5 Введите код аутентификации
+					p После сканирования приложение <a href="#">Google Authenticator app</a> покажет Вам 6-ти значный код аутентификации. Введите его в поле ниже.
+					+b.code
+						+e.INPUT(type="text" name="code_number_1" maxlength="1" inputmode="numeric" required).input
+						+e.INPUT(type="text" name="code_number_2" maxlength="1" inputmode="numeric" required).input
+						+e.INPUT(type="text" name="code_number_3" maxlength="1" inputmode="numeric" required).input
+						+e.INPUT(type="text" name="code_number_4" maxlength="1" inputmode="numeric" required).input
+						+e.INPUT(type="text" name="code_number_5" maxlength="1" inputmode="numeric" required).input
+						+e.INPUT(type="text" name="code_number_6" maxlength="1" inputmode="numeric" required).input
+				+btn()(class="_border" type="submit") Включить
