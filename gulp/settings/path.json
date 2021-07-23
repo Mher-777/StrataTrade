@@ -6,7 +6,8 @@
         "img": "dist/app/img/",
         "attach": "dist/",
         "svg": "dist/app/icons/",
-        "fonts": "dist/app/fonts/"
+        "fonts": "dist/app/fonts/",
+        "illustration": "dist/app/illustration/"
     },
     "src": {
         "html": "src/pug/pages/**/*.pug",
@@ -15,7 +16,8 @@
         "img": "src/img/*.{jpg,png}",
         "attach": ["src/attach/**/.*", "src/attach/**/*.*"],
         "svg": "src/icons/**/*.svg",
-        "fonts": "src/fonts/*.*"
+        "fonts": "src/fonts/*.*",
+        "illustration": "src/illustration/*.*"
     },
     "watch": {
         "html": "src/pug/**/*.pug",

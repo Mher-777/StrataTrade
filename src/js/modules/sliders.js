@@ -1,12 +1,15 @@
 import Swiper from 'swiper';
-import SwiperCore, { Autoplay, EffectFade } from 'swiper/core';
-SwiperCore.use([Autoplay, EffectFade]);
+import SwiperCore, { Autoplay, EffectFade, Pagination } from 'swiper/core';
+SwiperCore.use([Autoplay, EffectFade, Pagination]);
 
 var sliders = {
 	selector: ".js-slider",
 
 	settings: {
-
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
+		}
 	},
 
 	build: (selector) => {

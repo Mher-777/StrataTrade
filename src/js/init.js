@@ -7,6 +7,7 @@ import { forms } from "./modules/forms";
 import { card } from "./modules/card";
 import { tooltip } from "./modules/tooltip";
 import { select } from "./modules/select";
+import { charts } from "./modules/charts";
 
 var App = () => {};
 
@@ -20,6 +21,7 @@ App.prototype.init = () => {
 	card.init();
 	tooltip.init();
 	select.init();
+	charts.init();
 	config.log('app init')
 	
 };

@@ -3,6 +3,7 @@ include ../mixins/mixin-loader.pug
 block vars
 	-
 		var login = false
+		var back = false
 	-
 		var title = title || ''
 		var description = description || ''
@@ -61,9 +62,15 @@ html(class=html.classList)&attributes(html.attrs)
 		block head-end
 	body(class=`${login ? '' : 'body_padding'}` ontouchstart="")&attributes(body.attrs)
 		block body-start
-		if(!login)
+		if(!login && !back)
 			block header
 				include header
+		if(back)
+			.container
+				+b.back
+					+e.A(href="main.html").link
+						+icon('arrowBack')
+						| !{back}
 		block content
 		if(!login)
 			block footer

@@ -1,0 +1,20 @@
+-
+	var data = [
+		['09:00', 830, 'test'],
+		['', 900, 'test'],
+		['', 850, 'test'],
+		['12:00', 1000, 'test'],
+		['', 1100, 'test'],
+		['', 1100, 'test'],
+		['15:00', 1400, 'test'],
+		['', 1190, 'test'],
+		['', 1100, 'test'],
+		['18:00', 200, 'test'],
+		['', 600, 'test'],
+		['', 500, 'test'],
+		['21:00', 800, 'test']
+	]
++e.wrap
+	+e.diagram
+		//['09:00', 830, `<strong>₿ 0,0171</strong> <span>Открытых позиций&nbsp;7</span> <span>Активных сигналов&nbsp;5</span>`]
+		+b.js-chart(data-settings=data).absolute

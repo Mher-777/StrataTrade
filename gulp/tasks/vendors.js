@@ -17,7 +17,11 @@ module.exports = (gulp, plugins) => {
 			.pipe(plugins.newer(path.build.attach))
 			.pipe(gulp.dest(path.build.attach));
 
+		var illustration = gulp
+			.src(path.src.illustration)
+			.pipe(plugins.newer(path.build.illustration))
+			.pipe(gulp.dest(path.build.illustration));
 
-		return merge(fonts, attach);
+		return merge(fonts, attach, illustration);
 	};
 };

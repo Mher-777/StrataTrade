@@ -1,0 +1,90 @@
+.strategy {
+  &__banner {
+    position: relative;
+    padding-top: 155 / 345 * 100%;
+    overflow: hidden;
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+  }
+  &__badge {
+    margin-bottom: 1rem;
+  }
+  &__head {
+    color: #92929D;
+    font-size: 1.2rem;
+    &-row {
+      margin-bottom: 2rem;
+    }
+  }
+  &__income {
+    margin-top: 1rem;
+  }
+  &__title {
+    font-weight: 500;
+    line-height: 1.4em;
+    color: #11142D;
+    margin-bottom: .4rem;
+  }
+  &__day {
+    margin-top: .4rem;
+  }
+  &__cell {
+    width: 100%;
+    &_left {
+      max-width: 22rem;
+    }
+    &_right {
+      max-width: 12rem;
+      padding-top: .3rem;
+    }
+  }
+  &__time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(94, 129, 244, 0.1);
+    color: var(--color-blue);
+    font-weight: 600;
+    min-height: 4rem;
+    width: 205 / 343 * 100%;
+
+
+  }
+  &__link {
+    margin-top: 0;
+    max-width: fit-content;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    margin-left: .8rem;
+    font-size: 1.2rem;
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      flex-shrink: 0;
+      margin-left: 1rem;
+      margin-top: .15rem;
+      fill: var(--color-blue);
+    }
+  }
+  &__holder {
+    margin-top: 2rem;
+  }
+  &__main {
+    display: none;
+    margin-top: 2rem;
+    &.is-active {
+      display: block;
+    }
+  }
+  &__disclaimer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  &__subtitle {
+    margin-bottom: 1.5rem;
+  }
+  &__signals {
+    margin-top: 2rem;
+  }
+}

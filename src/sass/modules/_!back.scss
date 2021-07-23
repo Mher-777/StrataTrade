@@ -1,0 +1,19 @@
+.back {
+  padding-top: 2.5rem;
+  background-color: var(--color-white);
+  margin-bottom: 1.5rem;
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #37474F;
+    font-weight: 500;
+    svg {
+      flex-shrink: 0;
+      width: 1.6rem;
+      height: 1.4rem;
+      margin-right: 1rem;
+      fill: var(--color-accent)
+    }
+  }
+}

@@ -53,7 +53,7 @@
 }
 .status {
   color: var(--color-main);
-  font-weight: 500;
+  font-weight: 400;
   &::before {
     content: '';
     display: inline-block;
@@ -68,6 +68,12 @@
   &_active {
     &::before {
       background-color: #66BB6A;
+    }
+  }
+  &_tiny {
+    &::before {
+      width: .4rem;
+      height: .4rem;
     }
   }
 }
@@ -101,9 +107,27 @@
     margin-right: .8rem;
     flex-shrink: 0;
   }
+  &_small {
+    font-size: 2.4rem;
+  }
 }
 .title {
   font-size: 1.8rem;
   line-height: 1.5em;
   color: #1C1D21;
+}
+.counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: .8rem;
+  min-width: 2.4rem;
+  min-height: 2.4rem;
+  white-space: nowrap;
+  background-color: rgba(#5E81F4, .1);
+  font-weight: 700;
+  color: var(--color-blue);
+  border-radius: .4rem;
+  vertical-align: middle;
+  padding: 0 .7rem;
 }

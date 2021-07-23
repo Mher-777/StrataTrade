@@ -1,0 +1,15 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .swiper-pagination-bullet {
+    width: .6rem;
+    height: .6rem;
+    background-color: #DCE3FF;
+    opacity: 1;
+    margin: 0 .2rem;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: var(--color-blue);
+  }
+}

@@ -1,0 +1,43 @@
+.chart {
+  max-height: 43.5rem;
+  margin-bottom: 4rem;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__cell {
+    flex: 1 1 auto;
+    &_left {
+      padding-top: .5rem;
+      padding-right: 1rem;
+      max-width: 20rem;
+    }
+  }
+  &__btn-radio {
+    &:not(:last-child) {
+      margin-right: .8rem;
+    }
+  }
+  &__wrap {
+    overflow: hidden;
+  }
+  &__diagram {
+    margin-top: -5rem;
+    position: relative;
+    padding-top: 400 / 320 * 100%;
+    margin-bottom: -3rem;
+    circle {
+      r: 0.9rem;
+      stroke-width: 0.5rem;
+      stroke: var(--color-blue);
+      fill: var(--color-white)
+    }
+  }
+  &__periods {
+    justify-content: center;
+  }
+  .pagination {
+    margin-top: 3rem;
+    margin-bottom: -3.5rem;
+  }
+}

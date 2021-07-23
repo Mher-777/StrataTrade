@@ -1,0 +1,23 @@
+.periods {
+  display: flex;
+  color: var(--color-gray);
+  margin-left: -.5rem;
+  flex-wrap: wrap;
+  font-weight: 500;
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    &:checked {
+      & ~ .periods__text {
+        color: var(--color-blue);
+      }
+    }
+  }
+  &__text {
+    display: block;
+    padding: .5rem;
+    transition: .2s all linear;
+  }
+}

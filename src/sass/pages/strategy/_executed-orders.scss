@@ -1,0 +1,50 @@
+.executed-orders {
+  box-shadow: 0 1rem 4rem rgba(242, 242, 242, 0.5);
+  border-radius: 1.2rem;
+  background-color: var(--color-white);
+  overflow: hidden;
+  padding: .4rem 0;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #11142D;
+  &__item {
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child) {
+      border-bottom: 1px solid #EEEEEE;
+    }
+  }
+  &__info {
+    max-width: 15rem;
+  }
+  &__title {
+    max-width: 16rem;
+    color: var(--color-placeholder);
+  }
+  &__text {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      fill: var(--color-green);
+      margin-right: .8rem;
+      flex-shrink: 0;
+      &.icon-close {
+        fill: #FF3F3F;
+        stroke: #FF3F3F;
+      }
+    }
+  }
+  &__percent {
+    margin-left: auto;
+    min-width: 4rem;
+    text-align: right;
+  }
+  &__price {
+    margin-right: 1.5rem;
+  }
+}

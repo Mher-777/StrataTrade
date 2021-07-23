@@ -1,0 +1,24 @@
+.profitability {
+  &__periods {
+    margin-top: .3rem;
+    margin-bottom: .8rem;
+  }
+  &__cell {
+    width: 100%;
+    &_left {
+      max-width: 23.5rem;
+    }
+    &_right {
+      max-width: 8rem;
+    }
+  }
+  &__btn-radio {
+    margin-left: auto;
+    &:not(:first-child) {
+      margin-top: .6rem;
+    }
+  }
+  &__row {
+    width: 100%;
+  }
+}

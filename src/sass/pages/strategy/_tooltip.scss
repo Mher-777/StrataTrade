@@ -1,0 +1,19 @@
+.js-chart{
+  div.google-visualization-tooltip {
+    background: #303940;
+    border-radius: .4rem;
+    padding: .5rem .8rem;
+    white-space: nowrap;
+    color: var(--color-white) !important;
+    font-size: 1.2rem !important;
+  }
+  strong {
+    font-weight: 700;
+  }
+  span, strong {
+    display: block;
+  }
+  text {
+
+  }
+}

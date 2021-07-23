@@ -1,0 +1,109 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Отдельная страница сигнала. В профите';
+	- current = 'portfolio'
+	- back = 'К странице стратегии'
+append scripts
+	script(src="https://www.gstatic.com/charts/loader.js")
+block content
+	+b.SECTION.strategy
+		.container
+			+e.top
+				+e.banner
+					+e.bg
+						+b.IMG(src="/img/strategy-bg.jpg" alt="").object-fit
+				+e.badge.flex
+					+b.SPAN.badge Long
+					+b.SPAN.badge._blue Фючерс
+				+e.head
+					+e.head-row.flex._justify
+						+e.cell._left
+							+e.H3.title.h3 DOGE / BTC
+							+e.name Elon Musk DOGE Hype
+						+e.cell._right.css-text-right
+							+e.profit.profit__._small
+								+icon('profit')
+								| +12%
+			+b.parameters
+				+e.item
+					+e.IMG(src="app/img/parameters-icon-1.svg" alt="").icon
+					+e.subtitle Текущая цена <br> актива
+					+e.title $6.322
+					+e.info.info(data-tippy-placement="auto" data-tippy-content="Текущая цена <br> актива")
+						+icon('info')
+				+e.item
+					+e.IMG(src="app/img/parameters-icon-2.svg" alt="").icon
+					+e.subtitle Доля в портфеле <br> стратегии
+					+e.title 4%
+					+e.info.info(data-tippy-placement="auto" data-tippy-content="Доля в портфеле <br> стратегии")
+						+icon('info')
+			+e.holder
+				+e.H4.subtitle.h4 Исполненные ордеры
+				+b.executed-orders
+					+e.UL.list
+						+e.LI.item
+							+e.title Набор позиции
+							+e.info
+								+e.text $6.000322 – 0.00005200
+						+e.LI.item
+							+e.title Точки фиксации прибыли
+							+e.info
+								+e.text
+									+icon('check')
+									+e.price $6.000322
+									+e.percent.color-green +47%
+								+e.text
+									+icon('check')
+									+e.price $6.000322
+									+e.percent.color-green +117%
+								+e.text
+									+icon('check')
+									+e.price $6.000322
+									+e.percent.color-green +182%
+								+e.text
+									+icon('check')
+									+e.price $6.000322
+									+e.percent.color-green +236%
+								+e.text
+									+icon('check')
+									+e.price $6.000322
+									+e.percent.color-green +327%
+						+e.LI.item
+							+e.title Stop loss
+							+e.info
+								+e.total.css-text-right.color-red $5.583
+			+e.holder
+				+e.H4.subtitle.h4 Лог изменений
+				+e.logs.logs__
+					+e.UL.list
+						+e.LI.item
+							+e.cell._left
+								+e.title Изменена цена стоп-лосс ордера
+								+e.TIME.time(datetime="2021.05.21 02:55") 21.05.2021 02:55
+							+e.cell._right
+								+e.price $6.500
+						+e.LI.item
+							+e.cell._left
+								+e.title Новый лимитный ордер с фиксацией прибыли
+								+e.TIME.time(datetime="2021.05.21 02:55") 21.05.2021 02:55
+							+e.cell._right
+								+e.price $7.342
+						+e.LI.item
+							+e.cell._left
+								+e.title Новый рыночный стоп-лосс ордер
+								+e.TIME.time(datetime="2021.05.21 02:55") 21.05.2021 02:55
+							+e.cell._right
+								+e.price $5.342
+						+e.LI.item
+							+e.cell._left
+								+e.title Лимитный-ордер на покупку исполнен
+								+e.TIME.time(datetime="2021.05.21 02:55") 21.05.2021 02:55
+							+e.cell._right
+								+e.price $6.342
+						+e.LI.item
+							+e.cell._left
+								+e.title Новый лимитный ордер на покупку
+								+e.TIME.time(datetime="2021.05.21 02:55") 21.05.2021 02:55
+							+e.cell._right
+								+e.price $6.342

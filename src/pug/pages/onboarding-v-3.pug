@@ -3,7 +3,8 @@ extends ../layouts/base
 append vars
 	- title = 'Ондобрдин №3. Привязка карты';
 	- login = true
-
+append scripts
+	script(src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js")
 block content
 	+b.SECTION.onboarding
 		.container
@@ -14,7 +15,7 @@ block content
 				+e.A(href="#").skip.link Пропустить
 			+e.content
 				+e.image
-					+b.IMG(src="app/img/illustration-3.svg" alt="").object-fit
+					lottie-player(src="app/illustration/illustration-3.json" background="transparent" speed="1" loop autoplay).absolute
 				+e.wrap.css-text-center
 					+e.subtitle.color-blue Шаг 3
 					+e.P На третьем шаге рассказываем о том как оплатить подключенную стратегию и важности привязки карты для автоплатежей

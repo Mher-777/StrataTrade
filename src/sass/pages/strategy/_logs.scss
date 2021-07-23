@@ -1,0 +1,40 @@
+.logs {
+  box-shadow: 0 1rem 4rem rgba(242, 242, 242, 0.5);
+  border-radius: 1.2rem;
+  background-color: var(--color-white);
+  overflow: hidden;
+  padding: .4rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-placeholder);
+  &__item {
+    padding: .8rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child) {
+      border-bottom: 1px solid #EEEEEE;
+    }
+  }
+  &__cell {
+    flex: 1 1 auto;
+    &_left {
+      max-width: 25.5rem;
+      padding-right: 1rem;
+    }
+    &_right {
+      max-width: 7rem;
+      text-align: right;
+    }
+  }
+  &__price {
+    color: #1C1D21;
+  }
+  &__time {
+    font-weight: 400;
+  }
+  &__empty {
+    text-align: center;
+    color: var(--color-black);
+    padding: 1.2rem;
+  }
+}

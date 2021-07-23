@@ -15,3 +15,10 @@ mixin btn(link = false, submit = false)
 mixin btn-refresh
     +b.BUTTON.btn-refresh.flex._vertical._center(type="reset")&attributes(attributes)
         +icon('refresh')
+
+mixin btn-radio(name, value, checked = false)
+    +e.LABEL.btn-radio.btn-radio__
+        +e.INPUT.input(type="radio" name=name checked=checked value=value)
+        +e.SPAN.text
+            if block
+                block
