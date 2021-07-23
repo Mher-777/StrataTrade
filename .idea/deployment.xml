@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="host" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="host">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/www/u901965.com4.ru/StrataTrade" local="$PROJECT_DIR$" web="/" />
+            <mapping local="" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/www/u901965.com4.ru/StrataTrade" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

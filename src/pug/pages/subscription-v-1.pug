@@ -1,0 +1,76 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Флоу подписки Фиксированная цена. Выбор тарифа для клиента без подвязанной карты';
+	- current = 'strategy'
+block content
+	+b.SECTION.subscription
+		.container
+			+e.steps
+				+e.step._current Выбор <br> тарифа
+				+e.step Способ <br> оплаты
+				+e.step Оплата
+			+e.top.top-content
+				+e.H3 Выберите тариф
+				+e.P Мы предлагаем максимально выгодные условия для клиентов, которые приобретаю подписку на длительный период
+			+e.tabs.tabs__
+				+e.item.js-tab
+					+e.A(href="#").link.is-active Фиксированная сума
+				+e.item.js-tab
+					+e.A(href="#").link % от прибыли
+			+e.content.is-active.box.js-tab-content
+				+e.FORM(action="#").form
+					+e.UL.list
+						+e.LI.item
+							+e.cell._left
+								+radio('1 месяц', 'time', true)
+							+e.cell._right
+								+e.SPAN.price 275 USD
+						+e.LI.item
+							+e.cell._left
+								+radio('3 месяца', 'time')
+							+e.cell._right
+								+e.SPAN.discount.discount 825
+								+e.SPAN.percent.color-red -10%
+								+e.SPAN.price.color-green 742 USD
+						+e.LI.item
+							+e.cell._left
+								+radio('6 месяца', 'time')
+							+e.cell._right
+								+e.SPAN.discount.discount 1650
+								+e.SPAN.percent.color-red -12%
+								+e.SPAN.price.color-green 1452 USD
+						+e.LI.item
+							+e.cell._left
+								+radio('12 месяцев', 'time')
+							+e.cell._right
+								+e.SPAN.discount.discount 3300
+								+e.SPAN.percent.color-red -15%
+								+e.SPAN.price.color-green 2805 USD
+					+checkbox('Сделать платеж автоматическим', 'automatic', false, false)
+					+btn(false, true)._border._small Выбрать тариф
+			+e.content.box.js-tab-content
+				+e.FORM(action="#").form
+					+e.UL.list
+						+e.LI.item
+							+e.cell._left
+								+radio('1 месяц', 'time', true)
+							+e.cell._right
+								+e.SPAN.percent 25%
+						+e.LI.item
+							+e.cell._left
+								+radio('3 месяца', 'time')
+							+e.cell._right
+								+e.SPAN.percent.color-green 20%
+						+e.LI.item
+							+e.cell._left
+								+radio('6 месяца', 'time')
+							+e.cell._right
+								+e.SPAN.percent.color-green 15%
+						+e.LI.item
+							+e.cell._left
+								+radio('12 месяцев', 'time')
+							+e.cell._right
+								+e.SPAN.percent.color-green 10%
+					+checkbox('Сделать платеж автоматическим', 'automatic', false, false)
+					+btn(false, true)._border._small Выбрать тариф

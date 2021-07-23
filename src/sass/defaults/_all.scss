@@ -5,6 +5,10 @@
   color: #FF3F3F;
 }
 
+.color-accent {
+  color: var(--color-accent);
+}
+
 .color-green {
   color: var(--color-green);
 }
@@ -25,6 +29,11 @@
   svg {
     max-width: 100%;
     fill: var(--color-blue)
+  }
+  &_small {
+    width: 3.6rem;
+    height: 3.6rem;
+    padding: .6rem;
   }
 }
 .absolute {
@@ -130,4 +139,9 @@
   border-radius: .4rem;
   vertical-align: middle;
   padding: 0 .7rem;
+}
+.discount {
+  font-size: 1.2rem;
+  color: var(--color-placeholder);
+  text-decoration-line: line-through;
 }

@@ -41,6 +41,10 @@
 .modal {
   &__icon {
     margin-bottom: 1.6rem;
+    &_reverse {
+      margin-top: 1.6rem;
+      margin-bottom: 1.2rem;
+    }
   }
   &__content {
 
@@ -77,8 +81,8 @@
     width: 2.5rem;
     height: 2.5rem;
     position: absolute;
-    right: 1.5rem;
-    top: 1.5rem;
+    right: 1.6rem;
+    top: 1.6rem;
   }
   &__row {
     margin-top: 1.6rem;

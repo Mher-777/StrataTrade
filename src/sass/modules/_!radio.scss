@@ -1,17 +1,5 @@
-.switcher {
-  &__item {
-    display: block;
-    &:not(:last-child) {
-      margin-bottom: 1.4rem;
-    }
-  }
-  &_middle {
-    .switcher__text {
-      font-size: 1.4rem;
-      color: #2D2F34;
-      font-weight: 500;
-    }
-  }
+.radio {
+  color: var(--color-placeholder);
   &__arrow {
     width: 1.8rem;
     height: 1.8rem;
@@ -33,8 +21,8 @@
     }
   }
   &__text {
-    font-size: 1.2rem;
-    color: var(--color-placeholder);
+    font-size: 1.4rem;
+    font-weight: 500;
     display: flex;
   }
   &__input {
@@ -43,8 +31,8 @@
     height: 0;
     opacity: 0;
     &:checked {
-      & ~ .switcher__text {
-        .switcher__arrow {
+      & ~ .radio__text {
+        .radio__arrow {
           &::before {
             opacity: 1;
           }

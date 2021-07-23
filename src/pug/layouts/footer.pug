@@ -10,7 +10,7 @@ block vars
 					+e.icon
 						+icon('dashboard')
 					+e.SPAN.text Дашборд
-			+e.item
+			+e.item(class=`${current === 'strategy' ? 'is-active' : ''}`)
 				+e.A(href="#").link
 					+e.icon
 						+icon('strategy')

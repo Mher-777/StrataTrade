@@ -37,7 +37,7 @@
     }
     background-color: var(--color-main);
   }
-  &_border {
+  &.btn_border {
     color: var(--color-accent);
     border: 1px solid var(--color-accent);
     .btn__back {

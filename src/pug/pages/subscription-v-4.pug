@@ -1,0 +1,54 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Флоу подписки Фиксированная цена. Выбор способа оплаты для клиента c подвязанной картой. Оплата тарифа';
+	- current = 'strategy'
+block content
+	+b.SECTION.subscription
+		.container
+			+e.steps
+				+e.step._active Выбор <br> тарифа
+				+e.step._current Способ <br> оплаты
+				+e.step Оплата
+			+e.top.top-content
+				+e.H3 Выберите способ оплаты
+				+e.P Вы подтверждаете списание средств с вашей карты для приобретения подписки на 1 месяц
+			+e.holder.box
+				+e.FORM(action="#").form
+					+e.UL.list
+						+e.LI.item
+							+e.cell._left
+								+e.subtitle Длительность подписки:
+							+e.cell._right
+								+e.SPAN.day 1 мес.
+						+e.LI.item
+							+e.cell._left
+								+e.subtitle Дата покупки:
+							+e.cell._right
+								+e.TIME(datetime="2021.19.05").time 19.05.2021
+						+e.LI.item
+							+e.cell._left
+								+e.subtitle Цена:
+							+e.cell._right
+								+e.SPAN.price 275 USD
+						+e.LI.item._large
+							+e.cell._left
+								+e.total Итого:
+							+e.cell._right
+								+e.SPAN.price 275 USD
+					+e.select.select__._small
+						+e.label Способ оплаты
+						+e.parent
+							+e.SELECT.field(data-placeholder="Банковская карта Visa / Master Card").js-select
+								+e.OPTION Банковская карта Visa / Master Card
+								+e.OPTION Карта 5453 **** **** 1122
+					+btn()(type="submit" data-modal="#payment-card-error")._border._small.js-modal Оплатить
+block popup
+	+b.modal.mfp-hide.mfp-hide-close#payment-card-error
+		+e.content.css-text-center
+			+e.H4.title.h4 Ошибка
+			+e.icon._reverse.icon._tiny._red
+				+icon('close')
+			+e.P.text Упс... Что-то пошло не так. <br> Повторите еще раз!
+		+e.bottom.flex._right
+			+btn()(class="_blue _tiny js-close-modal") Повторить

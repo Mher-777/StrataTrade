@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4461c5af-b28f-4d79-9992-be9f1cc4d1d2" name="host" url="http://u901965.com4.ru">
+        <fileTransfer rootFolder="/www/u901965.com4.ru/StrataTrade" host="u901965.com4.ru" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -20,9 +20,17 @@
       height: 3.8rem;
     }
   }
+  &_tiny {
+    width: 3.5rem;
+    height: 3.5rem;
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
   &_red {
     background: rgba(255, 68, 68, 0.1);
-    stroke: #FF3F3F;
+    stroke: #D64D51;
     stroke-width: .2rem;
   }
 }

@@ -1,0 +1,62 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Флоу подписки Фиксированная цена. Выбор способа оплаты для клиента c подвязанной картой. Оплата тарифа';
+	- current = 'strategy'
+block content
+	+b.SECTION.subscription
+		.container
+			+e.steps
+				+e.step._active Выбор <br> тарифа
+				+e.step._current Способ <br> оплаты
+				+e.step Оплата
+			+e.top.top-content
+				+e.H3 Выберите способ оплаты
+				+e.P Вы подтверждаете списание средств с вашей карты для приобретения подписки на 1 месяц
+			+e.holder.box
+				+e.FORM(action="#").form
+					+e.UL.list
+						+e.LI.item
+							+e.cell._left
+								+e.subtitle Длительность подписки:
+							+e.cell._right
+								+e.SPAN.day 1 мес.
+						+e.LI.item
+							+e.cell._left
+								+e.subtitle Дата покупки:
+							+e.cell._right
+								+e.TIME(datetime="2021.19.05").time 19.05.2021
+						+e.LI.item
+							+e.cell._left
+								+e.subtitle Цена:
+							+e.cell._right
+								+e.SPAN.price 275 USD
+						+e.LI.item._large
+							+e.cell._left
+								+e.total Итого:
+							+e.cell._right
+								+e.SPAN.price 275 USD
+					+e.select.select__._small
+						+e.label Способ оплаты
+						+e.parent
+							+e.SELECT.field(data-placeholder="Банковская карта Visa / Master Card").js-select
+								+e.OPTION Банковская карта Visa / Master Card
+								+e.OPTION Карта 5453 **** **** 1122
+					+btn()(type="submit" data-modal="#payment-card")._border._small.js-modal Оплатить
+block popup
+	+b.modal.mfp-hide#payment-card
+		+e.content.css-text-center
+			+e.H4.title.h4 Оплата картой
+			+e.P.text После оплаты, будет подписка будет доступна <span class="color-accent">1 Месяц</span>
+		+e.FORM(action="")
+			+e.row.flex._justify
+				+input('', '', 'card')(type="text" inputmode="numeric" value="4433 3453 2345 4242" data-inputmask="'mask': '9999 9999 9999 9999', 'placeholder': ''" required)
+				+e.field.input__._width
+					+e.parent
+						+e.INPUT.field(type="text" inputmode="numeric" value="01/24" name="day" placeholder="" autocomplete="off" data-inputmask="'mask': '99/99', 'placeholder': ''" required)
+				+e.field.input__._width
+					+e.parent
+						+e.INPUT.field(type="text" inputmode="numeric" value="533" name="code" placeholder="" autocomplete="off" data-inputmask="'mask': '999', 'placeholder': ''" required)
+			+checkbox('Сделать платеж автоматическим', 'automatic', false, false)._no-margin
+			+e.bottom.flex._right
+				+btn(false, true)(class="_blue _tiny") Сохранить

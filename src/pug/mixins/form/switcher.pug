@@ -5,7 +5,7 @@ mixin switcher(name,  ...items)
 			- var checked = count == 0;
 			+e.LABEL.item
 				+e.INPUT.input(type="radio" name=name checked=checked value=`${count}`)
-				+e.SPAN.text.flex
+				+e.SPAN.text
 					+e.arrow
 					| !{item}
 			- count++;

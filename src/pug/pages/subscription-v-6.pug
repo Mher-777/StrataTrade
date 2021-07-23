@@ -1,0 +1,21 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Флоу подписки. Подписка оформлена';
+	- current = 'strategy'
+block content
+	+b.SECTION.subscription
+		.container
+			+e.steps
+				+e.step._active Выбор <br> тарифа
+				+e.step._active Способ <br> оплаты
+				+e.step._active Оплата
+			+e.box.box
+				+b.success-icon._small
+					+icon('check')
+				+b.content.css-text-center
+					+b.subtitle Подписка оформлена!
+					+b.P Вы успешно оформили подписку на <span class="color-access">1 месяц</span>
+				+e.row.flex._center
+					+btn('portfolio-v-1.html')(class="_blue _tiny _border") В портфель
+					+btn('#')(class="_blue _tiny") Посмотреть стратегию
