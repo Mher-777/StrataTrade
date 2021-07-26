@@ -1,0 +1,24 @@
+-
+	var sliderSettings = {
+		spaceBetween: 20,
+		loop: true,
+		autoplay: {
+			delay: 3000
+		}
+	}
+
++b.banner
+	+e.slider.swiper-container.js-slider(data-settings=sliderSettings)
+		.swiper-wrapper
+			.swiper-slide
+				+e.bg.absolute
+					+e.IMG(src="app/img/banner-3.svg").image.object-fit
+				+e.content
+					+e.H4.title.h4 Рекомендованный <br> портфель стратегий
+					+e.A(href="#").link Узнать подробнее
+			.swiper-slide
+				+e.bg.absolute
+					+e.IMG(src="app/img/banner-4.svg").image.object-fit
+				+e.content
+					+e.H4.title.h4 Рекомендованный <br> портфель стратегий
+					+e.A(href="#").link Узнать подробнее

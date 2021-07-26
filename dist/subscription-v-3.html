@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Флоу подписки Фиксированная цена. Выбор способа оплаты для&nbsp;клиента c подвязанной картой. Оплата тарифа</title>
+    <link rel="stylesheet" href="app/css/app.css?v=1627308168623">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body class="body_padding" ontouchstart="">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo logo">
+                    <a class="logo__link" href="main.html">
+                        <img src="app/img/logo.svg" alt="Логотип" width="40" height="40" title="" />
+                    </a>
+                </div>
+                <div class="header__notice">
+                    <a class="header__link" href="notice.html">
+                        <svg class="icon-notice" viewBox="0 0 20 20">
+                            <use xlink:href="app/icons/sprite.svg#notice"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__avatar avatar">
+                    <a class="avatar__link" href="portfolio-v-1.html">
+                        <picture>
+                            <source type="image/webp" srcset="app/img/avatar.webp">
+                                <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="subscription">
+        <div class="container">
+            <div class="subscription__steps">
+                <div class="subscription__step subscription__step_active">Выбор
+                    <br>тарифа</div>
+                <div class="subscription__step subscription__step_current">Способ
+                    <br>оплаты</div>
+                <div class="subscription__step">Оплата</div>
+            </div>
+            <div class="subscription__top top-content">
+                <h3>Выберите способ оплаты</h3>
+                <p>Вы подтверждаете списание средств с&nbsp;вашей карты для&nbsp;приобретения подписки на&nbsp;1 месяц</p>
+            </div>
+            <div class="subscription__holder box">
+                <form class="subscription__form" action="#">
+                    <ul class="subscription__list">
+                        <li class="subscription__item">
+                            <div class="subscription__cell subscription__cell_left">
+                                <div class="subscription__subtitle">Длительность подписки:</div>
+                            </div>
+                            <div class="subscription__cell subscription__cell_right"><span class="subscription__day">1 мес.</span>
+                            </div>
+                        </li>
+                        <li class="subscription__item">
+                            <div class="subscription__cell subscription__cell_left">
+                                <div class="subscription__subtitle">Дата покупки:</div>
+                            </div>
+                            <div class="subscription__cell subscription__cell_right">
+                                <time class="subscription__time" datetime="2021.19.05">19.05.2021</time>
+                            </div>
+                        </li>
+                        <li class="subscription__item">
+                            <div class="subscription__cell subscription__cell_left">
+                                <div class="subscription__subtitle">Цена:</div>
+                            </div>
+                            <div class="subscription__cell subscription__cell_right"><span class="subscription__price">275 USD</span>
+                            </div>
+                        </li>
+                        <li class="subscription__item subscription__item_large">
+                            <div class="subscription__cell subscription__cell_left">
+                                <div class="subscription__total">Итого:</div>
+                            </div>
+                            <div class="subscription__cell subscription__cell_right"><span class="subscription__price">275 USD</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="subscription__select select select_small">
+                        <div class="select__label">Способ оплаты</div>
+                        <div class="select__parent">
+                            <select class="select__field js-select" data-placeholder="Банковская карта Visa / Master Card">
+                                <option>Банковская карта Visa / Master Card</option>
+                                <option>Карта 5453 **** **** 1122</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="subscription__btn btn btn_border btn_small js-modal" type="submit" data-modal="#payment-card">
+                        <div class="btn__back"></div><span class="btn__text">Оплатить</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__item"><a class="nav__link" href="main.html"><span class="nav__icon"><svg class="icon-dashboard" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#dashboard"></use></svg></span><span class="nav__text">Дашборд</span></a>
+                </div>
+                <div class="nav__item is-active"><a class="nav__link" href="strategy-v-1.html"><span class="nav__icon"><svg class="icon-strategy" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#strategy"></use></svg></span><span class="nav__text">Стратегии</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="portfolio-v-1.html"><span class="nav__icon"><svg class="icon-briefcase" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#briefcase"></use></svg></span><span class="nav__text">Портфель</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="profile-v-1.html"><span class="nav__icon"><span class="nav__user"><picture>
+		                            <source type="image/webp" srcset="app/img/avatar.webp">
+		                            <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+		                        </picture></span></span><span class="nav__text">Профиль</span></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <div class="modal mfp-hide" id="payment-card">
+        <div class="modal__content css-text-center">
+            <h4 class="modal__title h4">Оплата картой</h4>
+            <p class="modal__text">После оплаты, будет подписка будет доступна <span class="color-accent">1 Месяц</span>
+            </p>
+        </div>
+        <form action="">
+            <div class="modal__row flex flex_justify">
+                <div class="modal__field input">
+                    <div class="input__parent">
+                        <input class="input__field" name="card" placeholder="" type="text" autocomplete="off" inputmode="numeric" value="4433 3453 2345 4242" data-inputmask="'mask': '9999 9999 9999 9999', 'placeholder': ''" required="required" />
+                    </div>
+                </div>
+                <div class="modal__field input input_width">
+                    <div class="input__parent">
+                        <input class="input__field" type="text" inputmode="numeric" value="01/24" name="day" placeholder="" autocomplete="off" data-inputmask="'mask': '99/99', 'placeholder': ''" required="required" />
+                    </div>
+                </div>
+                <div class="modal__field input input_width">
+                    <div class="input__parent">
+                        <input class="input__field" type="text" inputmode="numeric" value="533" name="code" placeholder="" autocomplete="off" data-inputmask="'mask': '999', 'placeholder': ''" required="required" />
+                    </div>
+                </div>
+            </div>
+            <label class="modal__checkbox checkbox checkbox_no-margin">
+                <input class="checkbox__input" data-rule-required="false" name="automatic" type="checkbox" /><span class="checkbox__text middle"> <span class="checkbox__arrow"><svg class="icon-checked" viewBox="0 0 12 9"><use xlink:href="app/icons/sprite.svg#checked"></use></svg></span>Сделать платеж автоматическим</span>
+            </label>
+            <div class="modal__bottom flex flex_right">
+                <button class="modal__btn btn btn_blue btn_tiny" type="submit">
+                    <div class="btn__back"></div><span class="btn__text">Сохранить</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app/js/app.js?v=1627308168630"></script>
+</body>
+
+</html>

@@ -48,7 +48,7 @@
       color: var(--color-white);
     }
   }
-  &_blue {
+  &.btn_blue {
     font-weight: 400;
     .btn__back {
       display: none;
@@ -62,12 +62,23 @@
       color: var(--color-blue);
       border-color: var(--color-blue);
     }
+    &.btn_icon {
+      fill: var(--color-blue)
+    }
   }
   &_primary {
     .btn__back {
       display: none;
     }
     background-color: var(--color-primary);
+  }
+  &_white {
+    .btn__back {
+      display: none;
+    }
+    border-radius: 1.2rem;
+    color: #11142D;
+    background-color: var(--color-white);
   }
   &_icon {
     img {
@@ -88,12 +99,25 @@
   }
   &_small {
     min-height: 4rem;
-    padding: 1rem 2rem;
+    padding: .6rem 2rem;
   }
   &_left {
     display: flex;
     margin-left: auto;
     max-width: fit-content;
+  }
+  &_icon {
+    width: 4rem;
+    min-height: 4rem;
+    padding: 0;
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      &.icon-info {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+    }
   }
 }
 .btn-refresh {

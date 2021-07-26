@@ -46,6 +46,7 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "@amcharts/amcharts4": "^4.10.20",
     "emitty": "^1.4.0",
     "google-charts": "^2.0.0",
     "gulp-if": "^3.0.0",

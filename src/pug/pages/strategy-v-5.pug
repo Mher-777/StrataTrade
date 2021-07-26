@@ -1,0 +1,59 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Стратегии (Крупные активы)';
+	- current = 'strategy'
+
+block content
+	+b.SECTION.strategy
+		.container
+			+e.content.content
+				+b.H3 Крупные активы
+				+b.P Стратегии, которые инвестируют только <br> в крупные криптоактивы. Только топовые коины, <br> токены и надежные ICO.
+			+b.search
+				+e.FORM(action="").form
+					+e.top.flex._justify
+						+e.field.input__
+							+e.parent
+								+e.INPUT.field(name="search" type="text" autocomplete="off" placeholder="Поиск" required)
+								+e.BUTTON(type="submit").button
+									+icon('search')
+						+e.control.flex._justify
+							+b.BUTTON.btn-sort.flex._vertical._center.js-open-dropdown(type="button")
+								+icon('sort')
+							+b.BUTTON.btn-filter._active.flex._vertical._center.js-open-dropdown(type="button" data-number="1")
+								+icon('filter')
+					+e.dropdown.box.js-dropdown.dropdown__
+						+e.top.flex._justify
+							+e.H3.title.title Сортировка
+							+e.BUTTON(type="button").close.js-close-dropdown
+								+icon('close')
+						+e.main
+							+switcher('sort', 'По умолчанию', 'По доходности', 'По цене подписки', 'По количеству подписчиков', 'По уровню риска')._middle
+						+e.bottom.flex._right
+							+btn-refresh
+							+btn(false, true)(class="_blue _tiny") Применить
+					+e.dropdown.box.js-dropdown.dropdown__
+						+e.top.flex._justify
+							+e.H3.title.title Фильтр
+							+e.BUTTON(type="button").close.js-close-dropdown
+								+icon('close')
+						+e.main
+							+checkbox('Рекомендованный портфель', '0', false, false)
+							+checkbox('Высокодоходные', '1', false, false)
+							+checkbox('С низким риском', '2', false, false)
+							+checkbox('Краткосрочные', '3', false, false)
+							+checkbox('Долгосрочные', '4', false, false)
+							+checkbox('Среднесрочные', '5', false, false)
+							+checkbox('Только крупные активы', '6', false, false)
+						+e.bottom.flex._right
+							+btn-refresh
+							+btn(false, true)(class="_blue _tiny") Применить
+				+e.result.flex._justify._vertical
+					+e.result-text Найдено стратегий: 4
+			+b.list-strategy
+				include ../modules/strategy-card-1
+				include ../modules/strategy-card-2
+				include ../modules/strategy-card-3
+				include ../modules/strategy-card-4
+				+btn('#')(class="_btn _border _small") Посмотреть все

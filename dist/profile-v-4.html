@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Настройки профиля (Управление подписками)</title>
+    <link rel="stylesheet" href="app/css/app.css?v=1627308165958">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body class="body_padding" ontouchstart="">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo logo">
+                    <a class="logo__link" href="main.html">
+                        <img src="app/img/logo.svg" alt="Логотип" width="40" height="40" title="" />
+                    </a>
+                </div>
+                <div class="header__notice">
+                    <a class="header__link" href="notice.html">
+                        <svg class="icon-notice" viewBox="0 0 20 20">
+                            <use xlink:href="app/icons/sprite.svg#notice"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__avatar avatar">
+                    <a class="avatar__link" href="portfolio-v-1.html">
+                        <picture>
+                            <source type="image/webp" srcset="app/img/avatar.webp">
+                                <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="profile">
+        <div class="container">
+            <div class="profile__menu menu swiper-container js-slider" data-settings="{&quot;slidesPerView&quot;: &quot;auto&quot;, &quot;freeMode&quot;: true, &quot;initialSlide&quot;: 2 }">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-1.html">Личные данные</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-2.html">2FA</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-3.html">История сессий</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link is-active" href="profile-v-4.html">Подписки</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-5.html">API</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-6.html">Пароль</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-7.html">Платежи</a>
+                    </div>
+                </div>
+            </div>
+            <div class="profile__management management">
+                <div class="top-content">
+                    <h3>Управление подписками</h3>
+                </div>
+                <div class="management__wrap">
+                    <div class="management__item box">
+                        <div class="management__cell management__cell_left">
+                            <div class="management__name">Elon Mask Strategy</div><a class="management__link color-red js-modal" href="#close-subscription">Отменить подписку</a>
+                        </div>
+                        <div class="management__cell management__cell_right">
+                            <div class="management__day">До 10.06.2021 , 13:54 PM</div>
+                            <button class="management__btn btn btn_tiny btn_blue btn_disabled js-modal" type="button" data-modal="#pause-copying">
+                                <div class="btn__back"></div><span class="btn__text">Приостановить копирование</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="management__item box">
+                        <div class="management__cell management__cell_left">
+                            <div class="management__name">Elon Mask Strategy</div><a class="management__link color-red js-modal" href="#close-subscription">Отменить подписку</a>
+                        </div>
+                        <div class="management__cell management__cell_right">
+                            <div class="management__day">До 10.06.2021 , 13:54 PM</div>
+                            <button class="management__btn btn btn_tiny btn_blue" type="button">
+                                <div class="btn__back"></div><span class="btn__text">Возобновить копирование</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="management__item box">
+                        <div class="management__cell management__cell_left">
+                            <div class="management__name">Elon Mask Strategy</div><a class="management__link color-red" href="#">Возоб. подписку</a>
+                        </div>
+                        <div class="management__cell management__cell_right">
+                            <div class="management__day">До 10.06.2021 , 13:54 PM</div>
+                            <button class="management__btn btn btn_tiny btn_blue" type="button">
+                                <div class="btn__back"></div><span class="btn__text">Возобновить копирование</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="management__item box">
+                        <div class="management__cell management__cell_left">
+                            <div class="management__name">Elon Mask Strategy</div><a class="management__link color-red js-modal" href="#close-subscription">Отменить подписку</a>
+                        </div>
+                        <div class="management__cell management__cell_right">
+                            <div class="management__day">До 10.06.2021 , 13:54 PM</div>
+                            <button class="management__btn btn btn_tiny btn_blue" type="button">
+                                <div class="btn__back"></div><span class="btn__text">Возобновить копирование</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__item"><a class="nav__link" href="main.html"><span class="nav__icon"><svg class="icon-dashboard" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#dashboard"></use></svg></span><span class="nav__text">Дашборд</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="strategy-v-1.html"><span class="nav__icon"><svg class="icon-strategy" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#strategy"></use></svg></span><span class="nav__text">Стратегии</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="portfolio-v-1.html"><span class="nav__icon"><svg class="icon-briefcase" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#briefcase"></use></svg></span><span class="nav__text">Портфель</span></a>
+                </div>
+                <div class="nav__item is-active"><a class="nav__link" href="profile-v-1.html"><span class="nav__icon"><span class="nav__user"><picture>
+		                            <source type="image/webp" srcset="app/img/avatar.webp">
+		                            <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+		                        </picture></span></span><span class="nav__text">Профиль</span></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <div class="modal mfp-hide mfp-hide-close" id="close-subscription">
+        <div class="modal__icon icon icon_small icon_red">
+            <svg class="icon-close" viewBox="0 0 24 24">
+                <use xlink:href="app/icons/sprite.svg#close"></use>
+            </svg>
+        </div>
+        <form action="">
+            <div class="modal__content css-text-center">
+                <h4 class="modal__title h4">Отмена подписки</h4>
+                <p class="modal__text"><span class="color-red">Внимание!</span> Ваша подписка оплачена до&nbsp;23.06.2021. Вы продолжите копировать трейды в&nbsp;рамках этой стратегии до&nbsp;23.06.2021 17:57 UTC+3. После этого все открытые на&nbsp;тот момент позиции будут закрыты
+                    по&nbsp;рыночной цене, а&nbsp;активные ордера удалены.</p>
+                <label class="modal__checkbox checkbox js-checkbox">
+                    <input class="checkbox__input" data-rule-required="true" name="subscription" type="checkbox" /><span class="checkbox__text middle"> <span class="checkbox__arrow"><svg class="icon-checked" viewBox="0 0 12 9"><use xlink:href="app/icons/sprite.svg#checked"></use></svg></span>Я понимаю риск и&nbsp;хочу отписаться от&nbsp;подписки.</span>
+                </label>
+            </div>
+            <div class="modal__bottom flex flex_center">
+                <button class="modal__btn btn btn_blue btn_tiny btn_border js-close-modal" type="button">
+                    <div class="btn__back"></div><span class="btn__text">Отменить</span>
+                </button>
+                <button class="modal__btn btn btn_blue btn_tiny" type="submit" data-modal="#close-subscription-success">
+                    <div class="btn__back"></div><span class="btn__text">Отписаться</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="modal mfp-hide mfp-hide-close" id="close-subscription-success">
+        <div class="modal__icon icon icon_small icon_red">
+            <svg class="icon-close" viewBox="0 0 24 24">
+                <use xlink:href="app/icons/sprite.svg#close"></use>
+            </svg>
+        </div>
+        <div class="modal__content css-text-center">
+            <h4 class="modal__title h4">Подписка отменена</h4>
+            <p class="modal__text">Вы можете остановить копирование
+                <br>сигналов в&nbsp;любой момент.</p>
+        </div>
+        <div class="modal__bottom flex flex_center">
+            <button class="modal__btn btn btn_blue btn_tiny js-close-modal" type="button">
+                <div class="btn__back"></div><span class="btn__text">Окей</span>
+            </button>
+        </div>
+    </div>
+    <div class="modal mfp-hide mfp-hide-close" id="pause-copying">
+        <div class="modal__icon icon icon_small icon_red">
+            <svg class="icon-close" viewBox="0 0 24 24">
+                <use xlink:href="app/icons/sprite.svg#close"></use>
+            </svg>
+        </div>
+        <form action="">
+            <div class="modal__content css-text-center">
+                <h4 class="modal__title h4">Приостановка копирования</h4>
+                <p class="modal__text"><span class="color-red">Внимание!</span> Все открытые в&nbsp;рамках данной стратегии позиции будут немедленно закрыты по&nbsp;текущей рыночной цене, а&nbsp;активные ордера будут удалены.</p>
+                <p class="modal__text color-bg">Вы действительно хотите приостановить
+                    <br>копирование сигналов трейдера по&nbsp;этой подписке?</p>
+                <label class="modal__checkbox checkbox js-checkbox">
+                    <input class="checkbox__input" data-rule-required="true" name="subscription" type="checkbox" /><span class="checkbox__text middle"> <span class="checkbox__arrow"><svg class="icon-checked" viewBox="0 0 12 9"><use xlink:href="app/icons/sprite.svg#checked"></use></svg></span>Я понимаю риск и&nbsp;хочу приостановить копирование
+                    трейдов.</span>
+                </label>
+            </div>
+            <div class="modal__bottom flex flex_center">
+                <button class="modal__btn btn btn_blue btn_tiny btn_border js-close-modal" type="button">
+                    <div class="btn__back"></div><span class="btn__text">Отменить</span>
+                </button>
+                <button class="modal__btn btn btn_blue btn_tiny" type="submit" data-modal="#pause-copying-success">
+                    <div class="btn__back"></div><span class="btn__text">Приостановить</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="modal mfp-hide mfp-hide-close" id="pause-copying-success">
+        <div class="modal__icon icon icon_small icon_red">
+            <svg class="icon-close" viewBox="0 0 24 24">
+                <use xlink:href="app/icons/sprite.svg#close"></use>
+            </svg>
+        </div>
+        <div class="modal__content css-text-center">
+            <h4 class="modal__title h4">Копирование приостановлено</h4>
+            <p class="modal__text">Вы можете возобновить копирование сигналов по&nbsp;
+                <br>этой стратегии в&nbsp;любой момент.</p>
+        </div>
+        <div class="modal__bottom flex flex_center">
+            <button class="modal__btn btn btn_blue btn_tiny js-close-modal" type="button">
+                <div class="btn__back"></div><span class="btn__text">Окей</span>
+            </button>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app/js/app.js?v=1627308165985"></script>
+</body>
+
+</html>

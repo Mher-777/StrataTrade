@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="app/css/app.css?v=1627308163410">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body ontouchstart="">
+    <section class="login">
+        <div class="container">
+            <div class="login__logo logo logo_width">
+                <a class="logo__link" href="#">
+                    <img src="app/img/logo.svg" alt="Логотип" width="40" height="40" title="" />
+                </a>
+            </div>
+            <div class="login__tabs tabs">
+                <div class="tabs__item"><a class="tabs__link" href="registration.html">Регистрация</a>
+                </div>
+                <div class="tabs__item"><a class="tabs__link is-active" href="login.html">Авторизация</a>
+                </div>
+            </div>
+            <form class="login__form" action="">
+                <div class="login__field input">
+                    <div class="input__label">Email</div>
+                    <div class="input__parent">
+                        <input class="input__field" name="email" placeholder="Email" type="email" autocomplete="off" required="required" />
+                    </div>
+                </div>
+                <div class="login__field input">
+                    <div class="input__label">Пароль</div>
+                    <div class="input__parent">
+                        <input class="input__field" name="password" placeholder="Пароль" type="password" autocomplete="off" required="required" />
+                    </div>
+                </div>
+                <div class="login__cell flex flex flex_justify flex flex_vertical">
+                    <label class="login__checkbox checkbox checkbox checkbox_no-margin">
+                        <input class="checkbox__input" checked="checked" data-rule-required="false" name="remember" type="checkbox" /><span class="checkbox__text middle"> <span class="checkbox__arrow"><svg class="icon-checked" viewBox="0 0 12 9"><use xlink:href="app/icons/sprite.svg#checked"></use></svg></span>Запомнить меня</span>
+                    </label><a class="login__link link" href="reset.html">Забыли пароль?</a>
+                </div>
+                <button class="login__btn btn" type="submit">
+                    <div class="btn__back"></div><span class="btn__text">Войти</span>
+                </button>
+                <div class="login__socials socials">
+                    <div class="line-text"><span>или</span>
+                    </div><a class="socials__btn btn btn_bg btn_icon" href="#"><span class="btn__back"></span><span class="btn__text"><img src="app/img/socials-icon-1.svg">Google</span></a><a class="socials__btn btn btn_blue btn_icon" href="#"><span class="btn__back"></span><span class="btn__text"><img src="app/img/socials-icon-2.svg">Facebook</span></a>
+                    <a
+                    class="socials__btn btn btn_primary btn_icon" href="#"><span class="btn__back"></span><span class="btn__text"><img src="app/img/socials-icon-3.svg">Вконтакте</span>
+                        </a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app/js/app.js?v=1627308163418"></script>
+</body>
+
+</html>

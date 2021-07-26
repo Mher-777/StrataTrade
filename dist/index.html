@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Список всех старниц</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="app/css/app.css?v=1627308163301">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        body{
+            background-color: #212122;
+        	color: #fff;
+        	min-height: 100vh;
+        	font-family: Arial;		
+        	padding-top: 40px;
+        }
+        
+        .box{
+        	padding: 20px 40px;
+        	background-color: #000;		
+        }
+        .head-top{
+        	display: flex;
+        	flex-wrap: wrap;
+        	align-items: center;
+        	margin-top: 24px;
+        	margin-bottom: 40px;
+        	justify-content: space-between;
+        
+        }
+        
+        .head-title{
+        	
+        	
+        	font-size: 24px;
+        	line-height: 1.4em;
+            		
+        }
+        
+        .git-link{
+        	font-size: 12px;
+        	line-height: 1.2em;
+        	display: block;
+        	margin: 5px 0;
+        	transition: var(--anim-transition);
+        	color: rgba(255,255,255, .2)!important;
+        }
+        
+        .git-link:hover{
+        	color:  #96fd8b!important;
+        }
+        
+        a{
+        	color: #fff;
+        	position: relative;
+        	display: inline-block;
+        	text-decoration: none;
+        	
+        
+        
+        }
+        
+        a::before{
+        	content: "";
+        	display: block;
+        	position: absolute;
+        	left: 0;
+        	bottom: 0;
+        	height: 1px;
+        	width: 100%;
+        	background-color: #fff;
+        	transition: var(--anim-transition);
+        	transform: scale(0,1);
+        
+        }
+        a:hover::before{
+        	transform: scale(1, 1);
+        }
+        a:visited {
+            color: #96fd8b;
+        }
+        a:visited::before{
+        	background-color: #96fd8b;
+        }
+        ol{
+        	-webkit-column-count: 3;
+        	-moz-column-count: 3;
+        	column-count: 3;
+        	counter-reset: heading;
+        	padding: 0;
+        	margin-top: 16px;
+        	margin-bottom: 25px;
+        	margin-left: -25px;			
+        }
+        
+        li{
+        	font-size: 16px;
+        	margin-bottom: 8px;
+        	position: relative;
+        	padding-left: 30px;
+        	list-style: none;
+        	page-break-inside: avoid;		
+        	counter-increment: heading;	
+        }
+        
+        li::before{
+        	position: absolute;
+        	left: 0;
+        	top: 0;
+        	content: counter(heading) ".";
+        	font-size: 14px;
+            color: rgba(241,241,241,.5);
+        	display: inline-block;
+        	width: 25px;
+        	margin-right: 5px;
+        	text-align: right;
+        }
+        
+        
+        a:hover{
+        	text-decoration: none;
+        }
+        
+        /* Media */
+        @media only screen and (max-width: 1023px) {
+        	ol {
+        		-webkit-column-count: 3;
+        		-moz-column-count: 3;
+        		-column-count: 3;
+        	}
+        }
+        
+        @media only screen and (max-width: 767px) {
+        	ol {
+        		-webkit-column-count: 2;
+        		-moz-column-count: 2;
+        		-column-count: 2;
+        	}
+        }
+        
+        @media only screen and (max-width: 479px) {
+        	ol {
+        		-webkit-column-count: 1;
+        		-moz-column-count: 1;
+        		-column-count: 1;
+        	}
+        
+        	.head-title{
+        		order: 2;
+        	}
+        	.git-link{
+        		order: 1;
+        		margin-bottom: 15px;
+        		font-size: 10px;
+        	}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box">
+            <div class="head-top">
+                <h3 class="head-title"> Страницы проекта <nobr>«StrataTrade»:</nobr></h3>
+            </div>
+            <ol><li><a href="dashboard-api-popup.html" target="_blank">Аккаунт добавлен</a></li><li><a href="dashboard-api.html" target="_blank">Подключение API аккаунта</a></li><li><a href="dashboard-card-popup.html" target="_blank">Карта добавлена</a></li><li><a href="dashboard-card.html" target="_blank">Подключение карты</a></li><li><a href="dashboard-v-1.html" target="_blank">Дашборд</a></li><li><a href="dashboard-v-2.html" target="_blank">Дашборд</a></li><li><a href="login.html" target="_blank">Авторизация</a></li><li><a href="main.html" target="_blank">Дашборд</a></li><li><a href="new-password.html" target="_blank">Новый пароль</a></li><li><a href="notice.html" target="_blank">Уведомления</a></li><li><a href="onboarding-v-1.html" target="_blank">Ондобрдин №1. Выбор биржи</a></li><li><a href="onboarding-v-2.html" target="_blank">Ондобрдин №2. Выбор стратегии</a></li><li><a href="onboarding-v-3.html" target="_blank">Ондобрдин №3. Привязка карты</a></li><li><a href="onboarding-v-4.html" target="_blank">Ондобрдин №4. Заработок</a></li><li><a href="portfolio-strategy-v-1.html" target="_blank">Мой портфель (Страница стратегии - Аналитика)</a></li><li><a href="portfolio-strategy-v-2.html" target="_blank">Отдельная страница сигнала. В профите</a></li><li><a href="portfolio-strategy-v-3.html" target="_blank">Отдельная стр. сигнала. Закрыт по&nbsp;стопу</a></li><li><a href="portfolio-v-1.html" target="_blank">Мой портфель (Список моих стратегий)</a></li><li><a href="portfolio-v-2.html" target="_blank">Мой портфель (Список моих стратегий + сортировка)</a></li><li><a href="portfolio-v-3.html" target="_blank">Мой портфель (Список моих стратегий + сортировка)</a></li><li><a href="profile-v-1.html" target="_blank">Настройки профиля (Личные данные)</a></li><li><a href="profile-v-2.html" target="_blank">Настройки профиля (2FA)</a></li><li><a href="profile-v-3.html" target="_blank">Настройки профиля (История сессий)</a></li><li><a href="profile-v-4.html" target="_blank">Настройки профиля (Управление подписками)</a></li><li><a href="profile-v-5.html" target="_blank">Настройки профиля (Ключи API)</a></li><li><a href="profile-v-6.html" target="_blank">Настройки профиля (Пароль)</a></li><li><a href="profile-v-7.html" target="_blank">Настройки профиля (Платежные данные)</a></li><li><a href="profile-v-8.html" target="_blank">Настройки профиля (Платежные данные, когде нет карты)</a></li><li><a href="registration.html" target="_blank">Регистрация</a></li><li><a href="reset-success.html" target="_blank">Восстановление пароля(пароль успешно изменен)</a></li><li><a href="reset.html" target="_blank">Восстановление пароля</a></li><li><a href="signals-v-1.html" target="_blank">Отдельная страница сигнала (Закрытый сигнал. В профите)</a></li><li><a href="signals-v-2.html" target="_blank">Отдельная страница сигнала (Закрытый сигнал. Закрыт по&nbsp;стопу)</a></li><li><a href="signals-v-3.html" target="_blank">Отдельная страница сигнала (Активный сигнал)</a></li><li><a href="strategy-v-1.html" target="_blank">Стратегии (Витрина стратегий.)</a></li><li><a href="strategy-v-10.html" target="_blank">Стратегии (Рекомендованный портфель стратегий)</a></li><li><a href="strategy-v-11.html" target="_blank">Страница стратегии (Аналитика. График доходности)</a></li><li><a href="strategy-v-12.html" target="_blank">Страница стратегии на&nbsp;которую я&nbsp;подписан</a></li><li><a href="strategy-v-2.html" target="_blank">Стратегии (Высокодоходные стртаегии + Сорт.)</a></li><li><a href="strategy-v-3.html" target="_blank">Стратегии (С низким риском)</a></li><li><a href="strategy-v-4.html" target="_blank">Стратегии (Больше всего подписчиков)</a></li><li><a href="strategy-v-5.html" target="_blank">Стратегии (Крупные активы)</a></li><li><a href="strategy-v-6.html" target="_blank">Стратегии (Краткосрочные + Поиск)</a></li><li><a href="strategy-v-7.html" target="_blank">Стратегии (Длинные инвестиции)</a></li><li><a href="strategy-v-8.html" target="_blank">Стратегии (Что ищут?)</a></li><li><a href="strategy-v-9.html" target="_blank">Стратегии (Топ просмотров)</a></li><li><a href="subscription-v-1.html" target="_blank">Флоу подписки Фиксированная цена. Выбор тарифа для&nbsp;клиента без&nbsp;подвязанной карты</a></li><li><a href="subscription-v-2.html" target="_blank">Флоу подписки Фиксированная цена. Выбор способа оплаты для&nbsp;клиента c подвязанной картой. Оплата тарифа</a></li><li><a href="subscription-v-3.html" target="_blank">Флоу подписки Фиксированная цена. Выбор способа оплаты для&nbsp;клиента c подвязанной картой. Оплата тарифа</a></li><li><a href="subscription-v-4.html" target="_blank">Флоу подписки Фиксированная цена. Выбор способа оплаты для&nbsp;клиента c подвязанной картой. Оплата тарифа</a></li><li><a href="subscription-v-5.html" target="_blank">Флоу подписки Подписка оформлена + регулярный платеж</a></li><li><a href="subscription-v-6.html" target="_blank">Флоу подписки. Подписка оформлена</a></li><li><a href="success-email.html" target="_blank">Восстановление пароля(e-mail отправлен)</a></li></ol>
+        </div>
+    </div>
+</body>
+
+</html>

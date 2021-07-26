@@ -14,7 +14,19 @@
     font-size: 1.2rem;
     &-row {
       margin-bottom: 2rem;
+      .strategy__btn {
+        margin-top: 0;
+        width: 295 / 343.2 * 100%;
+      }
     }
+  }
+  &__share {
+    margin-top: 0;
+  }
+  &__text {
+    margin-top: .3rem;
+    font-size: 1.2rem;
+    color: #263238;
   }
   &__income {
     margin-top: 1rem;
@@ -27,6 +39,10 @@
   }
   &__day {
     margin-top: .4rem;
+  }
+  &__data {
+    margin-top: .6rem;
+    display: inline-block;
   }
   &__cell {
     width: 100%;
@@ -48,8 +64,9 @@
     font-weight: 600;
     min-height: 4rem;
     width: 205 / 343 * 100%;
-
-
+    &_medium {
+      width: 295 / 343 * 100%;
+    }
   }
   &__link {
     margin-top: 0;
@@ -86,5 +103,25 @@
   }
   &__signals {
     margin-top: 2rem;
+  }
+  &__search {
+    margin-bottom: 2rem;
+  }
+  &__category {
+    margin-top: 2rem;
+  }
+  &__content {
+    margin-top: 1.8rem;
+    h3 {
+      color: #1C1D21;
+      margin-bottom: .8rem;
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1.3rem;
+      color: var(--color-black);
+      line-height: 1.6em;
+    }
   }
 }

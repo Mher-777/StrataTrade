@@ -1,5 +1,4 @@
 .chart {
-  max-height: 43.5rem;
   margin-bottom: 4rem;
   &__top {
     display: flex;
@@ -19,25 +18,44 @@
     }
   }
   &__wrap {
-    overflow: hidden;
+
   }
   &__diagram {
-    margin-top: -5rem;
-    position: relative;
-    padding-top: 400 / 320 * 100%;
-    margin-bottom: -3rem;
-    circle {
-      r: 0.9rem;
-      stroke-width: 0.5rem;
-      stroke: var(--color-blue);
-      fill: var(--color-white)
+    min-height: 36rem;
+    margin-left: -2.5rem;
+    .amcharts-Tooltip {
+      font-size: 1.2rem;
+      line-height: 1.1em;
+    }
+    .amcharts-Circle {
+      r: 3;
     }
   }
   &__periods {
     justify-content: center;
+    margin-top: -2rem;
+    position: relative;
+    z-index: 3;
+    margin-bottom: 2rem;
   }
   .pagination {
-    margin-top: 3rem;
-    margin-bottom: -3.5rem;
+    margin-bottom: -2rem;
+    transform: translateY(1.4rem);
+  }
+  &__select {
+    position: relative;
+    z-index: 5;
+    margin-top: 1.2rem;
+    .select__label {
+      color: var(--color-gray);
+      font-size: 1.2rem;
+    }
+  }
+  &__elem {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    min-height: 4.5rem;
   }
 }

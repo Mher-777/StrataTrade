@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Настройки профиля (Платежные данные)</title>
+    <link rel="stylesheet" href="app/css/app.css?v=1627308166330">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body class="body_padding" ontouchstart="">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo logo">
+                    <a class="logo__link" href="main.html">
+                        <img src="app/img/logo.svg" alt="Логотип" width="40" height="40" title="" />
+                    </a>
+                </div>
+                <div class="header__notice">
+                    <a class="header__link" href="notice.html">
+                        <svg class="icon-notice" viewBox="0 0 20 20">
+                            <use xlink:href="app/icons/sprite.svg#notice"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__avatar avatar">
+                    <a class="avatar__link" href="portfolio-v-1.html">
+                        <picture>
+                            <source type="image/webp" srcset="app/img/avatar.webp">
+                                <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="profile">
+        <div class="container">
+            <div class="profile__menu menu swiper-container js-slider" data-settings="{&quot;slidesPerView&quot;: &quot;auto&quot;, &quot;freeMode&quot;: true, &quot;initialSlide&quot;: 4 }">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-1.html">Личные данные</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-2.html">2FA</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-3.html">История сессий</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-4.html">Подписки</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-5.html">API</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-6.html">Пароль</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link is-active" href="profile-v-7.html">Платежи</a>
+                    </div>
+                </div>
+            </div>
+            <div class="profile__payment payment">
+                <div class="payment__info">
+                    <div class="top-content">
+                        <h3>Платежные данные</h3>
+                    </div>
+                    <div class="payment__holder box">
+                        <div class="payment__top flex flex_justify flex_vertical">
+                            <div class="payment__price price">$2,580.49</div>
+                            <div class="payment__number">**** 4242</div>
+                        </div>
+                        <div class="payment__params params">
+                            <div class="params__item">
+                                <div class="params__cell params__cell_left">
+                                    <div class="params__subtitle">Статус</div>
+                                </div>
+                                <div class="params__cell params__cell_right">
+                                    <div class="params__text status status_active">Активно</div>
+                                </div>
+                            </div>
+                            <div class="params__item">
+                                <div class="params__cell params__cell_left">
+                                    <div class="params__subtitle">Тип карты</div>
+                                </div>
+                                <div class="params__cell params__cell_right">
+                                    <div class="params__text">
+                                        <img class="params__icon" src="app/img/master-card.svg" alt="" role="presentation" />MasterCard</div>
+                                </div>
+                            </div>
+                            <div class="params__item">
+                                <div class="params__cell params__cell_left">
+                                    <div class="params__subtitle">Валюта</div>
+                                </div>
+                                <div class="params__cell params__cell_right">
+                                    <div class="params__text">
+                                        <img class="params__icon" src="app/img/flag-usa.svg" alt="" role="presentation" />USD</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment__cards">
+                    <div class="top-content">
+                        <h3>Мои карты</h3>
+                    </div>
+                    <div class="payment__slider swiper-container js-slider" data-settings="{&quot;slidesPerView&quot;: &quot;auto&quot;, &quot;freeMode&quot;: true, &quot;spaceBetween&quot;: 15 }">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a class="card-add" href="dashboard-card.html">
+                                    <svg class="icon-add" viewBox="0 0 24 24">
+                                        <use xlink:href="app/icons/sprite.svg#add"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card_small card_blue js-modal" data-modal="#edit-card">
+                                    <div class="card__wrap">
+                                        <div class="card__top flex flex_vertical flex_justify"><span class="card__text">**** 4242</span>
+                                            <div class="card__logo">
+                                                <img src="app/img/visa-card.svg" alt="" role="presentation" />
+                                            </div>
+                                        </div>
+                                        <div class="card__bottom flex flex_bottom">
+                                            <div class="card__cell card__cell_left">
+                                                <div class="card__name">Moe Elgendy</div>
+                                                <div class="card__day">Истекает 1/24</div>
+                                            </div>
+                                            <div class="card__cell card__cell_right">
+                                                <div class="card__state state">Основная</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card_small card_orange">
+                                    <div class="card__wrap">
+                                        <div class="card__top flex flex_vertical flex_justify"><span class="card__text">**** 4242</span>
+                                            <div class="card__logo">
+                                                <img src="app/img/visa-card.svg" alt="" role="presentation" />
+                                            </div>
+                                        </div>
+                                        <div class="card__bottom flex flex_bottom">
+                                            <div class="card__cell card__cell_left">
+                                                <div class="card__name">Moe Elgendy</div>
+                                                <div class="card__day">Истекает 1/24</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-content">
+                    <h3>История платежей</h3>
+                </div>
+                <div class="payment__history">
+                    <div class="payment-history payment-history_border box">
+                        <div class="payment-history__cell payment-history__cell_left">
+                            <div class="payment-history__name">Elon Mask Strategy</div>
+                            <div class="payment-history__day">19.05.2021 , 16:24 PM</div>
+                        </div>
+                        <div class="payment-history__cell payment-history__cell_right">
+                            <div class="payment-history__number">**** 4242</div>
+                            <div class="payment-history__price color-red">-$10.00 USD</div>
+                        </div>
+                    </div>
+                    <div class="payment-history payment-history_border box">
+                        <div class="payment-history__cell payment-history__cell_left">
+                            <div class="payment-history__name">HODL Strategy</div>
+                            <div class="payment-history__day">14.05.2021 , 09:22 PM</div>
+                        </div>
+                        <div class="payment-history__cell payment-history__cell_right">
+                            <div class="payment-history__number">**** 4242</div>
+                            <div class="payment-history__price color-red">-$10.00 USD</div>
+                        </div>
+                    </div>
+                    <div class="payment-history payment-history_border box">
+                        <div class="payment-history__cell payment-history__cell_left">
+                            <div class="payment-history__name">To the m00n</div>
+                            <div class="payment-history__day">01.05.2021 , 12:32 PM</div>
+                        </div>
+                        <div class="payment-history__cell payment-history__cell_right">
+                            <div class="payment-history__number">**** 4242</div>
+                            <div class="payment-history__price color-red">-$10.00 USD</div>
+                        </div>
+                    </div>
+                    <div class="payment-history payment-history_border box">
+                        <div class="payment-history__cell payment-history__cell_left">
+                            <div class="payment-history__name">Bullseye-Trading</div>
+                            <div class="payment-history__day">27.04.2021 , 20:51 PM</div>
+                        </div>
+                        <div class="payment-history__cell payment-history__cell_right">
+                            <div class="payment-history__number">**** 4242</div>
+                            <div class="payment-history__price color-red">-$10.00 USD</div>
+                        </div>
+                    </div>
+                </div><a class="payment__btn btn btn_border btn_small" href="#"><span class="btn__back"></span><span class="btn__text">Показать еще</span></a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__item"><a class="nav__link" href="main.html"><span class="nav__icon"><svg class="icon-dashboard" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#dashboard"></use></svg></span><span class="nav__text">Дашборд</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="strategy-v-1.html"><span class="nav__icon"><svg class="icon-strategy" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#strategy"></use></svg></span><span class="nav__text">Стратегии</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="portfolio-v-1.html"><span class="nav__icon"><svg class="icon-briefcase" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#briefcase"></use></svg></span><span class="nav__text">Портфель</span></a>
+                </div>
+                <div class="nav__item is-active"><a class="nav__link" href="profile-v-1.html"><span class="nav__icon"><span class="nav__user"><picture>
+		                            <source type="image/webp" srcset="app/img/avatar.webp">
+		                            <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+		                        </picture></span></span><span class="nav__text">Профиль</span></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <div class="modal mfp-hide" id="edit-card">
+        <div class="modal__content">
+            <h4 class="modal__title h4">Данные карты</h4>
+            <p class="modal__text">Можно редактировать карту</p>
+        </div>
+        <form action="">
+            <div class="modal__row flex flex_justify">
+                <div class="modal__field input">
+                    <div class="input__parent">
+                        <input class="input__field" name="card" placeholder="" type="text" autocomplete="off" inputmode="numeric" value="4433 3453 2345 4242" data-inputmask="'mask': '9999 9999 9999 9999', 'placeholder': ''" required="required" />
+                    </div>
+                </div>
+                <div class="modal__field input input_width">
+                    <div class="input__parent">
+                        <input class="input__field" type="text" inputmode="numeric" value="01/24" name="day" placeholder="" autocomplete="off" data-inputmask="'mask': '99/99', 'placeholder': ''" required="required" />
+                    </div>
+                </div>
+                <div class="modal__field input input_width">
+                    <div class="input__parent">
+                        <input class="input__field" type="text" inputmode="numeric" value="533" name="code" placeholder="" autocomplete="off" data-inputmask="'mask': '999', 'placeholder': ''" required="required" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal__switcher switcher">
+                <label class="switcher__item">
+                    <input class="switcher__input" type="radio" name="state" checked="checked" value="0" /><span class="switcher__text"><span class="switcher__arrow"></span>Основная</span>
+                </label>
+                <label class="switcher__item">
+                    <input class="switcher__input" type="radio" name="state" value="1" /><span class="switcher__text"><span class="switcher__arrow"></span>Дополнительная</span>
+                </label>
+            </div>
+            <div class="modal__bottom flex flex_right">
+                <button class="modal__btn btn btn_blue btn_tiny btn_border js-close-modal" type="button">
+                    <div class="btn__back"></div><span class="btn__text">Удалить</span>
+                </button>
+                <button class="modal__btn btn btn_blue btn_tiny" type="submit">
+                    <div class="btn__back"></div><span class="btn__text">Сохранить</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app/js/app.js?v=1627308166341"></script>
+</body>
+
+</html>

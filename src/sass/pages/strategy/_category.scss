@@ -1,0 +1,25 @@
+.category {
+  &__row {
+    margin-left: -1.6rem;
+  }
+  &__col {
+    width: calc(33.333333% - 1.6rem);
+    margin-left: 1.6rem;
+    margin-top: 1.6rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: var(--color-white);
+    box-shadow: 0 1rem 4rem rgba(242, 242, 242, 0.5);
+    border-radius: .6rem;
+  }
+  &__subtitle {
+    font-weight: 500;
+    color: var(--color-black);
+    margin-top: 1rem;
+    display: block;
+  }
+  &__icon {
+    max-width: 3rem;
+  }
+}

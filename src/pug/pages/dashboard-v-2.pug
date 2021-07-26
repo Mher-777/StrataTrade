@@ -1,0 +1,227 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Дашборд';
+append scripts
+	script(src="https://cdn.amcharts.com/lib/4/core.js")
+	script(src="https://cdn.amcharts.com/lib/4/charts.js")
+	script(src="https://cdn.amcharts.com/lib/4/themes/animated.js")
+block content
+	+b.SECTION.dashboard
+		.container
+			+e.top
+				+e.SPAN.top-name Добрый день, Александр!
+				+e.H2.top-title.h2 Дашборд
+			+b.banner-card
+				+e.slider.swiper-container.js-slider(data-settings=`{"slidesPerView": "auto", "freeMode": true, "spaceBetween": 15, "pagination": {"el": ".js-banner-pagination", "clickable": true} }`)
+					.swiper-wrapper
+						.swiper-slide
+							+e.item
+								+e.IMG(src="/img/banner-card-1.png").bg.object-fit
+								+e.content.content
+									+b.H3 To the m00n
+									+b.P Успей купить криптовалюту, <br> которой будут расплачиваться <br> на Марсе
+								+btn()._small._white Узнать больше
+						.swiper-slide
+							+e.item
+								+e.IMG(src="/img/banner-card-2.png").bg.object-fit
+								+e.content.content
+									+e.H3.title HODL Strategy
+									+e.P.text Успей купить криптовалюту, которой будут расплачиваться на Марсе
+								+btn()._small._white Узнать больше
+						.swiper-slide
+							+e.item
+								+e.IMG(src="/img/banner-card-1.png").bg.object-fit
+								+e.content.content
+									+b.H3 To the m00n
+									+b.P Успей купить криптовалюту, <br> которой будут расплачиваться <br> на Марсе
+								+btn()._small._white Узнать больше
+					+e.pagination.js-banner-pagination.pagination._red
+			+e.balance.balance__.box
+				+e.slider.swiper-container.js-slider(data-settings=`{"spaceBetween": 30, "autoHeight": true, "pagination": {"el": ".js-balance-pagination", "clickable": true}}`)
+					.swiper-wrapper
+						.swiper-slide
+							+e.FORM(action="").form
+								+e.row
+									+e.cell._left
+										+e.IMG(src="app/img/briefcase.svg" alt="").icon
+										+e.text Портфель
+										+e.price 14,2142
+											+e.val btc
+											+e.BUTTON(type="button").btn
+												+icon('eye')
+										+e.revenue.color-red
+											+icon('alt')
+											| –14,35
+											| (4,11%)
+										+e.A(href="#").link за все время
+									+e.cell._right
+										+btn-radio('currency', '0', true) BTC
+										+btn-radio('currency', '1') USD
+						.swiper-slide
+							+e.FORM(action="").form
+								+e.row
+									+e.cell._left
+										+e.IMG(src="app/img/briefcase.svg" alt="").icon
+										+e.text Портфель
+										+e.price 14,2142
+											+e.val btc
+											+e.BUTTON(type="button").btn
+												+icon('eye')
+										+e.revenue.color-green
+											+icon('alt')
+											| +74,29
+											| (17,78%)
+										+e.A(href="#").link за все время
+									+e.cell._right
+										+btn-radio('currency', '0', true) BTC
+										+btn-radio('currency', '1') USD
+			+b.js-balance-pagination.pagination._red
+			+e.subtitle Динамика портфолио
+			+e.chart.box.chart__
+				+e.slider.swiper-container.js-slider(data-settings=`{"spaceBetween": 30, "autoHeight": true, "simulateTouch": false, "pagination": {"el": ".js-chart-pagination", "clickable": true}}`)
+					.swiper-wrapper
+						.swiper-slide
+							+e.top
+								+e.cell._left.flex._justify
+									+e.subtitle.subtitle По стратегиям
+									+icon('chevron')
+								+e.cell._right.flex._right._justify
+									+e.select.select__
+										+e.parent
+											+e.SELECT.field(data-placeholder="Совокупный итог").js-select
+												+e.OPTION Совокупный итог
+												+e.OPTION Совокупный итог 1
+												+e.OPTION Совокупный итог 2
+												+e.OPTION Совокупный итог 3
+									+btn-radio('value-1', '0', true) BTC
+									+btn-radio('value-1', '1') USD
+							include ../modules/chart/chart-1
+						.swiper-slide
+							+e.top
+								+e.cell._left.flex._justify
+									+e.subtitle.subtitle Сравнительный анализ
+									+icon('chevron')
+								+e.cell._right._fix.flex._right._justify
+									+e.select.select__
+										+e.parent
+											+e.SELECT.field(data-placeholder="Совокупный итог").js-select
+												+e.OPTION Совокупный итог
+												+e.OPTION Совокупный итог 1
+												+e.OPTION Совокупный итог 2
+												+e.OPTION Совокупный итог 3
+									+btn-radio('value-2', '0', true) BTC
+									+e.select.select__
+										+e.parent
+											+e.SELECT.field(data-placeholder="S&P 500").js-select
+												+e.OPTION S&P 500
+												+e.OPTION S&P 600
+												+e.OPTION S&P 700
+												+e.OPTION S&P 800
+									+btn-radio('value-2', '1') USD
+							include ../modules/chart/chart-2
+
+				+periods('time', 'День', 'Неделя', 'Месяц')
+				+b.js-chart-pagination.pagination._red
+			+e.subtitle Баланс активов
+			+e.assets.assets__.box
+				+e.top.flex._justify
+					+e.subtitle.subtitle Активы
+					+icon('chevron')
+				+e.content
+					+e.select.select__
+						+e.parent
+							+e.SELECT.field(data-placeholder="Криптовалюта").js-select
+								+e.OPTION Криптовалюта
+								+e.OPTION По доходности
+								+e.OPTION Криптовалюта
+								+e.OPTION Криптовалюта 3
+					include ../modules/chart/chart-3
+					+btn()(class="_btn _border _small") Смотреть все
+			+e.subtitle Доходность стратегий
+			+e.yield.yield__.box
+				+periods('periods', 'За сегодня', 'За все время')
+				+e.item
+					+e.cell._left
+						+e.name Elon Mask Strategy
+						+e.TIME(datatime="2021.05.11").status.status._tiny._active 11 мая 2021
+					+e.cell._right.css-text-right
+						+e.price $ +7 985,77
+						+e.percent.color-green (+35,12%)
+				+e.item
+					+e.cell._left
+						+e.name HODL Strategy
+						+e.TIME(datatime="2021.05.11").status.status._tiny._active 11 мая 2021
+					+e.cell._right.css-text-right
+						+e.price $ +7 985,77
+						+e.percent.color-green (+35,12%)
+				+e.item
+					+e.cell._left
+						+e.name To the m00n
+						+e.TIME(datatime="2021.05.11").status.status._tiny._active 11 мая 2021
+					+e.cell._right.css-text-right
+						+e.price $ +7 985,77
+						+e.percent.color-green (+35,12%)
+				+e.item
+					+e.cell._left
+						+e.name Bullseye-Trading
+						+e.TIME(datatime="2021.05.11").status.status._tiny._active 11 мая 2021
+					+e.cell._right.css-text-right
+						+e.price $ +7 985,77
+						+e.percent.color-green (+35,12%)
+				+e.item
+					+e.cell._left
+						+e.name XRP Strategy
+						+e.TIME(datatime="2021.05.11").status.status._tiny._active 11 мая 2021
+					+e.cell._right.css-text-right
+						+e.price $ +7 985,77
+						+e.percent.color-green (+35,12%)
+				+btn('#')._border._small Смотреть все
+			+e.subtitle Последние трейды
+			+e.trades.trades__.box
+				+e.item
+					+e.cell._left
+						+e.title BTC / DOGE
+							+e.SPAN.badge.badge Long
+						+e.TIME(datetime="2021.01.09 14:00").date 01.09.2021 14:00
+						+e.name Elon Mask Strategy
+					+e.cell._right.color-red.css-text-right
+						+e.price – 0.0120 BTC
+						+e.text Stop loss
+				+e.item
+					+e.cell._left
+						+e.title BTC / DOGE
+							+e.SPAN.badge.badge._red Short x2
+						+e.TIME(datetime="2021.01.09 14:00").date 01.09.2021 14:00
+						+e.name Elon Mask Strategy
+					+e.cell._right.color-red.css-text-right
+						+e.price – 0.0120 BTC
+						+e.text Stop loss
+				+e.item
+					+e.cell._left
+						+e.title BTC / DOGE
+							+e.SPAN.badge.badge Long x3
+						+e.TIME(datetime="2021.01.09 14:00").date 01.09.2021 14:00
+						+e.name Elon Mask Strategy
+					+e.cell._right.color-red.css-text-right
+						+e.price – 0.0120 BTC
+						+e.text Stop loss
+				+e.item
+					+e.cell._left
+						+e.title BTC / DOGE
+							+e.SPAN.badge.badge._red Short x5
+						+e.TIME(datetime="2021.01.09 14:00").date 01.09.2021 14:00
+						+e.name Elon Mask Strategy
+					+e.cell._right.color-red.css-text-right
+						+e.price – 0.0120 BTC
+						+e.text Stop loss
+				+e.item
+					+e.cell._left
+						+e.title BTC / DOGE
+							+e.SPAN.badge.badge Long x2
+						+e.TIME(datetime="2021.01.09 14:00").date 01.09.2021 14:00
+						+e.name Elon Mask Strategy
+					+e.cell._right.color-red.css-text-right
+						+e.price – 0.0120 BTC
+						+e.text Stop loss
+				+btn('#')._border._small Смотреть все

@@ -1,7 +1,6 @@
 block vars
 	-
 		current = 'dashboard'
-
 +b.FOOTER.footer
 	.container
 		+b.NAV.nav
@@ -11,7 +10,7 @@ block vars
 						+icon('dashboard')
 					+e.SPAN.text Дашборд
 			+e.item(class=`${current === 'strategy' ? 'is-active' : ''}`)
-				+e.A(href="#").link
+				+e.A(href="strategy-v-1.html").link
 					+e.icon
 						+icon('strategy')
 					+e.SPAN.text Стратегии

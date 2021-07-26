@@ -32,6 +32,14 @@
     background: rgba(255, 68, 68, 0.1);
     stroke: #D64D51;
     stroke-width: .2rem;
+    svg {
+      &.icon-lock {
+        stroke-width: 0;
+        stroke: transparent;
+        fill: #F76659;
+        max-width: 1.5rem;
+      }
+    }
   }
 }
 .info {

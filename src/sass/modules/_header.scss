@@ -18,5 +18,18 @@
       height: 2.4rem;
       fill: var(--color-accent);
     }
+    &.is-status {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: .9rem;
+        height: .9rem;
+        background-color: var(--color-red);
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+      }
+    }
   }
 }

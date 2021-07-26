@@ -1,0 +1,70 @@
+.balance {
+  font-size: 1.2rem;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__cell {
+    width: 100%;
+    &_left {
+      position: relative;
+      padding-left: 3.6rem;
+      max-width: 25rem;
+    }
+    &_right {
+      max-width: 5.5rem;
+    }
+  }
+  &__icon {
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    left: 0;
+    top: 2rem;
+  }
+  &__text {
+    font-weight: 500;
+    color: #546E7A;
+    margin-bottom: .5rem;
+  }
+  &__price {
+    font-weight: 700;
+    color: var(--color-black);
+    font-size: 2.4rem;
+    line-height: .7em;
+    white-space: nowrap;
+  }
+  &__btn {
+    width: 2.4rem;
+    height: 1.6rem;
+    fill: #546E7A;
+    vertical-align: middle;
+  }
+  &__btn-radio {
+    margin: .4rem 0;
+  }
+  &__val {
+    font-size: 1.4rem;
+    display: inline-block;
+  }
+  &__revenue {
+    font-weight: 500;
+    margin-top: .5rem;
+    svg {
+      height: 1.7rem;
+      width: .6rem;
+      fill: var(--color-green);
+      margin-right: .2rem;
+    }
+    &.color-red {
+      svg {
+        transform: rotate(180deg);
+        fill: var(--color-red);
+      }
+    }
+  }
+  &__link {
+    color: var(--color-link);
+  }
+}

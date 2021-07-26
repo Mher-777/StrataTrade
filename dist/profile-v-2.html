@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Настройки профиля (2FA)</title>
+    <link rel="stylesheet" href="app/css/app.css?v=1627308165597">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body class="body_padding" ontouchstart="">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo logo">
+                    <a class="logo__link" href="main.html">
+                        <img src="app/img/logo.svg" alt="Логотип" width="40" height="40" title="" />
+                    </a>
+                </div>
+                <div class="header__notice">
+                    <a class="header__link" href="notice.html">
+                        <svg class="icon-notice" viewBox="0 0 20 20">
+                            <use xlink:href="app/icons/sprite.svg#notice"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__avatar avatar">
+                    <a class="avatar__link" href="portfolio-v-1.html">
+                        <picture>
+                            <source type="image/webp" srcset="app/img/avatar.webp">
+                                <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="profile">
+        <div class="container">
+            <div class="profile__menu menu swiper-container js-slider" data-settings="{&quot;slidesPerView&quot;: &quot;auto&quot;, &quot;freeMode&quot;: true }">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-1.html">Личные данные</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link is-active" href="profile-v-2.html">2FA</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-3.html">История сессий</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-4.html">Подписки</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-5.html">API</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-6.html">Пароль</a>
+                    </div>
+                    <div class="swiper-slide"><a class="menu__link" href="profile-v-7.html">Платежи</a>
+                    </div>
+                </div>
+            </div>
+            <div class="top-content">
+                <h3>Двухфакторная аутентификация</h3>
+                <p>В этом разделе Вы можете дополнительно защитить
+                    <br>свой аккаунт.</p>
+            </div>
+            <div class="profile__holder box">
+                <h5 class="profile__title h5">Cканируйте QR-код</h5>
+                <svg class="icon-qrCode" viewBox="0 0 200 200">
+                    <use xlink:href="app/icons/sprite.svg#qrCode"></use>
+                </svg>
+                <p>Если Вы желаете включить двухфакторную аутентификацию в&nbsp;аккаунте, мы рекомендуем использовать приложение <a href="#">Google Authenticator app.</a> Установите его на&nbsp;свое мобильное устройств и&nbsp;используйте его для&nbsp;сканирования
+                    QR-кода, который расположен ниже.
+                    <br>Или добавьте вручную, с&nbsp;помощью номера аккаунта и&nbsp;API ключа.</p>
+            </div>
+            <form action="">
+                <div class="profile__holder box">
+                    <h5 class="profile__title h5">Введите код аутентификации</h5>
+                    <p>После сканирования приложение <a href="#">Google Authenticator app</a> покажет Вам 6-ти значный код аутентификации. Введите его в&nbsp;поле ниже.</p>
+                    <div class="code">
+                        <input class="code__input" type="text" name="code_number_1" maxlength="1" inputmode="numeric" required="required" />
+                        <input class="code__input" type="text" name="code_number_2" maxlength="1" inputmode="numeric" required="required" />
+                        <input class="code__input" type="text" name="code_number_3" maxlength="1" inputmode="numeric" required="required" />
+                        <input class="code__input" type="text" name="code_number_4" maxlength="1" inputmode="numeric" required="required" />
+                        <input class="code__input" type="text" name="code_number_5" maxlength="1" inputmode="numeric" required="required" />
+                        <input class="code__input" type="text" name="code_number_6" maxlength="1" inputmode="numeric" required="required" />
+                    </div>
+                </div>
+                <button class="profile__btn btn btn_border" type="submit">
+                    <div class="btn__back"></div><span class="btn__text">Включить</span>
+                </button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__item"><a class="nav__link" href="main.html"><span class="nav__icon"><svg class="icon-dashboard" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#dashboard"></use></svg></span><span class="nav__text">Дашборд</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="strategy-v-1.html"><span class="nav__icon"><svg class="icon-strategy" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#strategy"></use></svg></span><span class="nav__text">Стратегии</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="portfolio-v-1.html"><span class="nav__icon"><svg class="icon-briefcase" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#briefcase"></use></svg></span><span class="nav__text">Портфель</span></a>
+                </div>
+                <div class="nav__item is-active"><a class="nav__link" href="profile-v-1.html"><span class="nav__icon"><span class="nav__user"><picture>
+		                            <source type="image/webp" srcset="app/img/avatar.webp">
+		                            <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+		                        </picture></span></span><span class="nav__text">Профиль</span></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app/js/app.js?v=1627308165605"></script>
+</body>
+
+</html>

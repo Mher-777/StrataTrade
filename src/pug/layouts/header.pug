@@ -1,12 +1,15 @@
+block vars
+	-
+		notice = false
 +b.HEADER.header
 	.container
 		+e.inner
 			+e.logo.logo__
 				+e.A(href="main.html").link
 					+e.IMG(src="app/img/logo.svg" alt="Логотип" width="40" height="40")
-			+e.notice
-				+e.A(href="#").link
+			+e.notice(class=`${notice === true ? 'is-status' : ''}`)
+				+e.A(href="notice.html").link
 					+icon('notice')
 			+e.avatar.avatar__
-				+e.A(href="#").link
+				+e.A(href="portfolio-v-1.html").link
 					+b.IMG(src="/img/avatar.png" alt="Александр").object-fit

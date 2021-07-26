@@ -1,0 +1,26 @@
+.yield {
+  &__periods {
+    justify-content: center;
+    margin-bottom: .5rem;
+  }
+  &__item {
+    padding: 1.2rem;
+    margin: 0 -1.2rem;
+    border-bottom: 1px solid #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name,
+  &__price {
+    font-weight: 600;
+    color: #1C1D21;
+    margin-bottom: .4rem;
+  }
+  &__status {
+    color: #92929D;
+    font-size: 1.2rem;
+  }
+  &__percent {
+    font-size: 1.2rem;
+  }
+}

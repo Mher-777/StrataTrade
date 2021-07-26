@@ -1,0 +1,16 @@
+.timer {
+  display: flex;
+  white-space: nowrap;
+  &__item {
+    font-weight: 700;
+    font-size: 2.4rem;
+    &:not(:last-child) {
+      &::after {
+        content: ':';
+      }
+    }
+    &_seconds {
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Дашборд</title>
+    <link rel="stylesheet" href="app/css/app.css?v=1627308163101">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body class="body_padding" ontouchstart="">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo logo">
+                    <a class="logo__link" href="main.html">
+                        <img src="app/img/logo.svg" alt="Логотип" width="40" height="40" title="" />
+                    </a>
+                </div>
+                <div class="header__notice">
+                    <a class="header__link" href="notice.html">
+                        <svg class="icon-notice" viewBox="0 0 20 20">
+                            <use xlink:href="app/icons/sprite.svg#notice"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__avatar avatar">
+                    <a class="avatar__link" href="portfolio-v-1.html">
+                        <picture>
+                            <source type="image/webp" srcset="app/img/avatar.webp">
+                                <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard__top"><span class="dashboard__top-name">Добрый день, Александр!</span>
+                <h2 class="dashboard__top-title h2">Дашборд</h2>
+            </div>
+            <div class="banner-card">
+                <div class="banner-card__slider swiper-container js-slider" data-settings="{&quot;slidesPerView&quot;: &quot;auto&quot;, &quot;freeMode&quot;: true, &quot;spaceBetween&quot;: 15, &quot;pagination&quot;: {&quot;el&quot;: &quot;.js-banner-pagination&quot;, &quot;clickable&quot;: true} }">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="banner-card__item">
+                                <picture>
+                                    <source type="image/webp" srcset="app/img/banner-card-1.webp">
+                                        <img src="app/img/banner-card-1.png" class="banner-card__bg object-fit" alt="" role="presentation" />
+                                </picture>
+                                <div class="banner-card__content content">
+                                    <h3>To the m00n</h3>
+                                    <p>Успей купить криптовалюту,
+                                        <br>которой будут расплачиваться
+                                        <br>на&nbsp;Марсе</p>
+                                </div>
+                                <button class="banner-card__btn btn btn_small btn_white" type="button">
+                                    <div class="btn__back"></div><span class="btn__text">Узнать больше</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="banner-card__item">
+                                <picture>
+                                    <source type="image/webp" srcset="app/img/banner-card-2.webp">
+                                        <img src="app/img/banner-card-2.png" class="banner-card__bg object-fit" alt="" role="presentation" />
+                                </picture>
+                                <div class="banner-card__content content">
+                                    <h3 class="banner-card__title">HODL Strategy</h3>
+                                    <p class="banner-card__text">Успей купить криптовалюту, которой будут расплачиваться на&nbsp;Марсе</p>
+                                </div>
+                                <button class="banner-card__btn btn btn_small btn_white" type="button">
+                                    <div class="btn__back"></div><span class="btn__text">Узнать больше</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="banner-card__item">
+                                <picture>
+                                    <source type="image/webp" srcset="app/img/banner-card-1.webp">
+                                        <img src="app/img/banner-card-1.png" class="banner-card__bg object-fit" alt="" role="presentation" />
+                                </picture>
+                                <div class="banner-card__content content">
+                                    <h3>To the m00n</h3>
+                                    <p>Успей купить криптовалюту,
+                                        <br>которой будут расплачиваться
+                                        <br>на&nbsp;Марсе</p>
+                                </div>
+                                <button class="banner-card__btn btn btn_small btn_white" type="button">
+                                    <div class="btn__back"></div><span class="btn__text">Узнать больше</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-card__pagination js-banner-pagination pagination pagination_red"></div>
+                </div>
+            </div>
+            <div class="dashboard__balance balance box">
+                <div class="balance__slider swiper-container js-slider" data-settings="{&quot;spaceBetween&quot;: 30, &quot;autoHeight&quot;: true, &quot;pagination&quot;: {&quot;el&quot;: &quot;.js-balance-pagination&quot;, &quot;clickable&quot;: true}}">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <form class="balance__form" action="">
+                                <div class="balance__row">
+                                    <div class="balance__cell balance__cell_left">
+                                        <img class="balance__icon" src="app/img/briefcase.svg" alt="" role="presentation" />
+                                        <div class="balance__text">Портфель</div>
+                                        <div class="balance__price">14,2142
+                                            <div class="balance__val">btc</div>
+                                            <button class="balance__btn" type="button">
+                                                <svg class="icon-eye" viewBox="0 0 24 17">
+                                                    <use xlink:href="app/icons/sprite.svg#eye"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="balance__revenue color-green">
+                                            <svg class="icon-alt" viewBox="0 0 6 17">
+                                                <use xlink:href="app/icons/sprite.svg#alt"></use>
+                                            </svg>+74,29 (17,78%)
+                                        </div><a class="balance__link" href="#">за&nbsp;все время</a>
+                                    </div>
+                                    <div class="balance__cell balance__cell_right">
+                                        <label class="balance__btn-radio btn-radio">
+                                            <input class="btn-radio__input" type="radio" name="currency" checked="checked" value="0" /><span class="btn-radio__text">BTC</span>
+                                        </label>
+                                        <label class="balance__btn-radio btn-radio">
+                                            <input class="btn-radio__input" type="radio" name="currency" value="1" /><span class="btn-radio__text">USD</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="swiper-slide">
+                            <form class="balance__form" action="">
+                                <div class="balance__row">
+                                    <div class="balance__cell balance__cell_left">
+                                        <img class="balance__icon" src="app/img/briefcase.svg" alt="" role="presentation" />
+                                        <div class="balance__text">Портфель</div>
+                                        <div class="balance__price">14,2142
+                                            <div class="balance__val">btc</div>
+                                            <button class="balance__btn" type="button">
+                                                <svg class="icon-eye" viewBox="0 0 24 17">
+                                                    <use xlink:href="app/icons/sprite.svg#eye"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="balance__revenue color-green">
+                                            <svg class="icon-alt" viewBox="0 0 6 17">
+                                                <use xlink:href="app/icons/sprite.svg#alt"></use>
+                                            </svg>+74,29 (17,78%)
+                                        </div><a class="balance__link" href="#">за&nbsp;все время</a>
+                                    </div>
+                                    <div class="balance__cell balance__cell_right">
+                                        <label class="balance__btn-radio btn-radio">
+                                            <input class="btn-radio__input" type="radio" name="currency" checked="checked" value="0" /><span class="btn-radio__text">BTC</span>
+                                        </label>
+                                        <label class="balance__btn-radio btn-radio">
+                                            <input class="btn-radio__input" type="radio" name="currency" value="1" /><span class="btn-radio__text">USD</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="js-balance-pagination pagination pagination_red"></div>
+            <div class="dashboard__subtitle">Динамика портфолио</div>
+            <div class="dashboard__chart box chart">
+                <div class="chart__slider swiper-container js-slider" data-settings="{&quot;spaceBetween&quot;: 30, &quot;autoHeight&quot;: true, &quot;simulateTouch&quot;: false, &quot;pagination&quot;: {&quot;el&quot;: &quot;.js-chart-pagination&quot;, &quot;clickable&quot;: true}}">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="chart__top">
+                                <div class="chart__cell chart__cell_left flex flex_justify">
+                                    <div class="chart__subtitle subtitle">По стратегиям</div>
+                                    <svg class="icon-chevron" viewBox="0 0 20 20">
+                                        <use xlink:href="app/icons/sprite.svg#chevron"></use>
+                                    </svg>
+                                </div>
+                                <div class="chart__cell chart__cell_right flex flex_right flex_justify">
+                                    <div class="chart__select select">
+                                        <div class="select__parent">
+                                            <select class="select__field js-select" data-placeholder="Совокупный итог">
+                                                <option>Совокупный итог</option>
+                                                <option>Совокупный итог 1</option>
+                                                <option>Совокупный итог 2</option>
+                                                <option>Совокупный итог 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <label class="chart__btn-radio btn-radio">
+                                        <input class="btn-radio__input" type="radio" name="value-1" checked="checked" value="0" /><span class="btn-radio__text">BTC</span>
+                                    </label>
+                                    <label class="chart__btn-radio btn-radio">
+                                        <input class="btn-radio__input" type="radio" name="value-1" value="1" /><span class="btn-radio__text">USD</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="chart__wrap">
+                                <div class="chart__diagram js-chart" data-settings='[{"time":"09:00","scale":1200,"price":"0,0171 BTC","position":7,"active":5},{"time":"10:00","scale":1100,"price":"0,0171 BTC","position":7,"active":5},{"time":"11:00","scale":1032,"price":"0,0171 BTC","position":7,"active":5},{"time":"12:00","scale":999,"price":"0,0171 BTC","position":7,"active":5},{"time":"13:00","scale":568,"price":"0,0171 BTC","position":7,"active":5},{"time":"14:00","scale":469,"price":"0,0171 BTC","position":7,"active":5},{"time":"15:00","scale":489,"price":"0,0171 BTC","position":7,"active":5},{"time":"16:00","scale":632,"price":"0,0171 BTC","position":7,"active":5},{"time":"17:00","scale":777,"price":"0,0171 BTC","position":7,"active":5},{"time":"18:00","scale":689,"price":"0,0171 BTC","position":7,"active":5},{"time":"19:00","scale":123,"price":"0,0171 BTC","position":7,"active":5},{"time":"20:00","scale":1200,"price":"0,0171 BTC","position":7,"active":5},{"time":"21:00","scale":1199,"price":"0,0171 BTC","position":7,"active":5},{"time":"22:00","scale":1110,"price":"0,0171 BTC","position":7,"active":5},{"time":"23:00","scale":1165,"price":"0,0171 BTC","position":7,"active":5},{"time":"24:00","scale":1145,"price":"0,0171 BTC","position":7,"active":5}]'
+                                id="chart-line-1"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chart__top">
+                                <div class="chart__cell chart__cell_left flex flex_justify">
+                                    <div class="chart__subtitle subtitle">Сравнительный анализ</div>
+                                    <svg class="icon-chevron" viewBox="0 0 20 20">
+                                        <use xlink:href="app/icons/sprite.svg#chevron"></use>
+                                    </svg>
+                                </div>
+                                <div class="chart__cell chart__cell_right chart__cell_fix flex flex_right flex_justify">
+                                    <div class="chart__select select">
+                                        <div class="select__parent">
+                                            <select class="select__field js-select" data-placeholder="Совокупный итог">
+                                                <option>Совокупный итог</option>
+                                                <option>Совокупный итог 1</option>
+                                                <option>Совокупный итог 2</option>
+                                                <option>Совокупный итог 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <label class="chart__btn-radio btn-radio">
+                                        <input class="btn-radio__input" type="radio" name="value-2" checked="checked" value="0" /><span class="btn-radio__text">BTC</span>
+                                    </label>
+                                    <div class="chart__select select">
+                                        <div class="select__parent">
+                                            <select class="select__field js-select" data-placeholder="S&amp;P 500">
+                                                <option>S&P 500</option>
+                                                <option>S&P 600</option>
+                                                <option>S&P 700</option>
+                                                <option>S&P 800</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <label class="chart__btn-radio btn-radio">
+                                        <input class="btn-radio__input" type="radio" name="value-2" value="1" /><span class="btn-radio__text">USD</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="chart__wrap">
+                                <div class="chart__diagram js-chart" data-settings='[{"time":"09:00","scale":1200,"price":"0,0171 BTC","position":7,"active":5},{"time":"10:00","scale":1100,"price":"0,0171 BTC","position":7,"active":5},{"time":"11:00","scale":1032,"price":"0,0171 BTC","position":7,"active":5},{"time":"12:00","scale":999,"price":"0,0171 BTC","position":7,"active":5},{"time":"13:00","scale":568,"price":"0,0171 BTC","position":7,"active":5},{"time":"14:00","scale":469,"price":"0,0171 BTC","position":7,"active":5},{"time":"15:00","scale":489,"price":"0,0171 BTC","position":7,"active":5},{"time":"16:00","scale":632,"price":"0,0171 BTC","position":7,"active":5},{"time":"17:00","scale":777,"price":"0,0171 BTC","position":7,"active":5},{"time":"18:00","scale":689,"price":"0,0171 BTC","position":7,"active":5},{"time":"19:00","scale":123,"price":"0,0171 BTC","position":7,"active":5},{"time":"20:00","scale":1200,"price":"0,0171 BTC","position":7,"active":5},{"time":"21:00","scale":1199,"price":"0,0171 BTC","position":7,"active":5},{"time":"22:00","scale":1110,"price":"0,0171 BTC","position":7,"active":5},{"time":"23:00","scale":1165,"price":"0,0171 BTC","position":7,"active":5},{"time":"24:00","scale":1145,"price":"0,0171 BTC","position":7,"active":5}]'
+                                id="chart-line-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart__periods periods">
+                    <label class="periods__item">
+                        <input class="periods__input" type="radio" name="time" checked="checked" value="0" /><span class="periods__text flex">День</span>
+                    </label>
+                    <label class="periods__item">
+                        <input class="periods__input" type="radio" name="time" value="1" /><span class="periods__text flex">Неделя</span>
+                    </label>
+                    <label class="periods__item">
+                        <input class="periods__input" type="radio" name="time" value="2" /><span class="periods__text flex">Месяц</span>
+                    </label>
+                </div>
+                <div class="js-chart-pagination pagination pagination_red"></div>
+            </div>
+            <div class="dashboard__subtitle">Баланс активов</div>
+            <div class="dashboard__assets assets box">
+                <div class="assets__top flex flex_justify">
+                    <div class="assets__subtitle subtitle">Активы</div>
+                    <svg class="icon-chevron" viewBox="0 0 20 20">
+                        <use xlink:href="app/icons/sprite.svg#chevron"></use>
+                    </svg>
+                </div>
+                <div class="assets__content">
+                    <div class="assets__select select">
+                        <div class="select__parent">
+                            <select class="select__field js-select" data-placeholder="Криптовалюта">
+                                <option>Криптовалюта</option>
+                                <option>По доходности</option>
+                                <option>Криптовалюта</option>
+                                <option>Криптовалюта 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="assets__wrap">
+                        <div class="assets__diagram js-chart" data-total="$23.7k" data-settings='[{"strategy":"Bullseye-Trading","price":"$18.6k","port":40,"color":"#64B5F6"},{"strategy":"One-btc Pumps","price":"$18.6k","port":25,"color":"#FFD54F"},{"strategy":"CryptoBulls","price":"$18.6k","port":15,"color":"#81C784"},{"strategy":"ETH FanProfit","price":"$18.6k","port":15,"color":"#7986CB"},{"strategy":"Свободные средства","price":"$18.6k","port":10,"color":"#F06292"}]'
+                        id="chart-pie"></div>
+                        <table class="assets__table table">
+                            <thead class="table__head">
+                                <tr class="table__row">
+                                    <th class="table__col css-text-left">
+                                        <div class="table__title">Стратегия</div>
+                                    </th>
+                                    <th class="table__col css-text-left">
+                                        <div class="table__title">Сумма</div>
+                                    </th>
+                                    <th class="table__col css-text-left">
+                                        <div class="table__title">Портф.%</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="table__body">
+                                <tr class="table__row">
+                                    <td class="table__col">
+                                        <div class="table__text">
+                                            <img class="table__icon" src="app/img/crypto-icon-1.svg" alt="" role="presentation" />Bullseye-Trading</div>
+                                    </td>
+                                    <td class="table__col">
+                                        <div class="table__price">$18.6k</div>
+                                    </td>
+                                    <td class="table__col css-text-right">
+                                        <div class="table__percent">26%</div>
+                                    </td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="table__col">
+                                        <div class="table__text">
+                                            <img class="table__icon" src="app/img/crypto-icon-2.svg" alt="" role="presentation" />One-btc Pumps</div>
+                                    </td>
+                                    <td class="table__col">
+                                        <div class="table__price">$18.6k</div>
+                                    </td>
+                                    <td class="table__col css-text-right">
+                                        <div class="table__percent">26%</div>
+                                    </td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="table__col">
+                                        <div class="table__text">
+                                            <img class="table__icon" src="app/img/crypto-icon-3.svg" alt="" role="presentation" />CryptoBulls</div>
+                                    </td>
+                                    <td class="table__col">
+                                        <div class="table__price">$18.6k</div>
+                                    </td>
+                                    <td class="table__col css-text-right">
+                                        <div class="table__percent">26%</div>
+                                    </td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="table__col">
+                                        <div class="table__text">
+                                            <img class="table__icon" src="app/img/crypto-icon-4.svg" alt="" role="presentation" />ETH FanProfit</div>
+                                    </td>
+                                    <td class="table__col">
+                                        <div class="table__price">$18.6k</div>
+                                    </td>
+                                    <td class="table__col css-text-right">
+                                        <div class="table__percent">26%</div>
+                                    </td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="table__col">
+                                        <div class="table__text">
+                                            <img class="table__icon" src="app/img/crypto-icon-5.svg" alt="" role="presentation" />Свободные средства</div>
+                                    </td>
+                                    <td class="table__col">
+                                        <div class="table__price">$18.6k</div>
+                                    </td>
+                                    <td class="table__col css-text-right">
+                                        <div class="table__percent">26%</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="assets__btn btn btn_btn btn_border btn_small" type="button">
+                        <div class="btn__back"></div><span class="btn__text">Смотреть все</span>
+                    </button>
+                </div>
+            </div>
+            <div class="dashboard__subtitle">Доходность стратегий</div>
+            <div class="dashboard__yield yield box">
+                <div class="yield__periods periods">
+                    <label class="periods__item">
+                        <input class="periods__input" type="radio" name="periods" checked="checked" value="0" /><span class="periods__text flex">За сегодня</span>
+                    </label>
+                    <label class="periods__item">
+                        <input class="periods__input" type="radio" name="periods" value="1" /><span class="periods__text flex">За все время</span>
+                    </label>
+                </div>
+                <div class="yield__item">
+                    <div class="yield__cell yield__cell_left">
+                        <div class="yield__name">Elon Mask Strategy</div>
+                        <time class="yield__status status status_tiny status_active" datatime="2021.05.11">11 мая 2021</time>
+                    </div>
+                    <div class="yield__cell yield__cell_right css-text-right">
+                        <div class="yield__price">$ +7 985,77</div>
+                        <div class="yield__percent color-green">(+35,12%)</div>
+                    </div>
+                </div>
+                <div class="yield__item">
+                    <div class="yield__cell yield__cell_left">
+                        <div class="yield__name">HODL Strategy</div>
+                        <time class="yield__status status status_tiny status_active" datatime="2021.05.11">11 мая 2021</time>
+                    </div>
+                    <div class="yield__cell yield__cell_right css-text-right">
+                        <div class="yield__price">$ +7 985,77</div>
+                        <div class="yield__percent color-green">(+35,12%)</div>
+                    </div>
+                </div>
+                <div class="yield__item">
+                    <div class="yield__cell yield__cell_left">
+                        <div class="yield__name">To the m00n</div>
+                        <time class="yield__status status status_tiny status_active" datatime="2021.05.11">11 мая 2021</time>
+                    </div>
+                    <div class="yield__cell yield__cell_right css-text-right">
+                        <div class="yield__price">$ +7 985,77</div>
+                        <div class="yield__percent color-green">(+35,12%)</div>
+                    </div>
+                </div>
+                <div class="yield__item">
+                    <div class="yield__cell yield__cell_left">
+                        <div class="yield__name">Bullseye-Trading</div>
+                        <time class="yield__status status status_tiny status_active" datatime="2021.05.11">11 мая 2021</time>
+                    </div>
+                    <div class="yield__cell yield__cell_right css-text-right">
+                        <div class="yield__price">$ +7 985,77</div>
+                        <div class="yield__percent color-green">(+35,12%)</div>
+                    </div>
+                </div>
+                <div class="yield__item">
+                    <div class="yield__cell yield__cell_left">
+                        <div class="yield__name">XRP Strategy</div>
+                        <time class="yield__status status status_tiny status_active" datatime="2021.05.11">11 мая 2021</time>
+                    </div>
+                    <div class="yield__cell yield__cell_right css-text-right">
+                        <div class="yield__price">$ +7 985,77</div>
+                        <div class="yield__percent color-green">(+35,12%)</div>
+                    </div>
+                </div><a class="yield__btn btn btn_border btn_small" href="#"><span class="btn__back"></span><span class="btn__text">Смотреть все</span></a>
+            </div>
+            <div class="dashboard__subtitle">Последние трейды</div>
+            <div class="dashboard__trades trades box">
+                <div class="trades__item">
+                    <div class="trades__cell trades__cell_left">
+                        <div class="trades__title">BTC / DOGE<span class="trades__badge badge">Long</span>
+                        </div>
+                        <time class="trades__date" datetime="2021.01.09 14:00">01.09.2021 14:00</time>
+                        <div class="trades__name">Elon Mask Strategy</div>
+                    </div>
+                    <div class="trades__cell trades__cell_right color-red css-text-right">
+                        <div class="trades__price">– 0.0120 BTC</div>
+                        <div class="trades__text">Stop loss</div>
+                    </div>
+                </div>
+                <div class="trades__item">
+                    <div class="trades__cell trades__cell_left">
+                        <div class="trades__title">BTC / DOGE<span class="trades__badge badge badge_red">Short x2</span>
+                        </div>
+                        <time class="trades__date" datetime="2021.01.09 14:00">01.09.2021 14:00</time>
+                        <div class="trades__name">Elon Mask Strategy</div>
+                    </div>
+                    <div class="trades__cell trades__cell_right color-red css-text-right">
+                        <div class="trades__price">– 0.0120 BTC</div>
+                        <div class="trades__text">Stop loss</div>
+                    </div>
+                </div>
+                <div class="trades__item">
+                    <div class="trades__cell trades__cell_left">
+                        <div class="trades__title">BTC / DOGE<span class="trades__badge badge">Long x3</span>
+                        </div>
+                        <time class="trades__date" datetime="2021.01.09 14:00">01.09.2021 14:00</time>
+                        <div class="trades__name">Elon Mask Strategy</div>
+                    </div>
+                    <div class="trades__cell trades__cell_right color-red css-text-right">
+                        <div class="trades__price">– 0.0120 BTC</div>
+                        <div class="trades__text">Stop loss</div>
+                    </div>
+                </div>
+                <div class="trades__item">
+                    <div class="trades__cell trades__cell_left">
+                        <div class="trades__title">BTC / DOGE<span class="trades__badge badge badge_red">Short x5</span>
+                        </div>
+                        <time class="trades__date" datetime="2021.01.09 14:00">01.09.2021 14:00</time>
+                        <div class="trades__name">Elon Mask Strategy</div>
+                    </div>
+                    <div class="trades__cell trades__cell_right color-red css-text-right">
+                        <div class="trades__price">– 0.0120 BTC</div>
+                        <div class="trades__text">Stop loss</div>
+                    </div>
+                </div>
+                <div class="trades__item">
+                    <div class="trades__cell trades__cell_left">
+                        <div class="trades__title">BTC / DOGE<span class="trades__badge badge">Long x2</span>
+                        </div>
+                        <time class="trades__date" datetime="2021.01.09 14:00">01.09.2021 14:00</time>
+                        <div class="trades__name">Elon Mask Strategy</div>
+                    </div>
+                    <div class="trades__cell trades__cell_right color-red css-text-right">
+                        <div class="trades__price">– 0.0120 BTC</div>
+                        <div class="trades__text">Stop loss</div>
+                    </div>
+                </div><a class="trades__btn btn btn_border btn_small" href="#"><span class="btn__back"></span><span class="btn__text">Смотреть все</span></a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__item is-active"><a class="nav__link" href="main.html"><span class="nav__icon"><svg class="icon-dashboard" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#dashboard"></use></svg></span><span class="nav__text">Дашборд</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="strategy-v-1.html"><span class="nav__icon"><svg class="icon-strategy" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#strategy"></use></svg></span><span class="nav__text">Стратегии</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="portfolio-v-1.html"><span class="nav__icon"><svg class="icon-briefcase" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#briefcase"></use></svg></span><span class="nav__text">Портфель</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="profile-v-1.html"><span class="nav__icon"><span class="nav__user"><picture>
+		                            <source type="image/webp" srcset="app/img/avatar.webp">
+		                            <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+		                        </picture></span></span><span class="nav__text">Профиль</span></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app/js/app.js?v=1627308163121"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+</body>
+
+</html>

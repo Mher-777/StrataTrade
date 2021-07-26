@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Карта добавлена</title>
+    <link rel="stylesheet" href="app/css/app.css?v=1627308162916">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body class="body_padding" ontouchstart="">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo logo">
+                    <a class="logo__link" href="main.html">
+                        <img src="app/img/logo.svg" alt="Логотип" width="40" height="40" title="" />
+                    </a>
+                </div>
+                <div class="header__notice">
+                    <a class="header__link" href="notice.html">
+                        <svg class="icon-notice" viewBox="0 0 20 20">
+                            <use xlink:href="app/icons/sprite.svg#notice"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__avatar avatar">
+                    <a class="avatar__link" href="portfolio-v-1.html">
+                        <picture>
+                            <source type="image/webp" srcset="app/img/avatar.webp">
+                                <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard__tabs tabs">
+                <div class="tabs__item"><a class="tabs__link is-active" href="dashboard-card.html">Ввести вручную</a>
+                </div>
+                <div class="tabs__item"><a class="tabs__link" href="login.html">Сканировать карту</a>
+                </div>
+            </div>
+            <div class="top-content">
+                <h4>Подключить карту</h4>
+                <p>Для привязки карты, необходимо ввести данные</p>
+            </div>
+            <div class="add-card js-card">
+                <div class="card">
+                    <div class="card__bg absolute">
+                        <img class="object-fit" src="app/img/card-bg.svg" alt="" role="presentation" />
+                    </div>
+                    <div class="card__wrap">
+                        <div class="card__top flex flex_bottom flex_justify"><span class="card__text">Банковская карта</span>
+                            <div class="card__logo">
+                                <img src="app/img/master-card.svg" alt="" role="presentation" />
+                            </div>
+                        </div>
+                        <div class="card__number">____ ____ ____ ____</div>
+                        <div class="card__bottom flex flex_justify">
+                            <div class="card__day">__/__</div>
+                            <div class="card__code">___</div>
+                        </div>
+                    </div>
+                </div>
+                <form class="add-card__form box" action="">
+                    <div class="add-card__row flex">
+                        <div class="add-card__field input">
+                            <div class="input__parent">
+                                <input class="input__field" name="card" placeholder="" type="text" autocomplete="off" inputmode="numeric" data-inputmask="'mask': '9999 9999 9999 9999', 'placeholder': ''" required="required" />
+                            </div>
+                        </div>
+                        <div class="add-card__field input input_width">
+                            <div class="input__parent">
+                                <input class="input__field" inputmode="numeric" name="day" placeholder="" type="text" autocomplete="off" data-inputmask="'mask': '99/99', 'placeholder': ''" required="required" />
+                            </div>
+                        </div>
+                        <div class="add-card__field input input_width">
+                            <div class="input__parent">
+                                <input class="input__field" inputmode="numeric" name="code" placeholder="" type="text" autocomplete="off" data-inputmask="'mask': '999', 'placeholder': ''" required="required" />
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-card__btn btn btn_blue btn_tiny js-modal" type="submit" data-modal="#success-card">
+                        <div class="btn__back"></div><span class="btn__text">Подключить</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__item is-active"><a class="nav__link" href="main.html"><span class="nav__icon"><svg class="icon-dashboard" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#dashboard"></use></svg></span><span class="nav__text">Дашборд</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="strategy-v-1.html"><span class="nav__icon"><svg class="icon-strategy" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#strategy"></use></svg></span><span class="nav__text">Стратегии</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="portfolio-v-1.html"><span class="nav__icon"><svg class="icon-briefcase" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#briefcase"></use></svg></span><span class="nav__text">Портфель</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="profile-v-1.html"><span class="nav__icon"><span class="nav__user"><picture>
+		                            <source type="image/webp" srcset="app/img/avatar.webp">
+		                            <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+		                        </picture></span></span><span class="nav__text">Профиль</span></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <div class="modal mfp-hide mfp-hide-close" id="success-card">
+        <div class="modal__icon icon icon_small">
+            <svg class="icon-card" viewBox="0 0 20 20">
+                <use xlink:href="app/icons/sprite.svg#card"></use>
+            </svg>
+        </div>
+        <div class="modal__content css-text-center">
+            <h4 class="modal__title h4">Карта добавлена</h4>
+            <p class="modal__text">Вы успешно добавили новую карту</p>
+        </div>
+        <div class="modal__bottom flex flex_center">
+            <button class="modal__btn btn btn_blue btn_tiny js-close-modal" type="button">
+                <div class="btn__back"></div><span class="btn__text">Окей</span>
+            </button>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app/js/app.js?v=1627308162923"></script>
+</body>
+
+</html>

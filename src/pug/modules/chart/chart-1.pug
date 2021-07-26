@@ -1,20 +1,101 @@
 -
-	var data = [
-		['09:00', 830, 'test'],
-		['', 900, 'test'],
-		['', 850, 'test'],
-		['12:00', 1000, 'test'],
-		['', 1100, 'test'],
-		['', 1100, 'test'],
-		['15:00', 1400, 'test'],
-		['', 1190, 'test'],
-		['', 1100, 'test'],
-		['18:00', 200, 'test'],
-		['', 600, 'test'],
-		['', 500, 'test'],
-		['21:00', 800, 'test']
-	]
+	var data = [{
+		time: "09:00",
+		scale: 1200,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "10:00",
+		scale: 1100,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "11:00",
+		scale: 1032,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "12:00",
+		scale: 999,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "13:00",
+		scale: 568,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "14:00",
+		scale: 469,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "15:00",
+		scale: 489,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "16:00",
+		scale: 632,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "17:00",
+		scale: 777,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "18:00",
+		scale: 689,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "19:00",
+		scale: 123,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "20:00",
+		scale: 1200,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "21:00",
+		scale: 1199,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "22:00",
+		scale: 1110,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "23:00",
+		scale: 1165,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	}, {
+		time: "24:00",
+		scale: 1145,
+		price: '0,0171 BTC',
+		position: 7,
+		active: 5
+	},]
 +e.wrap
-	+e.diagram
-		//['09:00', 830, `<strong>₿ 0,0171</strong> <span>Открытых позиций&nbsp;7</span> <span>Активных сигналов&nbsp;5</span>`]
-		+b.js-chart(data-settings=data).absolute
+	+e.diagram.js-chart(data-settings=data)#chart-line-1
+

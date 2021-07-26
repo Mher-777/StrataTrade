@@ -1,0 +1,53 @@
+.popular {
+  margin-top: 2rem;
+  overflow: hidden;
+  margin-right: -1.6rem;
+  padding-right: 1.6rem;
+  &__slider {
+
+  }
+  &__title {
+    margin-bottom: 1.6rem;
+  }
+  &__slide {
+    background-color: var(--color-white);
+    box-shadow: 0 1rem 4rem rgba(242, 242, 242, 0.5);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    width: 26.5rem;
+    padding-top: 1.2rem;
+  }
+  &__info {
+
+  }
+  &__name {
+    font-weight: 500;
+    margin-bottom: .8rem;
+    display: block;
+  }
+  &__item {
+    padding: 1.4rem 1.2rem;
+    border-bottom: 1px solid #EEEEEE;
+
+  }
+  &__subtitle {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    font-weight: 700;
+    margin-bottom: .6rem;
+    color: var(--color-black);
+  }
+  &__profit {
+    margin-right: .6rem;
+  }
+  &__day {
+    font-size: 1.2rem;
+    color: var(--color-blue);
+  }
+  &__btn {
+    margin-top: 0;
+    min-height: 3.6rem;
+    border-radius: 0 0 1.2rem 1.2rem;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,102 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Стратегии (Витрина стратегий.)';
+	- current = 'strategy'
+
+block content
+	+b.SECTION.strategy
+		.container
+			+e.search.search__
+				+e.FORM(action="").form
+					+e.top.flex._justify
+						+e.field._width.input__
+							+e.parent
+								+e.INPUT.field(name="search" type="text" autocomplete="off" placeholder="Поиск" required)
+								+e.BUTTON(type="submit").button
+									+icon('search')
+			include ../modules/strategy-banner
+			+e.category.category__
+				+e.H3.title.title Что выбрать?
+				+e.row.flex
+					+e.A(href="#").col
+						+e.IMG(src="app/img/category-icon-1.svg" alt="").icon
+						+e.subtitle С высоким <br> доходом
+					+e.A(href="#").col
+						+e.IMG(src="app/img/category-icon-2.svg" alt="").icon
+						+e.subtitle С низким <br> риском
+					+e.A(href="#").col
+						+e.IMG(src="app/img/category-icon-3.svg" alt="").icon
+						+e.subtitle Больше всего <br> подписчиков
+					+e.A(href="#").col
+						+e.IMG(src="app/img/category-icon-4.svg" alt="").icon
+						+e.subtitle Крупные <br> активы
+					+e.A(href="#").col
+						+e.IMG(src="app/img/category-icon-5.svg" alt="").icon
+						+e.subtitle На короткий <br> срок
+					+e.A(href="#").col
+						+e.IMG(src="app/img/category-icon-6.svg" alt="").icon
+						+e.subtitle Длинные <br> инвестиции
+			+e.popular.popular__
+				+e.H3.title.title Популярные стратегии
+				+e.slider.swiper-container.js-slider(data-settings=`{"spaceBetween": 16, "slidesPerView": "auto", "freeMode": true }`)
+					.swiper-wrapper
+						.swiper-slide
+							+e.slide
+								+e.subtitle.h3 Что ищут
+								+e.UL.list
+									+e.LI.item
+										+e.SPAN.name Elon Mask Strategy
+										+e.info.flex
+											+e.profit.profit__._tiny
+												+icon('increase')
+												| 0.3100 (+120%)
+											+e.day за день
+									+e.LI.item
+										+e.SPAN.name HODL Strategy
+										+e.info.flex
+											+e.profit.profit__._tiny
+												+icon('increase')
+												| 4.200 (+20%)
+											+e.day за день
+									+e.LI.item
+										+e.SPAN.name To the m00n
+										+e.info.flex
+											+e.profit.profit__._tiny
+												+icon('increase')
+												| 31.60 (+75%)
+											+e.day за день
+								+btn('strategy-v-2.html')._small._blue Узнать подробнее
+						.swiper-slide
+							+e.slide
+								+e.subtitle.h3 ТОП-просмотров
+								+e.UL.list
+									+e.LI.item
+										+e.SPAN.name Elon Mask Strategy
+										+e.info.flex
+											+e.profit.profit__._tiny
+												+icon('increase')
+												| 0.3100 (+120%)
+											+e.day за день
+									+e.LI.item
+										+e.SPAN.name HODL Strategy
+										+e.info.flex
+											+e.profit.profit__._tiny
+												+icon('increase')
+												| 4.200 (+20%)
+											+e.day за день
+									+e.LI.item
+										+e.SPAN.name To the m00n
+										+e.info.flex
+											+e.profit.profit__._tiny
+												+icon('increase')
+												| 31.60 (+75%)
+											+e.day за день
+								+btn('strategy-v-2.html')._small._blue Узнать подробнее
+			+b.list-strategy
+				+e.H3.title.title Актуальное
+				include ../modules/strategy-card-1
+				include ../modules/strategy-card-2
+				include ../modules/strategy-card-3
+				include ../modules/strategy-card-4
+				+btn('#')(class="_btn _border _small") Посмотреть все

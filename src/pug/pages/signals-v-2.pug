@@ -1,0 +1,76 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Отдельная страница сигнала (Закрытый сигнал. Закрыт по стопу)';
+	- current = 'strategy'
+	- back = 'К странице стратегии'
+append scripts
+	script(src="https://www.gstatic.com/charts/loader.js")
+block content
+	+b.SECTION.strategy
+		.container
+			+e.top
+				+e.banner
+					+e.bg
+						+b.IMG(src="/img/strategy-bg.jpg" alt="").object-fit
+				+e.badge.flex
+					+b.SPAN.badge._red Short x3
+					+b.SPAN.badge._blue Криптовалюта
+				+e.head
+					+e.head-row.flex._justify
+						+e.cell._left
+							+e.H3.title.h3 DOGE / BTC
+							+e.name Александра Маржин
+						+e.cell._right.css-text-right
+							+e.status.color-red Закрыт по стопу
+							+e.TIME(datetime="2021.01.09 14:00").data 01.09.2021 14:00
+			+b.parameters
+				+e.item
+					+e.IMG(src="app/img/parameters-icon-1.svg" alt="").icon
+					+e.subtitle Текущая цена <br> актива
+					+e.title $6.322
+					+e.info.info(data-tippy-placement="auto" data-tippy-content="Текущая цена <br> актива")
+						+icon('info')
+				+e.item
+					+e.IMG(src="app/img/parameters-icon-2.svg" alt="").icon
+					+e.subtitle Доля в портфеле <br> стратегии
+					+e.title 4%
+					+e.info.info(data-tippy-placement="auto" data-tippy-content="Доля в портфеле <br> стратегии")
+						+icon('info')
+			+e.holder
+				+e.H4.subtitle.h4 Исполненные ордеры
+				+b.executed-orders
+					+e.UL.list
+						+e.LI.item
+							+e.title Набор позиции
+							+e.info
+								+e.text $6.000322 – 0.00005200
+						+e.LI.item
+							+e.title Точки фиксации прибыли
+							+e.info
+								+e.text
+									+e.price $6.000322
+									+e.percent.color-green +47%
+								+e.text
+									+e.price $6.000322
+									+e.percent.color-green +117%
+								+e.text
+									+e.price $6.000322
+									+e.percent.color-green +182%
+								+e.text
+									+e.price $6.000322
+									+e.percent.color-green +236%
+								+e.text
+									+e.price $6.000322
+									+e.percent.color-green +327%
+						+e.LI.item
+							+e.title Stop loss
+							+e.info
+								+e.text.color-red
+									+icon('close')
+									+e.price $5.583
+									+e.percent -2%
+			+e.holder
+				+e.H4.subtitle.h4 Лог изменений
+				+e.logs.logs__
+					+e.empty Тут пока ничего нет

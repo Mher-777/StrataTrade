@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Мой портфель (Страница стратегии - Аналитика)</title>
+    <link rel="stylesheet" href="app/css/app.css?v=1627308164442">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body class="body_padding" ontouchstart="">
+    <div class="container">
+        <div class="back">
+            <a class="back__link" href="main.html">
+                <svg class="icon-arrowBack" viewBox="0 0 16 14">
+                    <use xlink:href="app/icons/sprite.svg#arrowBack"></use>
+                </svg>К странице стратегии</a>
+        </div>
+    </div>
+    <section class="strategy">
+        <div class="container">
+            <div class="strategy__top">
+                <div class="strategy__banner">
+                    <div class="strategy__bg">
+                        <picture>
+                            <source type="image/webp" srcset="app/img/strategy-bg.webp">
+                                <img src="app/img/strategy-bg.jpg" class="object-fit" alt="" role="presentation" />
+                        </picture>
+                    </div>
+                </div>
+                <div class="strategy__badge flex"><span class="badge">Long</span><span class="badge badge_blue">Фючерс</span>
+                </div>
+                <div class="strategy__head">
+                    <div class="strategy__head-row flex flex_justify">
+                        <div class="strategy__cell strategy__cell_left">
+                            <h3 class="strategy__title h3">Elon Musk DOGE Hype <br> Super to the moon</h3>
+                            <div class="strategy__name">Александра Маржин</div>
+                        </div>
+                        <div class="strategy__cell strategy__cell_right css-text-right">
+                            <div class="strategy__profit profit profit_small">
+                                <svg class="icon-profit" viewBox="0 0 18 18">
+                                    <use xlink:href="app/icons/sprite.svg#profit"></use>
+                                </svg>+56%</div>
+                            <div class="strategy__day">с&nbsp;момента подключения</div>
+                        </div>
+                    </div>
+                    <div class="strategy__head-row flex flex_justify">
+                        <div class="strategy__time">Дата подключения 11.05.21</div><a class="strategy__link btn btn_blue btn_border btn_small" href="#"><span class="btn__back"></span><span class="btn__text flex flex_inline">К стратегии<svg class="icon-downward" viewBox="0 0 16 16"><use xlink:href="app/icons/sprite.svg#downward"></use></svg></span></a>
+                    </div>
+                    <div class="strategy__tabs tabs">
+                        <div class="tabs__item js-tab"><a class="tabs__link is-active" href="#">Аналитика</a>
+                        </div>
+                        <div class="tabs__item js-tab"><a class="tabs__link" href="#">Описание</a>
+                        </div>
+                        <div class="tabs__item js-tab"><a class="tabs__link" href="#">Сигналы</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="strategy__main is-active js-tab-content">
+                <div class="strategy__holder profitability box profitability">
+                    <div class="profitability__subtitle subtitle">Доходность стратегии</div>
+                    <form class="profitability__form" action="">
+                        <div class="profitability__row flex flex_justify">
+                            <div class="profitability__cell profitability__cell_left">
+                                <div class="profitability__periods periods">
+                                    <label class="periods__item">
+                                        <input class="periods__input" type="radio" name="periods" checked="checked" value="0" /><span class="periods__text flex">1D</span>
+                                    </label>
+                                    <label class="periods__item">
+                                        <input class="periods__input" type="radio" name="periods" value="1" /><span class="periods__text flex">1W</span>
+                                    </label>
+                                    <label class="periods__item">
+                                        <input class="periods__input" type="radio" name="periods" value="2" /><span class="periods__text flex">1M</span>
+                                    </label>
+                                    <label class="periods__item">
+                                        <input class="periods__input" type="radio" name="periods" value="3" /><span class="periods__text flex">6M</span>
+                                    </label>
+                                    <label class="periods__item">
+                                        <input class="periods__input" type="radio" name="periods" value="4" /><span class="periods__text flex">За все время</span>
+                                    </label>
+                                </div>
+                                <div class="profitability__profit profit">+28%</div>
+                            </div>
+                            <div class="profitability__cell profitability__cell_right">
+                                <label class="profitability__btn-radio btn-radio">
+                                    <input class="btn-radio__input" type="radio" name="currency" checked="checked" value="0" /><span class="btn-radio__text">BTC</span>
+                                </label>
+                                <label class="profitability__btn-radio btn-radio">
+                                    <input class="btn-radio__input" type="radio" name="currency" value="1" /><span class="btn-radio__text">USD</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="strategy__holder box chart">
+                    <div class="chart__slider swiper-container js-slider" data-settings="{&quot;spaceBetween&quot;: 30, &quot;autoHeight&quot;: true, &quot;simulateTouch&quot;: false, &quot;pagination&quot;: {&quot;el&quot;: &quot;.js-chart-pagination&quot;, &quot;clickable&quot;: true}}">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="chart__top">
+                                    <div class="chart__cell chart__cell_left">
+                                        <div class="chart__subtitle subtitle">График доходностиi</div>
+                                    </div>
+                                    <div class="chart__cell chart__cell_right flex flex_right">
+                                        <label class="chart__btn-radio btn-radio">
+                                            <input class="btn-radio__input" type="radio" name="currency-1" checked="checked" value="0" /><span class="btn-radio__text">BTC</span>
+                                        </label>
+                                        <label class="chart__btn-radio btn-radio">
+                                            <input class="btn-radio__input" type="radio" name="currency-1" value="1" /><span class="btn-radio__text">USD</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="chart__wrap">
+                                    <div class="chart__diagram js-chart" data-settings='[{"time":"09:00","scale":1200,"price":"0,0171 BTC","position":7,"active":5},{"time":"10:00","scale":1100,"price":"0,0171 BTC","position":7,"active":5},{"time":"11:00","scale":1032,"price":"0,0171 BTC","position":7,"active":5},{"time":"12:00","scale":999,"price":"0,0171 BTC","position":7,"active":5},{"time":"13:00","scale":568,"price":"0,0171 BTC","position":7,"active":5},{"time":"14:00","scale":469,"price":"0,0171 BTC","position":7,"active":5},{"time":"15:00","scale":489,"price":"0,0171 BTC","position":7,"active":5},{"time":"16:00","scale":632,"price":"0,0171 BTC","position":7,"active":5},{"time":"17:00","scale":777,"price":"0,0171 BTC","position":7,"active":5},{"time":"18:00","scale":689,"price":"0,0171 BTC","position":7,"active":5},{"time":"19:00","scale":123,"price":"0,0171 BTC","position":7,"active":5},{"time":"20:00","scale":1200,"price":"0,0171 BTC","position":7,"active":5},{"time":"21:00","scale":1199,"price":"0,0171 BTC","position":7,"active":5},{"time":"22:00","scale":1110,"price":"0,0171 BTC","position":7,"active":5},{"time":"23:00","scale":1165,"price":"0,0171 BTC","position":7,"active":5},{"time":"24:00","scale":1145,"price":"0,0171 BTC","position":7,"active":5}]'
+                                    id="chart-line-1"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="chart__top">
+                                    <div class="chart__cell chart__cell_left">
+                                        <div class="chart__subtitle subtitle">График доходностиi</div>
+                                    </div>
+                                    <div class="chart__cell chart__cell_right flex flex_right">
+                                        <label class="chart__btn-radio btn-radio">
+                                            <input class="btn-radio__input" type="radio" name="currency-2" checked="checked" value="0" /><span class="btn-radio__text">BTC</span>
+                                        </label>
+                                        <label class="chart__btn-radio btn-radio">
+                                            <input class="btn-radio__input" type="radio" name="currency-2" value="1" /><span class="btn-radio__text">USD</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="chart__select select">
+                                    <div class="select__label">Выберите финансовый инструмент для&nbsp;сравнения</div>
+                                    <div class="select__parent">
+                                        <select class="select__field js-select" data-placeholder="S&amp;P 500">
+                                            <option>S&P 500</option>
+                                            <option>S&P 600</option>
+                                            <option>S&P 700</option>
+                                            <option>S&P 800</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="chart__wrap">
+                                    <div class="chart__diagram js-chart" data-settings='[{"time":"09:00","scale":1200,"price":"0,0171 BTC","position":7,"active":5},{"time":"10:00","scale":1100,"price":"0,0171 BTC","position":7,"active":5},{"time":"11:00","scale":1032,"price":"0,0171 BTC","position":7,"active":5},{"time":"12:00","scale":999,"price":"0,0171 BTC","position":7,"active":5},{"time":"13:00","scale":568,"price":"0,0171 BTC","position":7,"active":5},{"time":"14:00","scale":469,"price":"0,0171 BTC","position":7,"active":5},{"time":"15:00","scale":489,"price":"0,0171 BTC","position":7,"active":5},{"time":"16:00","scale":632,"price":"0,0171 BTC","position":7,"active":5},{"time":"17:00","scale":777,"price":"0,0171 BTC","position":7,"active":5},{"time":"18:00","scale":689,"price":"0,0171 BTC","position":7,"active":5},{"time":"19:00","scale":123,"price":"0,0171 BTC","position":7,"active":5},{"time":"20:00","scale":1200,"price":"0,0171 BTC","position":7,"active":5},{"time":"21:00","scale":1199,"price":"0,0171 BTC","position":7,"active":5},{"time":"22:00","scale":1110,"price":"0,0171 BTC","position":7,"active":5},{"time":"23:00","scale":1165,"price":"0,0171 BTC","position":7,"active":5},{"time":"24:00","scale":1145,"price":"0,0171 BTC","position":7,"active":5}]'
+                                    id="chart-line-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart__periods periods">
+                        <label class="periods__item">
+                            <input class="periods__input" type="radio" name="time" checked="checked" value="0" /><span class="periods__text flex">День</span>
+                        </label>
+                        <label class="periods__item">
+                            <input class="periods__input" type="radio" name="time" value="1" /><span class="periods__text flex">Неделя</span>
+                        </label>
+                        <label class="periods__item">
+                            <input class="periods__input" type="radio" name="time" value="2" /><span class="periods__text flex">Месяц</span>
+                        </label>
+                    </div>
+                    <div class="js-chart-pagination pagination"></div>
+                </div>
+                <div class="strategy__holder">
+                    <div class="parameters">
+                        <div class="parameters__item">
+                            <img class="parameters__icon" src="app/img/parameters-icon-1.svg" alt="" role="presentation" />
+                            <div class="parameters__subtitle">Аллрцированный
+                                <br>бюджет</div>
+                            <div class="parameters__title">0,02 BTC</div>
+                            <div class="parameters__info info" data-tippy-placement="auto" data-tippy-content="Аллрцированный &lt;br&gt; бюджет">
+                                <svg class="icon-info" viewBox="0 0 12 12">
+                                    <use xlink:href="app/icons/sprite.svg#info"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="parameters__item">
+                            <img class="parameters__icon" src="app/img/parameters-icon-7.svg" alt="" role="presentation" />
+                            <div class="parameters__subtitle">Текущая доля в&nbsp;
+                                <br>моем портфеле</div>
+                            <div class="parameters__title">24%</div>
+                            <div class="parameters__info info" data-tippy-placement="auto" data-tippy-content="Текущая доля в&nbsp;&lt;br&gt; моем портфеле">
+                                <svg class="icon-info" viewBox="0 0 12 12">
+                                    <use xlink:href="app/icons/sprite.svg#info"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="parameters__item">
+                            <img class="parameters__icon" src="app/img/parameters-icon-8.svg" alt="" role="presentation" />
+                            <div class="parameters__subtitle">Уровень
+                                <br>риска</div>
+                            <div class="parameters__title">3/5</div>
+                            <div class="parameters__info info" data-tippy-placement="auto" data-tippy-content="Уровень &lt;br&gt; риска">
+                                <svg class="icon-info" viewBox="0 0 12 12">
+                                    <use xlink:href="app/icons/sprite.svg#info"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="parameters__item">
+                            <img class="parameters__icon" src="app/img/parameters-icon-9.svg" alt="" role="presentation" />
+                            <div class="parameters__subtitle">Базовая
+                                <br>валюта</div>
+                            <div class="parameters__title">BTC</div>
+                            <div class="parameters__info info" data-tippy-placement="auto" data-tippy-content="Базовая &lt;br&gt; валюта">
+                                <svg class="icon-info" viewBox="0 0 12 12">
+                                    <use xlink:href="app/icons/sprite.svg#info"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="strategy__btn btn btn_btn btn_border btn_small" type="button">
+                    <div class="btn__back"></div><span class="btn__text">Поделиться стратегией</span>
+                </button>
+            </div>
+            <div class="strategy__main js-tab-content">
+                <div class="strategy__disclaimer disclaimer">
+                    <div class="disclaimer__top">
+                        <p class="disclaimer__text">Основу этой стратегии составляют активы из&nbsp;ТОП-20 "Coinmarketcap". Мы инвестируем только в&nbsp;проверенные временем криптовалюты и&nbsp;токены и&nbsp;не акцентируемся на&nbsp;шит-коинах.</p>
+                    </div>
+                    <div class="disclaimer__bottom">
+                        <p class="disclaimer__text disclaimer__text_red">Торговля криптоактивами - это высоко рисковые инвестиции, которые влекут за&nbsp;собой возможность частичной или&nbsp;полной потери капитала.</p>
+                        <img class="disclaimer__icon" src="app/img/disclaimer-icon.svg" alt="" role="presentation"
+                        />
+                    </div>
+                </div>
+                <div class="strategy__accordion accordion">
+                    <div class="accordion__item js-accordion">
+                        <div class="accordion__title">О трейдере</div>
+                        <svg class="icon-chevron" viewBox="0 0 20 20">
+                            <use xlink:href="app/icons/sprite.svg#chevron"></use>
+                        </svg>
+                    </div>
+                    <div class="accordion__content content">
+                        <p>Компания DOGE Capital LTD. была создана для&nbsp;того, чтобы дать возможность как можно большему количеству трейдеров инвестировать свои капиталы в&nbsp;торговлю на&nbsp;рынке Forex, CFD и&nbsp;crypto.</p>
+                        <p>Своей основной задачей мы видим существенное упрощение процесса трейдинга и&nbsp;получения максимально возможной прибыли.
+                            <br>Наша команда работает для&nbsp;того, чтобы Вы достигли успеха в&nbsp;трейдинге. У нас практикуется индивидуальный подход к&nbsp;каждому клиенту, который заключается во внимательном отношении к&nbsp;трейдерам, значительном выборе
+                            активов, большом количестве обучающих материалов и&nbsp;качественной клиентской поддержке.</p>
+                        <p>С каждым годом уверенного роста DOGE Capital представляла новые технологии и&nbsp;расширяла спектр своих услуг. Мы постоянно вкладываем в&nbsp;технологии свои усилия и&nbsp;средства, чтобы улучшить качество наших услуг. Мы хорошо
+                            знаем, как работает рынок Forex, его ключевых участников и&nbsp;принципы их работы. В основе наших знаний лежит наш многолетний опыт, что позволяет нам соблюдать высочайший уровень профессионализма и&nbsp;компетенции.</p>
+                        <p>Мы твёрдо убеждены, что только успешный трейдер является залогом финансового успеха для&nbsp;брокерской компании. Потому каждый из&nbsp;нас делает всё возможное, чтобы наши трейдеры добивались успеха и&nbsp;финансового благополучия.
+                            Ведь лучшая реклама – это искренний отзыв довольного клиента. Мы всегда отстаиваем интересы пользователей наших сервисов и&nbsp;услуг. Успех наших трейдеров — наш успех.</p>
+                    </div>
+                </div>
+                <div class="strategy__accordion accordion">
+                    <div class="accordion__item js-accordion">
+                        <div class="accordion__title">Стратегия</div>
+                        <svg class="icon-chevron" viewBox="0 0 20 20">
+                            <use xlink:href="app/icons/sprite.svg#chevron"></use>
+                        </svg>
+                    </div>
+                    <div class="accordion__content content">
+                        <p>Генерация рыбатекста происходит довольно просто: есть несколько фиксированных наборов фраз и&nbsp;словочетаний, из&nbsp;которых в&nbsp;опредёленном порядке формируются предложения. Предложения складываются в&nbsp;абзацы – и&nbsp;вы
+                            наслаждетесь очередным бредошедевром.</p>
+                        <p>Сама идея работы генератора заимствована у&nbsp;псевдосоветского "универсального кода речей", из&nbsp;которого мы выдернули используемые в&nbsp;нём словосочетания, запилили приличное количество собственных, в&nbsp;несколько раз
+                            усложнили алгоритм, добавив новые схемы сборки, – и&nbsp;оформили в&nbsp;виде быстрого и&nbsp;удобного сервиса для&nbsp;получения тестового контента.</p>
+                    </div>
+                </div>
+                <div class="strategy__accordion accordion">
+                    <div class="accordion__item js-accordion">
+                        <div class="accordion__title">Риски</div>
+                        <svg class="icon-chevron" viewBox="0 0 20 20">
+                            <use xlink:href="app/icons/sprite.svg#chevron"></use>
+                        </svg>
+                    </div>
+                    <div class="accordion__content content">
+                        <p>Торговля несёт в&nbsp;себе повышенный уровень риска и&nbsp;может не подходить для&nbsp;каждого инвестора. Существует высокая вероятность того, что Вы можете понести убытки даже сверх суммы первоначального депозита. Перед тем как
+                            принять решение о&nbsp;начале торговли с&nbsp;использованием финансовых инструментов, предлагаемых компанией Zota Capital LTD. , тщательно проанализируйте свои цели, финансовое состояние и&nbsp;потребности, а&nbsp;также существующий
+                            опыт торговли. Компания Zota Capital не несет ответственности за&nbsp;любые прямые, косвенные и&nbsp;случайные убытки или&nbsp;любой другой ущерб, связанный с&nbsp;действиями пользователя на&nbsp;данном веб-сайте. Информация,
+                            предоставленная на&nbsp;данном веб-сайте, включая любые изменения на&nbsp;торговой платформе, может не отражать истинную степень волатильности рыночной конъюнктуры, а&nbsp;также не может восприниматься в&nbsp;качестве торговых
+                            и/или инвестиционных рекомендаций.</p>
+                    </div>
+                </div>
+                <button class="strategy__btn btn btn_btn btn_border btn_small" type="button">
+                    <div class="btn__back"></div><span class="btn__text">Поделиться стратегией</span>
+                </button>
+            </div>
+            <div class="strategy__main js-tab-content">
+                <div class="parameters">
+                    <div class="parameters__item">
+                        <img class="parameters__icon" src="app/img/parameters-icon-10.svg" alt="" role="presentation" />
+                        <div class="parameters__subtitle">Количество
+                            <br>сигналов</div>
+                        <div class="parameters__title">988</div>
+                        <div class="parameters__info info" data-tippy-placement="auto" data-tippy-content="Количество &lt;br&gt; сигналов">
+                            <svg class="icon-info" viewBox="0 0 12 12">
+                                <use xlink:href="app/icons/sprite.svg#info"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="parameters__item">
+                        <img class="parameters__icon" src="app/img/parameters-icon-11.svg" alt="" role="presentation" />
+                        <div class="parameters__subtitle">Количество
+                            <br>прибыльных сигналов</div>
+                        <div class="parameters__title">521</div>
+                        <div class="parameters__info info" data-tippy-placement="auto" data-tippy-content="Количество &lt;br&gt; прибыльных сигналов">
+                            <svg class="icon-info" viewBox="0 0 12 12">
+                                <use xlink:href="app/icons/sprite.svg#info"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="parameters__item">
+                        <img class="parameters__icon" src="app/img/parameters-icon-12.svg" alt="" role="presentation" />
+                        <div class="parameters__subtitle">Среднее кол-во
+                            <br>сигналов в&nbsp;день</div>
+                        <div class="parameters__title">1,8</div>
+                        <div class="parameters__info info" data-tippy-placement="auto" data-tippy-content="Среднее кол-во &lt;br&gt; сигналов в&nbsp;день">
+                            <svg class="icon-info" viewBox="0 0 12 12">
+                                <use xlink:href="app/icons/sprite.svg#info"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="parameters__item">
+                        <img class="parameters__icon" src="app/img/parameters-icon-13.svg" alt="" role="presentation" />
+                        <div class="parameters__subtitle">Проходимость
+                            <br>(% доходности)</div>
+                        <div class="parameters__title">68%</div>
+                        <div class="parameters__info info" data-tippy-placement="auto" data-tippy-content="Проходимость &lt;br&gt; (% доходности)">
+                            <svg class="icon-info" viewBox="0 0 12 12">
+                                <use xlink:href="app/icons/sprite.svg#info"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="parameters__item">
+                        <img class="parameters__icon" src="app/img/parameters-icon-14.svg" alt="" role="presentation" />
+                        <div class="parameters__subtitle">Открытых
+                            <br>позиций</div>
+                        <div class="parameters__title">82%</div>
+                        <div class="parameters__info info" data-tippy-placement="auto" data-tippy-content="Открытых &lt;br&gt; позиций">
+                            <svg class="icon-info" viewBox="0 0 12 12">
+                                <use xlink:href="app/icons/sprite.svg#info"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="parameters__item">
+                        <img class="parameters__icon" src="app/img/parameters-icon-15.svg" alt="" role="presentation" />
+                        <div class="parameters__subtitle">Активных
+                            <br>сигналов</div>
+                        <div class="parameters__title">BTC</div>
+                        <div class="parameters__info info" data-tippy-placement="auto" data-tippy-content="Активных &lt;br&gt; сигналов">
+                            <svg class="icon-info" viewBox="0 0 12 12">
+                                <use xlink:href="app/icons/sprite.svg#info"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="strategy__signals">
+                    <h4 class="strategy__subtitle h4">Активные сигналы<span class="counter">2</span></h4>
+                    <div class="signal">
+                        <div class="signal__main">
+                            <div class="signal__title">DOGE / BTC</div>
+                            <ul class="signal__list">
+                                <li class="signal__item"><span class="signal__subtitle"><svg class="icon-alarm" viewBox="0 0 16 16"><use xlink:href="app/icons/sprite.svg#alarm"></use></svg>Среднесрочный</span>
+                                    <time class="signal__time" datetime="2021.09.01 14:00">01.09.2021 14:00</time>
+                                </li>
+                                <li class="signal__item"><span class="signal__subtitle"><svg class="icon-charge" viewBox="0 0 16 16"><use xlink:href="app/icons/sprite.svg#charge"></use></svg>Риск 2/5</span><span class="signal__status status status_tiny status_active">2 цели взято</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="signal__btn btn btn_small btn_blue" type="button">
+                            <div class="btn__back"></div><span class="btn__text">Узнать подробнее</span>
+                        </button>
+                    </div>
+                    <div class="signal">
+                        <div class="signal__main">
+                            <div class="signal__title">DOGE / BTC</div>
+                            <ul class="signal__list">
+                                <li class="signal__item"><span class="signal__subtitle"><svg class="icon-alarm" viewBox="0 0 16 16"><use xlink:href="app/icons/sprite.svg#alarm"></use></svg>Среднесрочный</span>
+                                    <time class="signal__time" datetime="2021.09.01 14:00">01.09.2021 14:00</time>
+                                </li>
+                                <li class="signal__item"><span class="signal__subtitle"><svg class="icon-charge" viewBox="0 0 16 16"><use xlink:href="app/icons/sprite.svg#charge"></use></svg>Риск 2/5</span><span class="signal__status status status_tiny status_active">2 цели взято</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="signal__btn btn btn_small btn_blue" type="button">
+                            <div class="btn__back"></div><span class="btn__text">Узнать подробнее</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="strategy__signals">
+                    <h4 class="strategy__subtitle h4">Закрытые сигналы<span class="counter">422</span></h4>
+                    <div class="signal">
+                        <div class="signal__main">
+                            <div class="signal__title">DOGE / BTC<span class="signal__badge badge badge_red">Short</span>
+                            </div>
+                            <ul class="signal__list">
+                                <li class="signal__item"><span class="signal__subtitle"><svg class="icon-alarm" viewBox="0 0 16 16"><use xlink:href="app/icons/sprite.svg#alarm"></use></svg>Среднесрочный</span>
+                                    <time class="signal__time" datetime="2021.09.01 14:00">01.09.2021 14:00</time>
+                                </li>
+                                <li class="signal__item"><span class="signal__subtitle"><svg class="icon-charge" viewBox="0 0 16 16"><use xlink:href="app/icons/sprite.svg#charge"></use></svg>Риск 2/5</span><span class="signal__status status status_tiny">Закрыт по&nbsp;стопу</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="signal__btn btn btn_small btn_blue" type="button">
+                            <div class="btn__back"></div><span class="btn__text">Узнать подробнее</span>
+                        </button>
+                    </div>
+                    <div class="signal">
+                        <div class="signal__main">
+                            <div class="signal__title">DOGE / BTC<span class="signal__badge badge">Long</span>
+                            </div>
+                            <ul class="signal__list">
+                                <li class="signal__item"><span class="signal__subtitle"><svg class="icon-alarm" viewBox="0 0 16 16"><use xlink:href="app/icons/sprite.svg#alarm"></use></svg>Среднесрочный</span>
+                                    <time class="signal__time" datetime="2021.09.01 14:00">01.09.2021 14:00</time>
+                                </li>
+                                <li class="signal__item"><span class="signal__subtitle"><svg class="icon-charge" viewBox="0 0 16 16"><use xlink:href="app/icons/sprite.svg#charge"></use></svg>Риск 2/5</span><span class="signal__status status status_tiny">Закрыт по&nbsp;стопу</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="signal__btn btn btn_small btn_blue" type="button">
+                            <div class="btn__back"></div><span class="btn__text">Узнать подробнее</span>
+                        </button>
+                    </div>
+                    <button class="strategy__btn btn btn_btn btn_border btn_small" type="button">
+                        <div class="btn__back"></div><span class="btn__text">Загрузить еще...</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__item"><a class="nav__link" href="main.html"><span class="nav__icon"><svg class="icon-dashboard" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#dashboard"></use></svg></span><span class="nav__text">Дашборд</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="strategy-v-1.html"><span class="nav__icon"><svg class="icon-strategy" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#strategy"></use></svg></span><span class="nav__text">Стратегии</span></a>
+                </div>
+                <div class="nav__item is-active"><a class="nav__link" href="portfolio-v-1.html"><span class="nav__icon"><svg class="icon-briefcase" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#briefcase"></use></svg></span><span class="nav__text">Портфель</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="profile-v-1.html"><span class="nav__icon"><span class="nav__user"><picture>
+		                            <source type="image/webp" srcset="app/img/avatar.webp">
+		                            <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+		                        </picture></span></span><span class="nav__text">Профиль</span></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app/js/app.js?v=1627308164457"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+</body>
+
+</html>

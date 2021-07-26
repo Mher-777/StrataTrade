@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Дашборд</title>
+    <link rel="stylesheet" href="app/css/app.css?v=1627308163528">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body class="body_padding" ontouchstart="">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo logo">
+                    <a class="logo__link" href="main.html">
+                        <img src="app/img/logo.svg" alt="Логотип" width="40" height="40" title="" />
+                    </a>
+                </div>
+                <div class="header__notice">
+                    <a class="header__link" href="notice.html">
+                        <svg class="icon-notice" viewBox="0 0 20 20">
+                            <use xlink:href="app/icons/sprite.svg#notice"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__avatar avatar">
+                    <a class="avatar__link" href="portfolio-v-1.html">
+                        <picture>
+                            <source type="image/webp" srcset="app/img/avatar.webp">
+                                <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard__top"><span class="dashboard__top-name">Добрый день, Александр!</span>
+                <h2 class="dashboard__top-title h2">Дашборд</h2>
+            </div>
+            <div class="dashboard__banner banner">
+                <div class="banner__slider swiper-container js-slider" data-settings='{"spaceBetween":20,"loop":true,"autoplay":{"delay":3000}}'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="banner__bg absolute">
+                                <img class="banner__image object-fit" src="app/img/banner-1.svg" alt="" role="presentation" />
+                            </div>
+                            <div class="banner__content">
+                                <h4 class="banner__title h4">С чего начать?</h4>
+                                <p class="banner__text">Рекомендванный портфель стратегий</p><a class="banner__link" href="#">Узнать подробнее</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="banner__bg absolute">
+                                <img class="banner__image object-fit" src="app/img/banner-2.svg" alt="" role="presentation" />
+                            </div>
+                            <div class="banner__content">
+                                <h4 class="banner__title h4">С чего начать?</h4>
+                                <p class="banner__text">Рекомендванный
+                                    <br>портфель стратегий</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard__holder box">
+                <div class="dashboard__icon icon">
+                    <svg class="icon-logout" viewBox="0 0 20 20">
+                        <use xlink:href="app/icons/sprite.svg#logout"></use>
+                    </svg>
+                </div>
+                <p>Для того, чтобы использовать стратегии, необходимо подключить аккаунт Binance</p><a class="dashboard__btn btn btn_small" href="dashboard-api.html"><span class="btn__back"></span><span class="btn__text">Подключить API аккаунт</span></a>
+            </div>
+            <div class="dashboard__holder box">
+                <div class="dashboard__icon icon">
+                    <svg class="icon-card" viewBox="0 0 20 20">
+                        <use xlink:href="app/icons/sprite.svg#card"></use>
+                    </svg>
+                </div>
+                <p>Для того, чтобы использовать стратегии, необходимо подвязать свою
+                    <br>банковкускую карту,</p><a class="dashboard__btn btn btn_small" href="dashboard-card.html"><span class="btn__back"></span><span class="btn__text">Подключить карту</span></a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__item is-active"><a class="nav__link" href="main.html"><span class="nav__icon"><svg class="icon-dashboard" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#dashboard"></use></svg></span><span class="nav__text">Дашборд</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="strategy-v-1.html"><span class="nav__icon"><svg class="icon-strategy" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#strategy"></use></svg></span><span class="nav__text">Стратегии</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="portfolio-v-1.html"><span class="nav__icon"><svg class="icon-briefcase" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#briefcase"></use></svg></span><span class="nav__text">Портфель</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="profile-v-1.html"><span class="nav__icon"><span class="nav__user"><picture>
+		                            <source type="image/webp" srcset="app/img/avatar.webp">
+		                            <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+		                        </picture></span></span><span class="nav__text">Профиль</span></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app/js/app.js?v=1627308163534"></script>
+</body>
+
+</html>

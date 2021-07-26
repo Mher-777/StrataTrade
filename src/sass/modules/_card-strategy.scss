@@ -43,6 +43,54 @@
   &__profit {
     margin-top: .8rem;
   }
+  &__subtitle {
+    display: block;
+    margin-bottom: .8rem;
+  }
+
+  &__conut {
+    line-height: 1em;
+  }
+  &_exclusive {
+    .card-strategy {
+      &__content {
+        min-height: 8.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      &__title {
+        padding-bottom: 0;
+      }
+      &__subtitle {
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+      &__badge {
+        width: 100%;
+        margin-bottom: 1rem;
+        .badge {
+          margin-right: .5rem;
+        }
+      }
+      &__price {
+        margin-top: .8rem;
+        font-weight: 700;
+      }
+      &__text {
+        color: var(--color-placeholder);
+      }
+      &__bottom {
+        .card-strategy__cell {
+          &_left {
+            width: 55%;
+          }
+          &_right {
+            width: 45%;
+          }
+        }
+      }
+    }
+  }
 }
 .list-strategy {
   margin-top: 2rem;

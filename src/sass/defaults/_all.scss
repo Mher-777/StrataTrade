@@ -2,7 +2,7 @@
   color: var(--color-blue);
 }
 .color-red {
-  color: #FF3F3F;
+  color: #D50000;
 }
 
 .color-accent {
@@ -118,6 +118,13 @@
   }
   &_small {
     font-size: 2.4rem;
+  }
+  &_tiny {
+    font-size: 1.6rem;
+    align-items: center;
+  }
+  &_black {
+    color: #263238;
   }
 }
 .title {

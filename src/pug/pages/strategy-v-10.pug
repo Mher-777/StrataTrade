@@ -1,0 +1,18 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Стратегии (Рекомендованный портфель стратегий)';
+	- current = 'strategy'
+
+block content
+	+b.SECTION.strategy
+		.container
+			+e.content.content
+				+b.H3 Топ просмотров
+				+b.P Сбалансированный портфель стратегий, который <br> включает в себя инвестиции разного уровня риска <br> в различные криптоактивы.
+			+b.list-strategy
+				include ../modules/strategy-card-1
+				include ../modules/strategy-card-2
+				include ../modules/strategy-card-3
+				include ../modules/strategy-card-4
+				+btn('#')(class="_btn _border _small") Посмотреть все

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Стратегии (Высокодоходные стртаегии + Сорт.)</title>
+    <link rel="stylesheet" href="app/css/app.css?v=1627308167711">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body class="body_padding" ontouchstart="">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo logo">
+                    <a class="logo__link" href="main.html">
+                        <img src="app/img/logo.svg" alt="Логотип" width="40" height="40" title="" />
+                    </a>
+                </div>
+                <div class="header__notice">
+                    <a class="header__link" href="notice.html">
+                        <svg class="icon-notice" viewBox="0 0 20 20">
+                            <use xlink:href="app/icons/sprite.svg#notice"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__avatar avatar">
+                    <a class="avatar__link" href="portfolio-v-1.html">
+                        <picture>
+                            <source type="image/webp" srcset="app/img/avatar.webp">
+                                <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="strategy">
+        <div class="container">
+            <div class="strategy__content content">
+                <h3>Высокодоходные стртаегии</h3>
+                <p>В этом разделе собраны стратегии, которые показали наилучший результат по&nbsp;доходности с&nbsp;момента создания нашего сервиса.</p>
+            </div>
+            <div class="search">
+                <form class="search__form" action="">
+                    <div class="search__top flex flex_justify">
+                        <div class="search__field input">
+                            <div class="input__parent">
+                                <input class="input__field" name="search" type="text" autocomplete="off" placeholder="Поиск" required="required" />
+                                <button class="input__button" type="submit">
+                                    <svg class="icon-search" viewBox="0 0 14 14">
+                                        <use xlink:href="app/icons/sprite.svg#search"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="search__control flex flex_justify">
+                            <button class="btn-sort flex flex_vertical flex_center js-open-dropdown" type="button">
+                                <svg class="icon-sort" viewBox="0 0 18 18">
+                                    <use xlink:href="app/icons/sprite.svg#sort"></use>
+                                </svg>
+                            </button>
+                            <button class="btn-filter btn-filter_active flex flex_vertical flex_center js-open-dropdown" type="button" data-number="1">
+                                <svg class="icon-filter" viewBox="0 0 18 18">
+                                    <use xlink:href="app/icons/sprite.svg#filter"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="search__dropdown box js-dropdown dropdown">
+                        <div class="dropdown__top flex flex_justify">
+                            <h3 class="dropdown__title title">Сортировка</h3>
+                            <button class="dropdown__close js-close-dropdown" type="button">
+                                <svg class="icon-close" viewBox="0 0 24 24">
+                                    <use xlink:href="app/icons/sprite.svg#close"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="dropdown__main">
+                            <div class="dropdown__switcher switcher switcher_middle">
+                                <label class="switcher__item">
+                                    <input class="switcher__input" type="radio" name="sort" checked="checked" value="0" /><span class="switcher__text"><span class="switcher__arrow"></span>По умолчанию</span>
+                                </label>
+                                <label class="switcher__item">
+                                    <input class="switcher__input" type="radio" name="sort" value="1" /><span class="switcher__text"><span class="switcher__arrow"></span>По доходности</span>
+                                </label>
+                                <label class="switcher__item">
+                                    <input class="switcher__input" type="radio" name="sort" value="2" /><span class="switcher__text"><span class="switcher__arrow"></span>По цене подписки</span>
+                                </label>
+                                <label class="switcher__item">
+                                    <input class="switcher__input" type="radio" name="sort" value="3" /><span class="switcher__text"><span class="switcher__arrow"></span>По количеству подписчиков</span>
+                                </label>
+                                <label class="switcher__item">
+                                    <input class="switcher__input" type="radio" name="sort" value="4" /><span class="switcher__text"><span class="switcher__arrow"></span>По уровню риска</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="dropdown__bottom flex flex_right">
+                            <button class="btn-refresh flex flex_vertical flex_center" type="reset">
+                                <svg class="icon-refresh" viewBox="0 0 20 20">
+                                    <use xlink:href="app/icons/sprite.svg#refresh"></use>
+                                </svg>
+                            </button>
+                            <button class="dropdown__btn btn btn_blue btn_tiny" type="submit">
+                                <div class="btn__back"></div><span class="btn__text">Применить</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="search__dropdown box js-dropdown dropdown">
+                        <div class="dropdown__top flex flex_justify">
+                            <h3 class="dropdown__title title">Фильтр</h3>
+                            <button class="dropdown__close js-close-dropdown" type="button">
+                                <svg class="icon-close" viewBox="0 0 24 24">
+                                    <use xlink:href="app/icons/sprite.svg#close"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="dropdown__main">
+                            <label class="dropdown__checkbox checkbox">
+                                <input class="checkbox__input" data-rule-required="false" name="0" type="checkbox" /><span class="checkbox__text middle"> <span class="checkbox__arrow"><svg class="icon-checked" viewBox="0 0 12 9"><use xlink:href="app/icons/sprite.svg#checked"></use></svg></span>Рекомендованный портфель</span>
+                            </label>
+                            <label class="dropdown__checkbox checkbox">
+                                <input class="checkbox__input" data-rule-required="false" name="1" type="checkbox" /><span class="checkbox__text middle"> <span class="checkbox__arrow"><svg class="icon-checked" viewBox="0 0 12 9"><use xlink:href="app/icons/sprite.svg#checked"></use></svg></span>Высокодоходные</span>
+                            </label>
+                            <label class="dropdown__checkbox checkbox">
+                                <input class="checkbox__input" data-rule-required="false" name="2" type="checkbox" /><span class="checkbox__text middle"> <span class="checkbox__arrow"><svg class="icon-checked" viewBox="0 0 12 9"><use xlink:href="app/icons/sprite.svg#checked"></use></svg></span>С низким риском</span>
+                            </label>
+                            <label class="dropdown__checkbox checkbox">
+                                <input class="checkbox__input" data-rule-required="false" name="3" type="checkbox" /><span class="checkbox__text middle"> <span class="checkbox__arrow"><svg class="icon-checked" viewBox="0 0 12 9"><use xlink:href="app/icons/sprite.svg#checked"></use></svg></span>Краткосрочные</span>
+                            </label>
+                            <label class="dropdown__checkbox checkbox">
+                                <input class="checkbox__input" data-rule-required="false" name="4" type="checkbox" /><span class="checkbox__text middle"> <span class="checkbox__arrow"><svg class="icon-checked" viewBox="0 0 12 9"><use xlink:href="app/icons/sprite.svg#checked"></use></svg></span>Долгосрочные</span>
+                            </label>
+                            <label class="dropdown__checkbox checkbox">
+                                <input class="checkbox__input" data-rule-required="false" name="5" type="checkbox" /><span class="checkbox__text middle"> <span class="checkbox__arrow"><svg class="icon-checked" viewBox="0 0 12 9"><use xlink:href="app/icons/sprite.svg#checked"></use></svg></span>Среднесрочные</span>
+                            </label>
+                            <label class="dropdown__checkbox checkbox">
+                                <input class="checkbox__input" data-rule-required="false" name="6" type="checkbox" /><span class="checkbox__text middle"> <span class="checkbox__arrow"><svg class="icon-checked" viewBox="0 0 12 9"><use xlink:href="app/icons/sprite.svg#checked"></use></svg></span>Только крупные активы</span>
+                            </label>
+                        </div>
+                        <div class="dropdown__bottom flex flex_right">
+                            <button class="btn-refresh flex flex_vertical flex_center" type="reset">
+                                <svg class="icon-refresh" viewBox="0 0 20 20">
+                                    <use xlink:href="app/icons/sprite.svg#refresh"></use>
+                                </svg>
+                            </button>
+                            <button class="dropdown__btn btn btn_blue btn_tiny" type="submit">
+                                <div class="btn__back"></div><span class="btn__text">Применить</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="search__result flex flex_justify flex_vertical">
+                    <div class="search__result-text">Найдено стратегий: 256</div>
+                    <label class="checkbox-sort">
+                        <input class="checkbox-sort__input" type="checkbox" /><span class="checkbox-sort__text" data-sort="По убыванию">По возрастанию<svg class="icon-default" viewBox="0 0 27 27"><use xlink:href="app/icons/sprite.svg#default"></use></svg></span>
+                    </label>
+                </div>
+            </div>
+            <div class="list-strategy"><a class="card-strategy card-strategy_exclusive" href="#"><span class="card-strategy__top"><span class="card-strategy__bg absolute"><picture>
+		                            <source type="image/webp" srcset="app/img/card-strategy-1.webp">
+		                            <img src="app/img/card-strategy-1.png" class="object-fit" alt="" role="presentation" />
+		                        </picture></span><span class="card-strategy__content"><span class="card-strategy__cell card-strategy__cell_lefy"><span class="card-strategy__title">To the m00n <br> Strategy</span></span><span class="card-strategy__cell card-strategy__cell_right"><span class="card-strategy__subtitle">Уровень риска</span><span class="card-strategy__count h2">3/5</span></span></span></span><span class="card-strategy__bottom flex flex_justify"><span class="card-strategy__badge flex"><span class="badge badge_red">Маржа</span><span class="badge badge_blue">Криптовалюта</span></span><span class="card-strategy__cell card-strategy__cell_left"><span class="card-strategy__text">Рекомендованный бюджет</span><span class="card-strategy__price price">0,02  BTC</span></span><span class="card-strategy__cell card-strategy__cell_right css-text-right"><span class="card-strategy__text card-strategy__text_small">прибыль за&nbsp;месяц</span><span class="card-strategy__profit profit"><svg class="icon-profit" viewBox="0 0 18 18"><use xlink:href="app/icons/sprite.svg#profit"></use></svg>+80%</span></span></span></a>
+                <a
+                class="card-strategy card-strategy_exclusive" href="#"><span class="card-strategy__top"><span class="card-strategy__bg absolute"><picture>
+		                            <source type="image/webp" srcset="app/img/card-strategy-2.webp">
+		                            <img src="app/img/card-strategy-2.png" class="object-fit" alt="" role="presentation" />
+		                        </picture></span><span class="card-strategy__content"><span class="card-strategy__cell card-strategy__cell_lefy"><span class="card-strategy__title">To the m00n <br> Strategy</span></span><span class="card-strategy__cell card-strategy__cell_right"><span class="card-strategy__subtitle">Уровень риска</span>
+                    <span
+                    class="card-strategy__count h2">3/5</span>
+                        </span>
+                        </span>
+                        </span><span class="card-strategy__bottom flex flex_justify"><span class="card-strategy__badge flex"><span class="badge badge_red">Спот</span><span class="badge badge_blue">Криптовалюта</span></span><span class="card-strategy__cell card-strategy__cell_left"><span class="card-strategy__text">Рекомендованный бюджет</span>
+                        <span
+                        class="card-strategy__price price">0,02 BTC</span>
+                            </span><span class="card-strategy__cell card-strategy__cell_right css-text-right"><span class="card-strategy__text card-strategy__text_small">прибыль за&nbsp;месяц</span><span class="card-strategy__profit profit"><svg class="icon-profit" viewBox="0 0 18 18"><use xlink:href="app/icons/sprite.svg#profit"></use></svg>+80%</span></span>
+                            </span>
+                            </a><a class="card-strategy card-strategy_exclusive" href="#"><span class="card-strategy__top"><span class="card-strategy__bg absolute"><picture>
+		                            <source type="image/webp" srcset="app/img/card-strategy-3.webp">
+		                            <img src="app/img/card-strategy-3.png" class="object-fit" alt="" role="presentation" />
+		                        </picture></span><span class="card-strategy__content"><span class="card-strategy__cell card-strategy__cell_lefy"><span class="card-strategy__title">To the m00n <br> Strategy</span></span><span class="card-strategy__cell card-strategy__cell_right"><span class="card-strategy__subtitle">Уровень риска</span><span class="card-strategy__count h2">3/5</span></span></span></span><span class="card-strategy__bottom flex flex_justify"><span class="card-strategy__badge flex"><span class="badge badge_red">Маржинальная торговля</span><span class="badge badge_blue">Криптовалюта</span></span><span class="card-strategy__cell card-strategy__cell_left"><span class="card-strategy__text">Рекомендованный бюджет</span><span class="card-strategy__price price">0,02  BTC</span></span><span class="card-strategy__cell card-strategy__cell_right css-text-right"><span class="card-strategy__text card-strategy__text_small">прибыль за&nbsp;месяц</span><span class="card-strategy__profit profit"><svg class="icon-profit" viewBox="0 0 18 18"><use xlink:href="app/icons/sprite.svg#profit"></use></svg>+80%</span></span></span></a>
+                            <a
+                            class="card-strategy card-strategy_exclusive" href="#"><span class="card-strategy__top"><span class="card-strategy__bg absolute"><picture>
+		                            <source type="image/webp" srcset="app/img/card-strategy-4.webp">
+		                            <img src="app/img/card-strategy-4.png" class="object-fit" alt="" role="presentation" />
+		                        </picture></span><span class="card-strategy__content"><span class="card-strategy__cell card-strategy__cell_lefy"><span class="card-strategy__title">To the m00n <br> Strategy</span></span><span class="card-strategy__cell card-strategy__cell_right"><span class="card-strategy__subtitle">Уровень риска</span>
+                                <span
+                                class="card-strategy__count h2">3/5</span>
+                                    </span>
+                                    </span>
+                                    </span><span class="card-strategy__bottom flex flex_justify"><span class="card-strategy__badge flex"><span class="badge badge_red">Маржа</span><span class="badge badge_blue">Криптовалюта</span></span><span class="card-strategy__cell card-strategy__cell_left"><span class="card-strategy__text">Рекомендованный бюджет</span>
+                                    <span
+                                    class="card-strategy__price price">0,02 BTC</span>
+                                        </span><span class="card-strategy__cell card-strategy__cell_right css-text-right"><span class="card-strategy__text card-strategy__text_small">прибыль за&nbsp;месяц</span><span class="card-strategy__profit profit"><svg class="icon-profit" viewBox="0 0 18 18"><use xlink:href="app/icons/sprite.svg#profit"></use></svg>+80%</span></span>
+                                        </span>
+                                        </a><a class="list-strategy__btn btn btn_btn btn_border btn_small" href="#"><span class="btn__back"></span><span class="btn__text">Посмотреть все</span></a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__item"><a class="nav__link" href="main.html"><span class="nav__icon"><svg class="icon-dashboard" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#dashboard"></use></svg></span><span class="nav__text">Дашборд</span></a>
+                </div>
+                <div class="nav__item is-active"><a class="nav__link" href="strategy-v-1.html"><span class="nav__icon"><svg class="icon-strategy" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#strategy"></use></svg></span><span class="nav__text">Стратегии</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="portfolio-v-1.html"><span class="nav__icon"><svg class="icon-briefcase" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#briefcase"></use></svg></span><span class="nav__text">Портфель</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="profile-v-1.html"><span class="nav__icon"><span class="nav__user"><picture>
+		                            <source type="image/webp" srcset="app/img/avatar.webp">
+		                            <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+		                        </picture></span></span><span class="nav__text">Профиль</span></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app/js/app.js?v=1627308167722"></script>
+</body>
+
+</html>

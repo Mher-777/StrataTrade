@@ -12,4 +12,9 @@
   .swiper-pagination-bullet-active {
     background-color: var(--color-blue);
   }
+  &_red {
+    .swiper-pagination-bullet-active {
+      background-color: var(--color-accent);
+    }
+  }
 }

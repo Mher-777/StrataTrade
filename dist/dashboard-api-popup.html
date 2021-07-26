@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Аккаунт добавлен</title>
+    <link rel="stylesheet" href="app/css/app.css?v=1627308162734">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body class="body_padding" ontouchstart="">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo logo">
+                    <a class="logo__link" href="main.html">
+                        <img src="app/img/logo.svg" alt="Логотип" width="40" height="40" title="" />
+                    </a>
+                </div>
+                <div class="header__notice">
+                    <a class="header__link" href="notice.html">
+                        <svg class="icon-notice" viewBox="0 0 20 20">
+                            <use xlink:href="app/icons/sprite.svg#notice"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__avatar avatar">
+                    <a class="avatar__link" href="portfolio-v-1.html">
+                        <picture>
+                            <source type="image/webp" srcset="app/img/avatar.webp">
+                                <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="dashboard">
+        <div class="container">
+            <div class="top-content">
+                <h4>Подключить API аккакунт</h4>
+                <p>Для использования стратегии, подлкючите свой аккаунт
+                    <<br> <a class="color-accent" href="#">Binance</a>
+                </p>
+            </div>
+            <div class="dashboard__box box">
+                <h5 class="h5">Binance</h5>
+                <div class="dashboard__tabs tabs">
+                    <div class="tabs__item"><a class="tabs__link is-active" href="dashboard-api.html">Spot</a>
+                    </div>
+                    <div class="tabs__item"><a class="tabs__link" href="#">Futures</a>
+                    </div>
+                </div>
+                <form class="dashboard__form" action="">
+                    <div class="dashboard__field input">
+                        <div class="input__label flex flex_justify flex_vertical">Номер аккаунта
+                            <div class="info" data-tippy-placement="auto" data-tippy-content="&lt;strong&gt;Номер аккаунта&lt;/strong&gt;&lt;p&gt;На бирже Binance, нажмите на&nbsp;иконку аккаунта - в&nbsp;выпадающем меню, нажмите первую вкладку, там находится Ваш номер аккаунта&lt;/p&gt;">
+                                <svg class="icon-info" viewBox="0 0 12 12">
+                                    <use xlink:href="app/icons/sprite.svg#info"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input__parent">
+                            <input class="input__field" name="number" placeholder="52929951" type="text" autocomplete="off" required="required" />
+                        </div>
+                    </div>
+                    <div class="dashboard__field input">
+                        <div class="input__label flex flex_justify flex_vertical">API ключ
+                            <div class="info" data-tippy-placement="auto" data-tippy-content="&lt;strong&gt;API ключ&lt;/strong&gt;&lt;p&gt;На бирже BInance, нажмите на&nbsp;иконку аккаунта - в&nbsp;выпадающем меню, выберите вкладку “ Управление API”. В разделе “Лист API” находится API ключ.&lt;/p&gt;">
+                                <svg class="icon-info" viewBox="0 0 12 12">
+                                    <use xlink:href="app/icons/sprite.svg#info"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input__parent">
+                            <input class="input__field" name="kay" placeholder="SU5zwfluOPoDJ6q8vuT4SU5zwfluOPoDJ6qvuT4SU5" type="text" autocomplete="off" required="required" />
+                        </div>
+                    </div>
+                    <div class="dashboard__field input">
+                        <div class="input__label flex flex_justify flex_vertical">Секретный ключ
+                            <div class="info" data-tippy-placement="auto" data-tippy-content="&lt;strong&gt;Секретный ключ&lt;/strong&gt;&lt;p&gt;На бирже BInance, нажмите на&nbsp;иконку аккаунта - в&nbsp;выпадающем меню, выберите вкладку “Управление API”. В разделе “Лист API” находится Секретный ключ.&lt;/p&gt;">
+                                <svg class="icon-info" viewBox="0 0 12 12">
+                                    <use xlink:href="app/icons/sprite.svg#info"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input__parent">
+                            <input class="input__field" name="code" value="test" type="password" autocomplete="off" required="required" />
+                            <button class="input__button js-type-change" type="button">
+                                <svg class="icon-carbon" viewBox="0 0 20 20">
+                                    <use xlink:href="app/icons/sprite.svg#carbon"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="btn btn_blue btn_tiny btn_left js-modal" type="submit" data-modal="#success-api">
+                        <div class="btn__back"></div><span class="btn__text">Подключить</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__item is-active"><a class="nav__link" href="main.html"><span class="nav__icon"><svg class="icon-dashboard" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#dashboard"></use></svg></span><span class="nav__text">Дашборд</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="strategy-v-1.html"><span class="nav__icon"><svg class="icon-strategy" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#strategy"></use></svg></span><span class="nav__text">Стратегии</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="portfolio-v-1.html"><span class="nav__icon"><svg class="icon-briefcase" viewBox="0 0 25 24"><use xlink:href="app/icons/sprite.svg#briefcase"></use></svg></span><span class="nav__text">Портфель</span></a>
+                </div>
+                <div class="nav__item"><a class="nav__link" href="profile-v-1.html"><span class="nav__icon"><span class="nav__user"><picture>
+		                            <source type="image/webp" srcset="app/img/avatar.webp">
+		                            <img src="app/img/avatar.png" class="object-fit" alt="Александр" title="" />
+		                        </picture></span></span><span class="nav__text">Профиль</span></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <div class="modal mfp-hide mfp-hide-close" id="success-api">
+        <div class="modal__icon icon icon_small">
+            <svg class="icon-key" viewBox="0 0 38 38">
+                <use xlink:href="app/icons/sprite.svg#key"></use>
+            </svg>
+        </div>
+        <div class="modal__content css-text-center">
+            <h4 class="modal__title h4">Ключ успешно добавлен</h4>
+            <p class="modal__text">Вы успешно добавили Binance аккаунт</p>
+        </div>
+        <div class="modal__bottom flex flex_center">
+            <button class="modal__btn btn btn_blue btn_tiny js-close-modal" type="button">
+                <div class="btn__back"></div><span class="btn__text">Окей</span>
+            </button>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app/js/app.js?v=1627308162740"></script>
+</body>
+
+</html>

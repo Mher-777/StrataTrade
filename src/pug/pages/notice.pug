@@ -1,0 +1,36 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Уведомления';
+	- current = 'profile'
+	- notice = true
+block content
+	+b.SECTION.notice
+		.container
+			+b.top-content__
+				+b.H3 Уведомления
+			+e.box.box
+				+e.item
+					+e.top.flex._justify
+						+e.title Произведено списание
+						+e.TIME(datetime="2021.11.06 21:45").time._status 7 минут назад
+					+e.content
+						+e.P.text Мы произвели списание в сумме $25 в счет списания за оплату подписки стратегии...
+				+e.item
+					+e.top.flex._justify
+						+e.title Новое уведомление с длинным заголовком
+						+e.TIME(datetime="2021.11.06 21:45").time._status Сегодня 21:45
+					+e.content
+						+e.P.text Текст уведомления, который описывает суть события, требующего реакции пользователя.
+				+e.item
+					+e.top.flex._justify
+						+e.title Заголовок уведомления
+						+e.TIME(datetime="2021.11.06 20:45").time Вчера 20:45
+					+e.content
+						+e.P.text Текст уведомления, который описывает суть события, требующего реакции пользователя.
+				+e.item
+					+e.top.flex._justify
+						+e.title Заголовок уведомления
+						+e.TIME(datetime="2021.11.06 21:45").time 11.06.21 21:45
+					+e.content
+						+e.P.text Текст уведомления, который описывает суть события, требующего реакции пользователя.

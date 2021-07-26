@@ -5,7 +5,9 @@ append vars
 	- current = 'portfolio'
 	- back = 'К странице стратегии'
 append scripts
-	script(src="https://www.gstatic.com/charts/loader.js")
+	script(src="https://cdn.amcharts.com/lib/4/core.js")
+	script(src="https://cdn.amcharts.com/lib/4/charts.js")
+	script(src="https://cdn.amcharts.com/lib/4/themes/animated.js")
 block content
 	+b.SECTION.strategy
 		.container
@@ -29,7 +31,7 @@ block content
 								| с момента подключения
 					+e.head-row.flex._justify
 						+e.time Дата подключения 11.05.21
-						+e.A(href="#").link.btn._blue._border._small
+						+e.A(href="#").link.btn__._blue._border._small
 							+e.back
 							+e.SPAN.text.flex_inline К стратегии
 								+icon('downward')
@@ -53,18 +55,32 @@ block content
 								+btn-radio('currency', '0', true) BTC
 								+btn-radio('currency', '1') USD
 				+e.holder.box.chart__
-					+e.top
-						+e.cell._left
-							+e.subtitle.subtitle График доходностиi
-						+e.cell._right.flex._right
-							+btn-radio('currency', '0', true) BTC
-							+btn-radio('currency', '1') USD
-					+e.slider.swiper-container.js-slider(data-settings=`{"spaceBetween": 30, "pagination": {"el": ".js-chart-pagination", "clickable": true}}`)
+					+e.slider.swiper-container.js-slider(data-settings=`{"spaceBetween": 30, "autoHeight": true, "simulateTouch": false, "pagination": {"el": ".js-chart-pagination", "clickable": true}}`)
 						.swiper-wrapper
 							.swiper-slide
+								+e.top
+									+e.cell._left
+										+e.subtitle.subtitle График доходностиi
+									+e.cell._right.flex._right
+										+btn-radio('currency-1', '0', true) BTC
+										+btn-radio('currency-1', '1') USD
 								include ../modules/chart/chart-1
 							.swiper-slide
-								include ../modules/chart/chart-1
+								+e.top
+									+e.cell._left
+										+e.subtitle.subtitle График доходностиi
+									+e.cell._right.flex._right
+										+btn-radio('currency-2', '0', true) BTC
+										+btn-radio('currency-2', '1') USD
+								+e.select.select__
+									+e.label Выберите финансовый инструмент для сравнения
+									+e.parent
+										+e.SELECT.field(data-placeholder="S&P 500").js-select
+											+e.OPTION S&P 500
+											+e.OPTION S&P 600
+											+e.OPTION S&P 700
+											+e.OPTION S&P 800
+								include ../modules/chart/chart-2
 
 					+periods('time', 'День', 'Неделя', 'Месяц')
 					+b.js-chart-pagination.pagination

@@ -1,0 +1,294 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Страница стратегии на которую я подписан';
+	- current = 'strategy'
+	- back = 'К странице стратегии'
+append scripts
+	script(src="https://cdn.amcharts.com/lib/4/core.js")
+	script(src="https://cdn.amcharts.com/lib/4/charts.js")
+	script(src="https://cdn.amcharts.com/lib/4/themes/animated.js")
+block content
+	+b.SECTION.strategy
+		.container
+			+e.top
+				+e.banner
+					+e.bg
+						+b.IMG(src="/img/strategy-bg.jpg" alt="").object-fit
+				+e.badge.flex
+					+b.SPAN.badge._red Маржа
+					+b.SPAN.badge._blue Криптовалюта
+				+e.head
+					+e.head-row.flex._justify
+						+e.cell._left
+							+e.H3.title.h3 Elon Musk DOGE Hype
+							+e.name Александра Маржин
+						+e.cell._right.css-text-right
+							+e.profit.profit__._small._black 4%
+							+e.text от прибыли
+					+e.head-row.flex._justify
+						+e.time._medium.js-modal(data-modal="#subscribed-strategy") Вы подписаны на эту стратегию
+						+e.A(href="#copying-strategy").share.btn._blue._border._small._icon.js-modal
+							+e.back
+							+icon('info')
+					+e.tabs.tabs__
+						+e.item.js-tab
+							+e.A(href="#").link.is-active Аналитика
+						+e.item.js-tab
+							+e.A(href="#").link Описание
+						+e.item.js-tab
+							+e.A(href="#").link Сигналы
+			+e.main.is-active.js-tab-content
+				+e.holder.profitability.box.profitability__
+					+e.subtitle.subtitle Доходность стратегии
+					+e.FORM(action="").form
+						+e.row.flex._justify
+							+e.cell._left
+								+periods('periods', '1D', '1W', '1M', '6M', 'За все время')
+								+e.profit.profit__
+									| +28%
+							+e.cell._right
+								+btn-radio('currency', '0', true) BTC
+								+btn-radio('currency', '1') USD
+				+e.holder.box.chart__
+					+e.slider.swiper-container.js-slider(data-settings=`{"spaceBetween": 30, "autoHeight": true, "simulateTouch": false, "pagination": {"el": ".js-chart-pagination", "clickable": true}}`)
+						.swiper-wrapper
+							.swiper-slide
+								+e.top
+									+e.cell._left
+										+e.subtitle.subtitle График доходностиi
+									+e.cell._right.flex._right
+										+btn-radio('currency-1', '0', true) BTC
+										+btn-radio('currency-1', '1') USD
+								include ../modules/chart/chart-1
+							.swiper-slide
+								+e.top
+									+e.cell._left
+										+e.subtitle.subtitle График доходностиi
+									+e.cell._right.flex._right
+										+btn-radio('currency-2', '0', true) BTC
+										+btn-radio('currency-2', '1') USD
+								+e.select.select__
+									+e.label Выберите финансовый инструмент для сравнения
+									+e.parent
+										+e.SELECT.field(data-placeholder="S&P 500").js-select
+											+e.OPTION S&P 500
+											+e.OPTION S&P 600
+											+e.OPTION S&P 700
+											+e.OPTION S&P 800
+								include ../modules/chart/chart-2
+
+
+					+periods('time', 'День', 'Неделя', 'Месяц')
+					+b.js-chart-pagination.pagination
+				+e.holder
+					+b.parameters
+						+e.item
+							+e.IMG(src="app/img/parameters-icon-1.svg" alt="").icon
+							+e.subtitle Аллрцированный <br> бюджет
+							+e.title 0,02  BTC
+							+e.info.info(data-tippy-placement="auto" data-tippy-content="Аллрцированный <br> бюджет")
+								+icon('info')
+						+e.item
+							+e.IMG(src="app/img/parameters-icon-7.svg" alt="").icon
+							+e.subtitle Текущая доля в <br> моем портфеле
+							+e.title 24%
+							+e.info.info(data-tippy-placement="auto" data-tippy-content="Текущая доля в <br> моем портфеле")
+								+icon('info')
+						+e.item
+							+e.IMG(src="app/img/parameters-icon-8.svg" alt="").icon
+							+e.subtitle Уровень <br> риска
+							+e.title 3/5
+							+e.info.info(data-tippy-placement="auto" data-tippy-content="Уровень <br> риска")
+								+icon('info')
+						+e.item
+							+e.IMG(src="app/img/parameters-icon-9.svg" alt="").icon
+							+e.subtitle Базовая <br> валюта
+							+e.title BTC
+							+e.info.info(data-tippy-placement="auto" data-tippy-content="Базовая <br> валюта")
+								+icon('info')
+				+e.stock.stock__
+					+e.content
+						+e.text Подключите стратегию до <br> 26.05.2021 и получите второй месяц в подарок.
+						+e.timer.timer__
+							+e.item._day 00
+							+e.item._hours 00
+							+e.item._minutes 00
+							+e.item._seconds 00
+
+					+e.IMG(src="app/img/stock-img.svg" alt="").img
+				+btn()(class="_small") Поделиться стратегией
+			+e.main.js-tab-content
+				+e.disclaimer.disclaimer__
+					+e.top
+						+e.P.text Основу этой стратегии составляют активы из ТОП-20 "Coinmarketcap". Мы инвестируем только в проверенные временем криптовалюты и токены и не акцентируемся на шит-коинах.
+					+e.bottom
+						+e.P.text._red Торговля криптоактивами - это высоко рисковые инвестиции, которые влекут за собой возможность частичной или полной потери капитала.
+						+e.IMG(src="app/img/disclaimer-icon.svg" alt="").icon
+				+e.accordion.accordion__
+					+e.item.js-accordion
+						+e.title О трейдере
+						+icon('chevron')
+					+e.content.content
+						+e.P Компания DOGE Capital LTD. была создана для того, чтобы дать возможность как можно большему количеству трейдеров инвестировать свои капиталы в торговлю на рынке Forex, CFD и crypto.
+						+e.P Своей основной задачей мы видим существенное упрощение процесса трейдинга и получения максимально возможной прибыли. <br> Наша команда работает для того, чтобы Вы достигли успеха в трейдинге. У нас практикуется индивидуальный подход к каждому клиенту, который заключается во внимательном отношении к трейдерам, значительном выборе активов, большом количестве обучающих материалов и качественной клиентской поддержке.
+						+e.P С каждым годом уверенного роста DOGE Capital представляла новые технологии и расширяла спектр своих услуг. Мы постоянно вкладываем в технологии свои усилия и средства, чтобы улучшить качество наших услуг. Мы хорошо знаем, как работает рынок Forex, его ключевых участников и принципы их работы. В основе наших знаний лежит наш многолетний опыт, что позволяет нам соблюдать высочайший уровень профессионализма и компетенции.
+						+e.P Мы твёрдо убеждены, что только успешный трейдер является залогом финансового успеха для брокерской компании. Потому каждый из нас делает всё возможное, чтобы наши трейдеры добивались успеха и финансового благополучия. Ведь лучшая реклама – это искренний отзыв довольного клиента. Мы всегда отстаиваем интересы пользователей наших сервисов и услуг. Успех наших трейдеров — наш успех.
+				+e.accordion.accordion__
+					+e.item.js-accordion
+						+e.title Стратегия
+						+icon('chevron')
+					+e.content.content
+						+e.P Генерация рыбатекста происходит довольно просто: есть несколько фиксированных наборов фраз и словочетаний, из которых в опредёленном порядке формируются предложения. Предложения складываются в абзацы – и вы наслаждетесь очередным бредошедевром.
+						+e.P Сама идея работы генератора заимствована у псевдосоветского "универсального кода речей", из которого мы выдернули используемые в нём словосочетания, запилили приличное количество собственных, в несколько раз усложнили алгоритм, добавив новые схемы сборки, – и оформили в виде быстрого и удобного сервиса для получения тестового контента.
+				+e.accordion.accordion__
+					+e.item.js-accordion
+						+e.title Риски
+						+icon('chevron')
+					+e.content.content
+						+e.P Торговля несёт в себе повышенный уровень риска и может не подходить для каждого инвестора. Существует высокая вероятность того, что Вы можете понести убытки даже сверх суммы первоначального депозита. Перед тем как принять решение о начале торговли с использованием финансовых инструментов, предлагаемых компанией Zota Capital LTD. , тщательно проанализируйте свои цели, финансовое состояние и потребности, а также существующий опыт торговли. Компания Zota Capital не несет ответственности за любые прямые, косвенные и случайные убытки или любой другой ущерб, связанный с действиями пользователя на данном веб-сайте. Информация, предоставленная на данном веб-сайте, включая любые изменения на торговой платформе, может не отражать истинную степень волатильности рыночной конъюнктуры, а также не может восприниматься в качестве торговых и/или инвестиционных рекомендаций.
+				+e.stock.stock__
+					+e.content
+						+e.text Подключите стратегию до <br> 26.05.2021 и получите второй месяц в подарок.
+						+e.timer.timer__
+							+e.item._day 00
+							+e.item._hours 00
+							+e.item._minutes 00
+							+e.item._seconds 00
+					+e.IMG(src="app/img/stock-img.svg" alt="").img
+				+btn()(class="_small") Поделиться стратегией
+			+e.main.js-tab-content
+				+b.parameters
+					+e.item
+						+e.IMG(src="app/img/parameters-icon-10.svg" alt="").icon
+						+e.subtitle Количество <br> сигналов
+						+e.title 988
+						+e.info.info(data-tippy-placement="auto" data-tippy-content="Количество <br> сигналов")
+							+icon('info')
+					+e.item
+						+e.IMG(src="app/img/parameters-icon-11.svg" alt="").icon
+						+e.subtitle Количество <br> прибыльных сигналов
+						+e.title 521
+						+e.info.info(data-tippy-placement="auto" data-tippy-content="Количество <br> прибыльных сигналов")
+							+icon('info')
+					+e.item
+						+e.IMG(src="app/img/parameters-icon-12.svg" alt="").icon
+						+e.subtitle Среднее кол-во <br> сигналов в день
+						+e.title 1,8
+						+e.info.info(data-tippy-placement="auto" data-tippy-content="Среднее кол-во <br> сигналов в день")
+							+icon('info')
+					+e.item
+						+e.IMG(src="app/img/parameters-icon-13.svg" alt="").icon
+						+e.subtitle Проходимость <br> (% доходности)
+						+e.title 68%
+						+e.info.info(data-tippy-placement="auto" data-tippy-content="Проходимость <br> (% доходности)")
+							+icon('info')
+					+e.item
+						+e.IMG(src="app/img/parameters-icon-14.svg" alt="").icon
+						+e.subtitle Открытых <br> позиций
+						+e.title 82%
+						+e.info.info(data-tippy-placement="auto" data-tippy-content="Открытых <br> позиций")
+							+icon('info')
+					+e.item
+						+e.IMG(src="app/img/parameters-icon-15.svg" alt="").icon
+						+e.subtitle Активных <br> сигналов
+						+e.title BTC
+						+e.info.info(data-tippy-placement="auto" data-tippy-content="Активных <br> сигналов")
+							+icon('info')
+				+e.signals
+					+e.H4.subtitle.h4 Активные сигналы
+						+b.counter 2
+					+b.signal
+						+e.main
+							+e.title DOGE / BTC
+							+e.UL.list
+								+e.LI.item
+									+e.SPAN.subtitle
+										+icon('alarm')
+										| Среднесрочный
+									+e.TIME(datetime="2021.09.01 14:00").time 01.09.2021 14:00
+								+e.LI.item
+									+e.SPAN.subtitle
+										+icon('charge')
+										| Риск 2/5
+									+e.SPAN.status.status._tiny._active 2 цели взято
+						+btn()._small._blue Узнать подробнее
+					+b.signal
+						+e.main
+							+e.title DOGE / BTC
+							+e.UL.list
+								+e.LI.item
+									+e.SPAN.subtitle
+										+icon('alarm')
+										| Среднесрочный
+									+e.TIME(datetime="2021.09.01 14:00").time 01.09.2021 14:00
+								+e.LI.item
+									+e.SPAN.subtitle
+										+icon('charge')
+										| Риск 2/5
+									+e.SPAN.status.status._tiny._active 2 цели взято
+						+btn()._small._blue Узнать подробнее
+				+e.signals
+					+e.H4.subtitle.h4 Закрытые сигналы
+						+b.counter 422
+					+b.signal
+						+e.main
+							+e.title DOGE / BTC
+								+e.SPAN.badge.badge._red Short
+							+e.UL.list
+								+e.LI.item
+									+e.SPAN.subtitle
+										+icon('alarm')
+										| Среднесрочный
+									+e.TIME(datetime="2021.09.01 14:00").time 01.09.2021 14:00
+								+e.LI.item
+									+e.SPAN.subtitle
+										+icon('charge')
+										| Риск 2/5
+									+e.SPAN.status.status._tiny Закрыт по стопу
+						+btn()._small._blue Узнать подробнее
+					+b.signal
+						+e.main
+							+e.title DOGE / BTC
+								+e.SPAN.badge.badge Long
+							+e.UL.list
+								+e.LI.item
+									+e.SPAN.subtitle
+										+icon('alarm')
+										| Среднесрочный
+									+e.TIME(datetime="2021.09.01 14:00").time 01.09.2021 14:00
+								+e.LI.item
+									+e.SPAN.subtitle
+										+icon('charge')
+										| Риск 2/5
+									+e.SPAN.status.status._tiny Закрыт по стопу
+						+btn()._small._blue Узнать подробнее
+					+btn()(class="_small _border") Загрузить еще...
+				+e.stock.stock__
+					+e.content
+						+e.text Подключите стратегию до <br> 26.05.2021 и получите второй месяц в подарок.
+						+e.timer.timer__
+							+e.item._day 00
+							+e.item._hours 00
+							+e.item._minutes 00
+							+e.item._seconds 00
+					+e.IMG(src="app/img/stock-img.svg" alt="").img
+				+btn()(class="_small") Подключить стратегию
+block popup
+	+b.modal.mfp-hide#subscribed-strategy
+		+e.icon.icon._small
+			+icon('strategy')
+		+e.content.css-text-center
+			+e.H4.title.h4 Вы подписаны на эту стратегию с 11.05.2021
+			+e.P.text Вы можете начать копировать эту <br> стратегию в любой момент.
+		+e.bottom.flex._center
+			+btn()(class="_blue _tiny js-close-modal") Окей
+	+b.modal.mfp-hide#copying-strategy
+		+e.icon.icon._small
+			+icon('strategy')
+		+e.content.css-text-center
+			+e.H4.title.h4 Вы копируете эту стратегию с <br> 11.05.2021
+			+e.P.text Вы можете приостановить копирование <br> этой стратегии или отписаться от <br> стратегии.
+		+e.bottom.flex._center
+			+btn()(class="_blue _tiny _border js-close-modal") Отмена
+			+btn('profile-v-4.html')(class="_blue _tiny") Настройки

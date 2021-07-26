@@ -1,0 +1,85 @@
+-
+	var data = [{
+		strategy: "Bullseye-Trading",
+		price: '$18.6k',
+		port: 40,
+		color: '#64B5F6'
+	}, {
+		strategy: "One-btc Pumps",
+		price: '$18.6k',
+		port: 25,
+		color: '#FFD54F'
+	}, {
+		strategy: "CryptoBulls",
+		price: '$18.6k',
+		port: 15,
+		color: '#81C784'
+	}, {
+		strategy: "ETH FanProfit",
+		price: '$18.6k',
+		port: 15,
+		color: '#7986CB'
+	}, {
+		strategy: "Свободные средства",
+		price: '$18.6k',
+		port: 10,
+		color: '#F06292'
+	}]
++e.wrap
+	+e.diagram.js-chart(data-total="$23.7k" data-settings=data)#chart-pie
+	+e.TABLE.table.table__
+		+e.THEAD.head
+			+e.TR.row
+				+e.TH.col.css-text-left
+					+e.title Стратегия
+				+e.TH.col.css-text-left
+					+e.title Сумма
+				+e.TH.col.css-text-left
+					+e.title Портф.%
+		+e.TBODY.body
+			+e.TR.row
+				+e.TD.col
+					+e.text
+						+e.IMG(src="app/img/crypto-icon-1.svg" alt="").icon
+						| Bullseye-Trading
+				+e.TD.col
+					+e.price $18.6k
+				+e.TD.col.css-text-right
+					+e.percent 26%
+			+e.TR.row
+				+e.TD.col
+					+e.text
+						+e.IMG(src="app/img/crypto-icon-2.svg" alt="").icon
+						| One-btc Pumps
+				+e.TD.col
+					+e.price $18.6k
+				+e.TD.col.css-text-right
+					+e.percent 26%
+			+e.TR.row
+				+e.TD.col
+					+e.text
+						+e.IMG(src="app/img/crypto-icon-3.svg" alt="").icon
+						| CryptoBulls
+				+e.TD.col
+					+e.price $18.6k
+				+e.TD.col.css-text-right
+					+e.percent 26%
+			+e.TR.row
+				+e.TD.col
+					+e.text
+						+e.IMG(src="app/img/crypto-icon-4.svg" alt="").icon
+						| ETH FanProfit
+				+e.TD.col
+					+e.price $18.6k
+				+e.TD.col.css-text-right
+					+e.percent 26%
+			+e.TR.row
+				+e.TD.col
+					+e.text
+						+e.IMG(src="app/img/crypto-icon-5.svg" alt="").icon
+						| Свободные средства
+				+e.TD.col
+					+e.price $18.6k
+				+e.TD.col.css-text-right
+					+e.percent 26%
+
